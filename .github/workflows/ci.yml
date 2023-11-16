@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: "Package, index and push chart"
+        run: |
+          WORKDIR=`pwd`
+          for subdir in "$WORKDIR/charts"/*/; do
+              if [ -d "$subdir" ]; then
+                  echo "Processing directory: $subdir"
+                  cd docs
+                  helm package $subdir
+                  cd $WORKDIR 
+              fi
+          done
+          helm repo index --url https://sag-private-cloud.github.io/private-cloud-helm-charts/ docs
+          git add .
+          git commit -m "Updating charts repository"
+          git push
