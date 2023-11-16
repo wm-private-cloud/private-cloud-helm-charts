@@ -3,12 +3,12 @@ entries:
   microservices-runtime:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-16T11:35:10.06254+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 20be008426a052ec2298617ebfbd9f1723a5ac4d4b370c6f5f8730ae693ad88c
+    created: "2023-11-16T09:56:40.831069354Z"
+    description: webMethods Microservices Runtime with MySQL Database
+    digest: e4d18f1666dea923a1b825a21f134ba2c2a2528a097264fc40c4760a401d636f
     name: microservices-runtime
     type: application
     urls:
     - https://sag-private-cloud.github.io/private-cloud-helm-charts/microservices-runtime-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-16T11:35:10.061409+02:00"
+generated: "2023-11-16T09:56:40.830107954Z"
