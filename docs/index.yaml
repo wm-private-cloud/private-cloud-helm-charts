@@ -3,9 +3,9 @@ entries:
   microservices-runtime:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-16T14:25:26.64452315Z"
+    created: "2023-11-16T14:32:40.755463836Z"
     description: webMethods Microservices Runtime with MySQL Database
-    digest: d2ad532e954ed12267d5367a51b7310d902de6db427d50bf48061c87ea368430
+    digest: b755755ae6a87b5edcbdc24fd9cceb27b7e785f9e178237eeaa288dcda83d3f3
     name: microservices-runtime
     type: application
     urls:
@@ -14,12 +14,12 @@ entries:
   universalmessaging-server:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-16T14:25:26.644900719Z"
+    created: "2023-11-16T14:32:40.755795028Z"
     description: Software AG Universal Messaging Server
-    digest: eafaa19e126bf45f2fd3082a618c65023348a65a4788db1c9795a8183c4ce84c
+    digest: b903a4d1d578e59a3c4936f9c64fdfa410ced5416182943e8915c1d4d8d259b3
     name: universalmessaging-server
     type: application
     urls:
     - https://sag-private-cloud.github.io/private-cloud-helm-charts/universalmessaging-server-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-16T14:25:26.63794282Z"
+generated: "2023-11-16T14:32:40.75490925Z"
