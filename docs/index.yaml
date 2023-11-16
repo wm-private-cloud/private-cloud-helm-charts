@@ -1,25 +1,14 @@
 apiVersion: v1
 entries:
-  demochart:
+  microservices-runtime:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-16T10:25:26.524613+02:00"
+    created: "2023-11-16T11:35:10.06254+02:00"
     description: A Helm chart for Kubernetes
-    digest: 8f59ce3503c9b740dbeb9bf1d60d1c5b006518e44e8e61540d8099ba9f712f88
-    name: demochart
+    digest: 20be008426a052ec2298617ebfbd9f1723a5ac4d4b370c6f5f8730ae693ad88c
+    name: microservices-runtime
     type: application
     urls:
-    - https://sag-private-cloud.github.io/private-cloud-helm-charts/demochart-0.1.0.tgz
+    - https://sag-private-cloud.github.io/private-cloud-helm-charts/microservices-runtime-0.1.0.tgz
     version: 0.1.0
-  seconddemochart:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-11-16T10:25:26.52524+02:00"
-    description: A Helm chart for Kubernetes
-    digest: e811154530868e6ee228d387937a411031cacdc8847983424c8faa85dd1cb2c9
-    name: seconddemochart
-    type: application
-    urls:
-    - https://sag-private-cloud.github.io/private-cloud-helm-charts/seconddemochart-0.1.0.tgz
-    version: 0.1.0
-generated: "2023-11-16T10:25:26.523474+02:00"
+generated: "2023-11-16T11:35:10.061409+02:00"
