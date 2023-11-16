@@ -6,9 +6,9 @@ metadata:
   namespace: {{ .Release.Namespace }}
 data:
 {{- if .Values.externalFiles.properties }}
-  application-properties: |-
+  additional-application-properties: |-
 {{ .Values.externalFiles.properties | indent 4 }}
-{{- else }}
+{{ end }}
   application-properties: |-
     #Sample Generated Template
     #Wed Mar 25 14:18:54 UTC 2020
@@ -52,6 +52,5 @@ data:
     jndi.DEFAULT_IS_JNDI_PROVIDER.securityPrincipal=Administrator
     messaging.IS_DES_CONNECTION.CLIENTPREFIX=J_jRQtEolDEurgAVIwwwADXaZQs_
     messaging.IS_UM_CONNECTION.CLIENTPREFIX=J_jRQtEolDEurgAVIwwwADXaZQs_
-    messaging.IS_UM_CONNECTION.url=nsp\://localhost\:9000																														    
-
-  {{ end }}
+    messaging.IS_UM_CONNECTION.url=nsp\://localhost\:9000	
+    {{ .Values.externalFiles.properties | indent 4 }}

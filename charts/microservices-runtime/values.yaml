@@ -4,10 +4,10 @@
 
 replicaCount: 1
 
+msr:
+  image: 'sagcr.azurecr.io/esbmsr:11.0'
 image:
-  repository: 'sagcr.azurecr.io/esbmsr:11.0'
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
+  pullPolicy: Always
 
 imagePullSecrets:
   - name: regcred

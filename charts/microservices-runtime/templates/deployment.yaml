@@ -33,7 +33,7 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}"
+          image: "{{ .Values.msr.image }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
 
@@ -49,6 +49,10 @@ spec:
             {{ if .Values.mysql.enabled }}
             - name: "MSR_JDBC_URL"
               value: "jdbc:mysql://microservices-runtime-storage:3306/scratch"
+            - name: "MSR_JDBC_NAME"
+              value: "scratch"
+            - name: "MSR_JDBC_SERVER_NAME"
+              value: "microservices-runtime-storage"
             - name: "MSR_JDBC_USER"
               value: "scratch"
             - name: "MSR_JDBC_PASSWORD"
@@ -69,6 +73,11 @@ spec:
             - name: properties
               mountPath: /opt/softwareag/IntegrationServer/application.properties
               subPath: application.properties
+            {{ if .Values.externalFiles.properties }}
+            - name: additional-properties
+              mountPath: /opt/softwareag/IntegrationServer/application1.properties
+              subPath: application1.properties
+            {{ end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           command: [ '/bin/sh','-c' ]
@@ -81,6 +90,14 @@ spec:
               items:
                 - key: application-properties
                   path: application.properties
+          {{ if .Values.externalFiles.properties }}
+          - name: additional-properties
+            configMap:
+              name: {{ include "microservices-runtime.fullname" . }}-properties-config-map
+              items:
+                  - key: additional-application-properties
+                    path: application1.properties
+          {{ end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
