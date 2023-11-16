@@ -2,38 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory Listing</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.14.1/js-yaml.min.js"></script>
+    <title>Helm Charts</title>
 </head>
-<body>
 
-    <h1>Directory Listing</h1>
-    <ul id="directory-list"></ul>
+<h1>Helm Charts</h1>
 
-    <script>
-        $(document).ready(function() {
-            // Fetch the contents of the "docs" directory
-            $.ajax({
-                url: 'docs',
-                success: function(data) {
-                    // Parse the HTML response
-                    var doc = new DOMParser().parseFromString(data, 'text/html');
-                    
-                    // Extract the links (subdirectories)
-                    var links = doc.querySelectorAll('a');
+<ul id="helmChartList"></ul>
 
-                    // Display the links in the "directory-list" element
-                    var directoryList = $('#directory-list');
-                    links.forEach(function(link) {
-                        var listItem = $('<li></li>').text(link.textContent);
-                        directoryList.append(listItem);
-                    });
-                }
+<script>
+    // Fetch the YAML file
+    fetch('index.yaml')
+        .then(response => response.text())
+        .then(yamlText => {
+            // Parse YAML into JSON
+            const yamlObject = jsyaml.load(yamlText);
+
+            // Get the entries object
+            const entries = yamlObject.entries;
+
+            // Get the ul element to append the list items
+            const helmChartList = document.getElementById('helmChartList');
+
+            // Iterate through each entry and create a list item
+            Object.keys(entries).forEach(entryKey => {
+                const entry = entries[entryKey][0]; // Assuming each entry has only one item in the list
+
+                // Create a list item
+                const listItem = document.createElement('li');
+
+                // Populate the list item with name, description, and version
+                listItem.innerHTML = `<strong>Name:</strong> ${entry.name}<br>
+                                      <strong>Description:</strong> ${entry.description}<br>
+                                      <strong>Version:</strong> ${entry.version}`;
+
+                // Append the list item to the ul element
+                helmChartList.appendChild(listItem);
             });
-        });
-    </script>
+        })
+        .catch(error => console.error('Error fetching YAML:', error));
+</script>
 
 </body>
 </html>
