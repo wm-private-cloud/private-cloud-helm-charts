@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.14.1/js-yaml.min.js"></script>
     <title>Helm Charts</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 
 <h1>Helm Charts</h1>
@@ -29,16 +46,16 @@
             Object.keys(entries).forEach(entryKey => {
                 const entry = entries[entryKey][0]; // Assuming each entry has only one item in the list
 
-                // Create a list item
-                const listItem = document.createElement('li');
+                // Create a table row
+                const tableRow = document.createElement('tr');
 
-                // Populate the list item with name, description, and version
-                listItem.innerHTML = `<strong>Name:</strong> ${entry.name}<br>
-                                      <strong>Description:</strong> ${entry.description}<br>
-                                      <strong>Version:</strong> ${entry.version}`;
+                // Populate the table row with name, description, and version
+                tableRow.innerHTML = `<td>${entry.name}</td>
+                                      <td>${entry.description}</td>
+                                      <td>${entry.version}</td>`;
 
-                // Append the list item to the ul element
-                helmChartList.appendChild(listItem);
+                // Append the table row to the table body
+                helmChartTableBody.appendChild(tableRow);
             });
         })
         .catch(error => console.error('Error fetching YAML:', error));
