@@ -62,7 +62,7 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: traefik
   hosts:
-    - host: msr.mydomain.com
+    - host: msr.flint-tech-solutions.com
       paths:
         - path: /
           pathType: Prefix
