@@ -28,6 +28,19 @@
 
 <ul id="helmChartList"></ul>
 
+<h1>Helm Charts</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Version</th>
+        </tr>
+    </thead>
+    <tbody id="helmChartTableBody"></tbody>
+</table>
+
 <script>
     // Fetch the YAML file
     fetch('index.yaml')
@@ -39,10 +52,10 @@
             // Get the entries object
             const entries = yamlObject.entries;
 
-            // Get the ul element to append the list items
-            const helmChartList = document.getElementById('helmChartList');
+            // Get the table body element to append the table rows
+            const helmChartTableBody = document.getElementById('helmChartTableBody');
 
-            // Iterate through each entry and create a list item
+            // Iterate through each entry and create a table row
             Object.keys(entries).forEach(entryKey => {
                 const entry = entries[entryKey][0]; // Assuming each entry has only one item in the list
 
