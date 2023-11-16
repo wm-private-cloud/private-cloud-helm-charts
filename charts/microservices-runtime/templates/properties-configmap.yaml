@@ -1,0 +1,57 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name:  {{ include "microservices-runtime.fullname" . }}-properties-config-map
+  namespace: {{ .Release.Namespace }}
+data:
+{{- if .Values.externalFiles.properties }}
+  application-properties: |-
+{{ .Values.externalFiles.properties | indent 4 }}
+{{- else }}
+  application-properties: |-
+    #Sample Generated Template
+    #Wed Mar 25 14:18:54 UTC 2020
+    healthindicators.Adapters.enabled=true
+    healthindicators.Cluster.enabled=true
+    healthindicators.Cluster.properties.threshold.value=2
+    healthindicators.Diskspace.enabled=true
+    healthindicators.Diskspace.properties.threshold.value=10
+    healthindicators.JDBC.enabled=false
+    healthindicators.JMS.enabled=false
+    healthindicators.JNDIAliases.enabled=false
+    healthindicators.Memory.enabled=true
+    healthindicators.Memory.properties.threshold.value=10
+    healthindicators.RemoteServers.enabled=true
+    healthindicators.SFTPServers.enabled=true
+    healthindicators.ServiceThread.enabled=true
+    healthindicators.ServiceThread.properties.threshold.value=10
+    healthindicators.Sessions.enabled=true
+    healthindicators.Sessions.properties.threshold.value=85
+    healthindicators.UMAliases.enabled=false
+    settings.watt.server.autodeploy.enabled=true
+    settings.watt.server.autodeploy.alwaysUseHotDeployment=true
+    settings.watt.server.autodeploy.interval=5
+    jms.DEFAULT_IS_JMS_CONNECTION.clientID=DEFAULT_IS_JMS_CLIENT
+    jms.DEFAULT_IS_JMS_CONNECTION.enabled=true
+    jms.PE_NONTRANSACTIONAL_ALIAS.clientID=ISe5ec3480_6960_4603_b177_e2664fd2292
+    keystore.DEFAULT_IS_KEYSTORE.keyAlias.ssos.keyAliasPassword={AES}Y5IgMqjfvkgbg7p5VUZztw\=\=
+    keystore.DEFAULT_IS_KEYSTORE.ksLocation=../common/conf/keystore.jks
+    keystore.DEFAULT_IS_KEYSTORE.ksPassword={AES}Y5IgMqjfvkgbg7p5VUZztw\=\=
+    settings.watt.server.compile=/opt/softwareag/IntegrationServer/docker/../../jvm/jvm/bin/javac -classpath {0} -d {1} {2}
+    truststore.DEFAULT_IS_TRUSTSTORE.ksLocation=../common/conf/platform_truststore.jks
+    truststore.DEFAULT_IS_TRUSTSTORE.ksPassword={AES}Y5IgMqjfvkgbg7p5VUZztw\=\=
+    user.Administrator.password={AES}8Den8WBQULNGKvvNcJzUUQJnOnGnF+j7z6e5C9vpod+S5ZCV+CxVaeRBCl4jugoxt1jOz8anl1Hnt+m/laLUcun32q24D8R+p4T97upSwzI\=
+    user.Developer.password={AES}HO9DiRD1yuNlaBusYmdYJ8ClvZhqQ2qfWw10wi1PV5edq1G9KvO16kvS4/Wr1R4eAg5pyis51HVExVqreIbbgaelP7oQkwkZZM0es0spZoY\=
+    user.Replicator.password={AES}BbOuDqLEyyJklzmHAX8sn0C1xVEaCUcXFQE7KE3NeXSry83iwtSAVLVR0BB9217bZ7AUDsxWvLtyebMA+eZ0/b766uaIe5j1T2oh4J/uYGI\=
+    jdbc.default.dbURL=$env{MSR_JDBC_URL} 
+    jdbc.default.password=$env{MSR_JDBC_PASSWORD}
+    jdbc.default.userid=$env{MSR_JDBC_USER}
+    jndi.DEFAULT_IS_JNDI_PROVIDER.providerURL=nsp\://localhost\:9000
+    jndi.DEFAULT_IS_JNDI_PROVIDER.securityCredentials={AES}Y5IgMqjfvkgbg7p5VUZztw\=\=
+    jndi.DEFAULT_IS_JNDI_PROVIDER.securityPrincipal=Administrator
+    messaging.IS_DES_CONNECTION.CLIENTPREFIX=J_jRQtEolDEurgAVIwwwADXaZQs_
+    messaging.IS_UM_CONNECTION.CLIENTPREFIX=J_jRQtEolDEurgAVIwwwADXaZQs_
+    messaging.IS_UM_CONNECTION.url=nsp\://localhost\:9000																														    
+
+  {{ end }}
