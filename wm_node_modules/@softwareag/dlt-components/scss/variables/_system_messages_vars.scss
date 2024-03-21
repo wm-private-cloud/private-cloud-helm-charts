@@ -1,0 +1,115 @@
+/* =====================================================
+    SYSTEM MESSAGES SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$system-messages-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$system-messages-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$system-messages-font-weight:                              var(--dlt-font-weight-regular, 400);
+$system-messages-line-height:                              1.25rem;
+$system-messages-inline-font-size:                         var(--dlt-font-size-sm, 1rem);
+$system-messages-inline-title-line-height:                 1.5rem;
+$system-messages-inline-detail-line-height:                calc(1.5rem + 1rem - 0.875rem);
+$system-messages-title-font-size:                          var(--dlt-font-size-sm, 1rem);
+// The following are the same as for modal messages
+$system-messages-title-font-weight:                        var(--dlt-font-weight-medium, 500);
+$system-messages-title-line-height:                        1.75rem;
+$system-messages-title-toast-font-size:                    var(--dlt-font-size-lg, 1.25rem);
+$system-messages-title-margin-bottom:                      5px;
+
+$system-messages-border-radii:                             var(--dlt-border-radii-default, 0);
+$system-messages-border-style:                             var(--dlt-border-style-default, solid);
+$system-messages-border-width:                             4px;
+
+$system-messages-margin-top:                               var(--dlt-spacing-3-x, 1.5rem); 
+$system-messages-margin-right:                             var(--dlt-spacing-3-x, 1.5rem); 
+$system-messages-toast-padding:                            12px 16px 16px 16px; // var(--dlt-spacing-2-x, 1rem);
+$system-messages-toast-margin-bottom:                      7px;
+$system-messages-modal-padding:                            var(--dlt-spacing-5-x, 2.5rem);
+$system-messages-toast-message-padding-top:                8px; // 0.5rem;
+$system-messages-toast-message-padding-left:               2rem; // 2.125rem;
+// $system-messages-inline-padding:                           calc(var(--dlt-spacing-1-x-half, 0.75rem) + 2px) var(--dlt-spacing-2-x-half, 1rem) calc(var(--dlt-spacing-1-x-half, 0.75rem) - 5px) var(--dlt-spacing-2-x-half, 1rem);
+$system-messages-inline-padding:                           14px 12px 12px 20px;
+$system-messages-toast-details-margin-left:                28px;
+
+$system-messages-elevation:                                var(--dlt-elevation-border, 0px 0px 0px transparent), var(--dlt-elevation-md, $shadow-depth-12);
+$system-messages-modal-elevation:                          var(--dlt-elevation-lg, $shadow-depth-24);
+
+$system-messages-color-overlay:                            var(--dlt-color-base-component-overlay, rgba(0,0,0,.32));
+
+$system-messages-z-index:                                  var(--dlt-z-index-toast, 9999);
+
+$close-time-transition:                                    var(--dlt-time-transition-short, .25s);
+$close-transition-effect:                                  ease-in;
+
+$system-messages-icon-close-position:                      1rem;
+$system-messages-icon-font-size:                           var(--dlt-font-size-xxl, 1.5rem);
+$system-messages-icon-margin-right:                        0.5rem;
+$system-messages-icon-toggle-font-size:                    1.5rem;
+
+$system-messages-buttons-margin-top:                       calc(1rem - 1px);
+$system-messages-button-margin-left:                       calc(0.5rem - 1px);
+
+$system-messages-color-error:                              var(--dlt-color-system-message-error, #e0000e);
+$system-messages-color-success:                            var(--dlt-color-system-message-success, #a0b909);
+$system-messages-color-info:                               var(--dlt-color-system-message-info, #1c8ce3);
+$system-messages-color-warning:                            var(--dlt-color-system-message-warning, #ff801f);
+
+$system-messages-transition-time:                          var(--dlt-time-transition-default, .3s);
+$system-messages-transition-effect:                        cubic-bezier(0.165, 0.84, 0.44, 1);
+$system-messages-transition-delay:                         var(--dlt-time-delay-short, 0.05s);
+$system-messages-transition-backdrop-delay:                var(--dlt-time-delay-default, 0.10s);
+$system-messages-transition-backdrop-effect:               ease;
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'system-messages';
+
+$system-messages-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$system-messages-color-background-interactive-secondary-active: var(--dlt-#{$el}-color-background-interactive-secondary-active, $component-color-background-interactive-secondary-active);
+$system-messages-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$system-messages-color-text-interactive-primary:           var(--dlt-#{$el}-color-text-interactive-primary, $component-color-text-interactive-primary);
+$system-messages-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$system-messages-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$system-messages-color-background-active:                  var(--dlt-#{$el}-color-background-default, $component-color-background-default); 
+$system-messages-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$system-messages-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$system-messages-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$system-messages-color-border-focus:                       var(--dlt-#{$el}-color-border-separator, $component-color-border-separator); 
+
+$system-messages-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$system-messages-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$system-messages-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+
+$system-messages-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$system-messages-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$system-messages-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$system-messages-color-text-interactive-muted:             var(--dlt-#{$el}-color-text-muted, $component-color-text-interactive-muted); 
+
+
+$system-messages-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$system-messages-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$system-messages-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$system-messages-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$system-messages-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 
+
+$system-messages-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$system-messages-color-icon:                               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary);
+$system-messages-color-icon-muted-secondary:               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary); 
+$system-messages-color-icon-muted-primary:                 var(--dlt-#{$el}-color-icon-muted-primary, $component-color-icon-muted-primary);
+$system-messages-icon-toggle-color:                        var(--dlt-#{$el}-color-icon-interactive-secondary, $component-color-icon-interactive-secondary);
+
+$system-messages-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$system-messages-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

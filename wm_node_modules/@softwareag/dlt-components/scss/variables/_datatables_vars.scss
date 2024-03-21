@@ -1,0 +1,104 @@
+/* =====================================================
+    DATA TABLES SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$data-tables-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$data-tables-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$data-tables-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$data-tables-font-weight:                              var(--dlt-font-weight-regular, 400);
+$data-tables-title-font-size:                          var(--dlt-font-size-lg, 1.25rem);
+$data-tables-title-font-weight:                        var(--dlt-font-weight-medium, 500);
+$data-tables-thead-font-weight:                        var(--dlt-font-weight-medium, 500);
+$data-tables-line-height:                              var(--dlt-font-line-height-reset, 1); 
+$data-tables-title-line-height:                        56px !default; 
+$data-tables-form-span-line-height:                    1.125rem !default; 
+$data-tables-padding:                                  var(--dlt-spacing-3-x, 1.5rem); 
+$data-tables-header-height:                            56px;
+$data-tables-trow-height:                              46.5px;
+$data-tables-textarea-height:                          var(--dlt-sizing-md, 2rem);
+$data-tables-icon-size:                                var(--dlt-sizing-xs, 1rem);
+
+$data-tables-border-radii:                             var(--dlt-border-radii-default, 0);
+$data-tables-border-style:                             var(--dlt-border-style-default, solid);
+$data-tables-border-style-hover:                       double;
+$data-tables-border-width:                             var(--dlt-border-width-default,  1px);
+$data-tables-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+//## Batch actions data-tables
+$data-tables-batch-action-margin:                      var(--dlt-spacing-1-x, .5rem);
+$data-tables-batch-action-margin-left:                 var(--dlt-spacing-2-x, 1rem);
+$data-tables-batch-summary-line-height:                3rem !default;
+$data-tables-indeterminate-left:                       3px !default;
+
+//## Check mark for data-tables
+$data-tables-icon-button-size:                         var(--dlt-sizing-sm, 1.5rem);
+$data-tables-icon-button-font-size:                    var(--dlt-font-size-sm, 1rem);
+$data-tables-icon-button-line-height:                  var(--dlt-font-line-height-reset, 1);
+
+//## Density for data-tables
+$data-tables-density-sm:                               2rem !default;
+$data-tables-density-md:                               3rem !default;
+$data-tables-density-lg:                               3.5rem !default;
+$data-tables-density-xl:                               4.5rem !default;
+
+//## Unique adjustments
+$data-tables-chekbox-padding:                          0 var(--dlt-spacing-2-x, 1rem);
+$data-tables-row-actions-padding:                      0 var(--dlt-spacing-1-x, .5rem);
+$data-tables-color-zebra-dark:                         var(--dlt-color-background-static-secondary, $gray-95);  
+$data-tables-color-zebra-light:                        var(--dlt-color-background-static-primary, $white); 
+$data-tables-toolbar-height:                           auto;
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'data-tables';
+
+$data-tables-color-border-separator:                   var(--dlt-#{$el}-color-border-static-primary, $component-color-border-separator);
+$data-tables-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$data-tables-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$data-tables-color-text-inverse:                       var(--dlt-#{$el}-color-text-inverse, $component-color-text-inverse);
+$data-tables-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$data-tables-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$data-tables-color-background-hover:                   var(--dlt-#{$el}-color-background-static-tertiary, $component-color-background-static-tertiary); 
+$data-tables-color-background-active:                  var(--dlt-#{$el}-color-background-static-tertiary, $component-color-background-static-tertiary); 
+$data-tables-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$data-tables-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$data-tables-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$data-tables-color-border-focus:                       var(--dlt-#{$el}-color-border-separator, $component-color-border-separator); 
+
+$data-tables-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$data-tables-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$data-tables-color-input-background:                   var(--dlt-#{$el}-color-background-input-default, $component-color-background-input-default); 
+$data-tables-color-input-background-focus:             var(--dlt-#{$el}-color-background-input-focus, $component-color-background-input-focus); 
+$data-tables-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+
+$data-tables-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$data-tables-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$data-tables-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$data-tables-color-text-muted:                         var(--dlt-#{$el}-color-text-muted, $component-color-text-interactive-muted); 
+
+$data-tables-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$data-tables-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$data-tables-color-primary-light:                      var(--dlt-#{$el}-color-interactive-secondary-active, $component-color-secondary-active); 
+$data-tables-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$data-tables-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$data-tables-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 
+
+$data-tables-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$data-tables-color-icon:                               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary);
+$data-tables-color-icon-muted-secondary:              var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary); 
+$data-tables-color-icon-muted-primary:                var(--dlt-#{$el}-color-icon-muted-primary, $component-color-icon-muted-primary);
+
+$data-tables-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$data-tables-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

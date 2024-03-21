@@ -1,0 +1,101 @@
+/* =====================================================
+    CARDS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+
+$cards-icon-button-size:                         var(--dlt-font-size-xxl, 1.5rem);
+
+$cards-icon-size:                                var(--dlt-font-size-xs, 0.875rem);
+$cards-icon-size-md:                             var(--dlt-font-size-sm, 1rem);
+$cards-icon-size-lg:                             var(--dlt-font-size-md, 1.125rem);
+
+$cards-icon-color:                                var(--dlt-color-icon-static-subtle, rgb(102,102,102)); 
+$cards-draggable-icon-color:                      var(--dlt-color-icon-interactive-secondary, $almost-black);
+$cards-icon-fav-color:                          var(--dlt-color-icon-interactive-accent, rgb(224,0,127));
+$cards-icon-fav-active:                         var(--dlt-color-palette-purple-870, rgb(255,189,226));
+
+$cards-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$cards-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$cards-font-weight:                              var(--dlt-font-weight-regular, 400);
+$cards-line-height:                              var(--dlt-font-line-height-text, 1.5);
+$cards-title-font-size:                          var(--dlt-font-size-md, 1.125rem);
+$cards-title-font-weight:                        var(--dlt-font-weight-medium, 500);
+$cards-title-line-height:                        var(--dlt-font-line-heading, 1.25);
+$cards-title-padding:                            0 0 0 var(--dlt-spacing-2-x, 1rem);  
+$cards-title-sub-font-size:                      $cards-font-size;       
+$cards-title-sub-font-weight:                    $cards-font-weight;       
+$cards-title-sub-margin-top:                     2px;     
+
+$cards-icon-placeholder:                         var(--dlt-sizing-lg, 40px);
+$cards-icon-placeholder-size:                    var(--dlt-sizing-lg, 40px);
+$cards-icon-placeholder-margin:                  0 0 var(--dlt-spacing-1-x, .5rem) 0;
+
+$cards-border-radii:                             var(--dlt-border-radii-default, 0);
+$cards-border-style:                             var(--dlt-border-style-default, solid);
+$cards-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$cards-border-width:                             var(--dlt-border-width-default,  1px);
+$cards-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+$cards-padding:                                  var(--dlt-spacing-3-x, 1.5rem) var(--dlt-spacing-3-x, 1.5rem)  var(--dlt-spacing-2-x, 1rem) var(--dlt-spacing-3-x, 1.5rem) ;
+$cards-padding-top:                              var(--dlt-spacing-3-x, 1.5rem);
+$cards-padding-right:                            var(--dlt-spacing-2-x, 1rem);
+$cards-padding-bottom:                           var(--dlt-spacing-2-x, 1rem);
+$cards-padding-left:                             var(--dlt-spacing-2-x, 1rem);
+$cards-elevation:                                var(--dlt-elevation-sm, $shadow-depth-4);
+$cards-elevation-dragged:                        var(--dlt-elevation-md, $shadow-depth-12);
+
+//## Card button
+$cards-button-padding-top:                       var(--dlt-spacing-2-x, 1rem);
+$cards-button-icon-width:                        var(--dlt-sizing-xl, 48px);
+$cards-button-icon-height:                       var(--dlt-sizing-xl, 48px);
+
+$cards-content-padding-top:                      var(--dlt-spacing-2-x, 1rem);
+$cards-content-text-padding:                     0 var(--dlt-spacing-1-x, .5rem);
+$cards-content-text-margin:                      2px;
+$cards-content-gap:                              var(--dlt-spacing-2-x, 1rem);
+$cards-action-icons-padding-top:                 var(--dlt-spacing-2-x, 1rem);
+$cards-action-icons-gap:                         4px;
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'cards';
+
+$cards-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$cards-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$cards-color-text-inverse:                       var(--dlt-#{$el}-color-text-inverse, $component-color-text-inverse);
+$cards-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$cards-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$cards-color-background-active:                  var(--dlt-#{$el}-color-background-default, $component-color-background-default); 
+$cards-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$cards-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$cards-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$cards-color-border-focus:                       var(--dlt-#{$el}-color-border-separator, $component-color-border-separator); 
+
+$cards-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$cards-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$cards-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+
+$cards-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$cards-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$cards-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$cards-color-text-static-muted:                  var(--dlt-#{$el}-color-text-muted, $component-color-text-static-muted); 
+
+$cards-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$cards-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$cards-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$cards-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$cards-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 
+
+$cards-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$cards-color-icon:                               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary);
+$cards-color-icon-interactive-accent:            var(--dlt-#{$el}-color-icon-interactive-accent, $component-color-icon-interactive-accent); 
+

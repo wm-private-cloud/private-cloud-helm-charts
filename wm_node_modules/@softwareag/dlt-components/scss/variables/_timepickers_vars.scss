@@ -1,0 +1,90 @@
+/* =====================================================
+    TIME PICKERS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+//## SOME PROPERTIES ARE SHARED FROM FORMS_VAR
+
+$time-pickers-width:                                    6.375rem;
+$time-pickers-width-ss:                                 7.875rem;
+$button-grp-left:                                       $time-pickers-width + 0.5rem;
+$time-pickers-elevation:                                var(--dlt-elevation-sm, 0px 2px 4px 1px hsla(0, 0%, 0%, 0.16));
+
+$time-pickers-am-pm-margin-left:                        7px;
+$time-pickers-am-pm-margin-left-sm:                     3px;
+
+$time-pickers-am-pm-padding:                            0 0.75rem;
+$time-pickers-am-pm-font-size:                          $forms-input-font-size;
+$time-pickers-am-pm-font-weight:                        var(--dlt-font-weight-medium, 500);
+
+//Type I specific variables
+$time-pickers-type1-button-group-margin-left:           8px;
+$time-pickers-type1-button-padding-sm:                  0 0.5rem;
+
+$time-pickers-type1-holder-height:                      var(--dlt-sizing-md, 32px);
+$time-pickers-type1-hrs-colon-top:                      28px;
+$time-pickers-type1-hrs-colon-right:                    -1px;
+$time-pickers-type1-mins-left:                          33px;
+$time-pickers-type1-secs-colon-top:                     28px;
+$time-pickers-type1-secs-colon-left:                    -1px;
+$time-pickers-type1-secs-left:                          72px;
+$time-pickers-type1-input-height:                       22px;
+$time-pickers-type1-input-width:                        36px;
+$time-pickers-type1-input-margin-top:                   4px;
+$time-pickers-type1-spinner-height:                     80px;
+$time-pickers-type1-spinner-width:                      36px;
+$time-pickers-type1-spinner-top:                        32px;
+$time-pickers-type1-spinner-left:                       2px;
+$time-pickers-type1-stepup-height:                      20px;
+$time-pickers-type1-stepdown-height:                    26px;
+$time-pickers-type1-stepup-width:                       24px;
+$time-pickers-type1-stepdown-width:                     24px;
+$time-pickers-type1-stepup-font-size:                   1rem;
+$time-pickers-type1-stepup-top:                         6px;
+$time-pickers-type1-stepup-right:                       6.4px;
+$time-pickers-type1-stepup-span-width:                  26px;
+$time-pickers-type1-stepup-span-top:                    29px;
+$time-pickers-type1-stepup-span-left:                   5px;
+$time-pickers-type1-stepdown-top:                       50px;
+$time-pickers-type1-stepdown-right:                     6.4px;
+$time-pickers-arrow-icon-right:                         4px;
+$time-pickers-arrow-font-size:                          1.5rem;
+$time-pickers-arrow-line-height:                        2rem;
+
+$time-pickers-type1-holder-height-lg:                   var(--dlt-sizing-lg, 40px);
+$time-pickers-type1-input-height-lg:                    30px;
+$time-pickers-type1-mins-line-height-lg:                38px;
+$time-pickers-type1-am-pm-padding-lg:                   0 1rem;
+$time-pickers-type1-am-pm-line-height-lg:               2.375rem;
+$time-pickers-type1-spinner-top-lg:                     40px;
+$time-pickers-arrow-icon-font-size-lg:                  1.5rem;
+$time-pickers-arrow-icon-line-height-lg:                2.5rem;
+$time-pickers-arrow-icon-right-lg:                      8px;
+
+$time-pickers-type1-holder-height-sm:                   var(--dlt-sizing-sm, 24px);
+$time-pickers-type1-input-height-sm:                    14px;
+$time-pickers-type1-mins-line-height-sm:                20px;
+$time-pickers-type1-am-pm-padding-sm:                   0 0.5rem;
+$time-pickers-type1-am-pm-line-height-sm:               1.375rem;
+$time-pickers-type1-spinner-top-sm:                     24px;
+$time-pickers-arrow-icon-font-size-sm:                  1.3rem;
+$time-pickers-arrow-icon-line-height-sm:                1.5rem;
+
+$time-pickers-time-transition:                          var(--dlt-time-transition-short, .25s);
+$time-pickers-transition-effect:                        ease-in;
+
+//Type II specific variables
+
+$time-pickers-list-max-height:                          168px;
+$time-pickers-list-padding:                             6px 0 0 0;
+$time-pickers-list-item-padding:                        4px 0 4px 10px;
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+//## COLORS ARE SHARED FROM FORMS_VAR
+$time-pickers-arrow-icon-color:                         var(--dlt-forms-color-icon-interactive-secondary, var(--dlt-component-color-icon-interactive-secondary, var(--dlt-color-icon-interactive-secondary, #333333)));

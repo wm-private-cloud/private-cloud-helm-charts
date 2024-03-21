@@ -1,0 +1,65 @@
+/* =====================================================
+    FILTERS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$filters-font-size:                                var(--dlt-font-size-xs, .875rem);
+$filters-title-font-family:                        var(--dlt-font-family-base, $font-family-base);
+$filters-title-font-size:                          var(--dlt-font-size-xs, .875rem);
+$filters-title-font-weight:                        var(--dlt-font-weight-medium, 500);
+$filters-title-height:                             var(--dlt-sizing-xl, 3rem);
+$filters-title-padding:                            0 8px 0 6px;  
+
+$filters-border-radii:                             var(--dlt-border-radii-default, 0);
+$filters-border-style:                             var(--dlt-border-style-default, solid);
+$filters-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$filters-border-width:                             var(--dlt-border-width-default,  1px);
+$filters-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+//## Panel variables
+$filters-panel-padding:                            0 var(--dlt-spacing-half-x, 0.3125rem) 0 var(--dlt-spacing-6-x, 3rem);
+$filters-panel-item-margin:                        var(--dlt-spacing-1-x, 0.5rem) var(--dlt-spacing-2-x, 1rem) var(--dlt-spacing-2-x, 1rem) 0;
+$filters-panel-item-width:                         calc(34.4% - var(--dlt-spacing-3-x, 1.5rem));
+
+$filters-actions-margin:                           var(--dlt-spacing-3-x-half, 1.5rem) 0 0;
+$filters-tags-padding:                             var(--dlt-spacing-1-x, 0.5rem) var(--dlt-spacing-5-x, 2.5rem) var(--dlt-spacing-1-half, .5rem) var(--dlt-spacing-6-x, 3rem);
+$filters-tags-margin:                              0 var(--dlt-spacing-1-x, 0.5rem) var(--dlt-spacing-1-x, 0.5rem) 0;
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'filters';
+
+$filters-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$filters-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$filters-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$filters-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$filters-color-background-active:                  var(--dlt-#{$el}-color-background-default, $component-color-background-default); 
+$filters-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$filters-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$filters-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+
+$filters-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$filters-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$filters-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+
+$filters-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$filters-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$filters-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$filters-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$filters-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+
+$filters-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$filters-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$filters-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

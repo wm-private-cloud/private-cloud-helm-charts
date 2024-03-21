@@ -1,0 +1,97 @@
+// Input Text Label
+$input-text-label-line-height: 1;
+$input-text-label-padding-bottom: .25rem;
+$input-text-label-margin: 0;
+
+// Opacity
+$input-disabled-opacity: .5;
+
+//Input Text/Text Area
+$input-text-font-size: $font-size-base;
+$input-text-line-height: $input-text-font-size+1;
+$input-text-padding-y: 0rem !default;
+$input-text-padding-x: .5rem !default;
+
+
+$input-text-border-width: $border-width !default;
+$input-text-border-style: solid !default;
+
+$input-text-outline-width: $outline-width !default;
+$input-text-outline-style: solid !default;
+
+$input-text-close-right: .25rem;
+$input-text-close-width: 1.5rem;
+$input-text-close-height: 1.5rem;
+$input-text-close-line-height: 1.6rem;
+
+$input-error-block-padding-top : .438rem;
+$input-error-font-size: $font-size-sm;
+$input-error-padding-left: .25rem;
+
+$input-icon-right: .25rem;
+
+$input-password-icon-width: 1.5rem;
+$input-password-icon-height: 1.5rem;
+$input-password-icon-line-height: 1.6rem;
+$input-pwd-text-close-right: calc(#{$input-icon-right} + #{$input-password-icon-width});
+
+//Input Checkbox
+$input-checkbox-width: 1rem;
+$input-checkbox-height: 1rem;
+
+$input-checkbox-padding-top: .875rem;
+$input-checkbox-border-width: $border-width !default;
+$input-checkbox-border-style: solid !default;
+
+$input-checkbox-outline-width: $outline-width !default;
+$input-checkbox-outline-style: solid !default;
+
+$input-checkmark-height: .3rem;
+$input-checkmark-width: .6rem;
+$input-checkmark-border-left: .125rem;
+$input-checkmark-border-bottom: .125rem;
+$input-checkmark-left: .1875rem;
+$input-checkmark-top: .25rem;
+
+$input-indeterminate-bottom-width: .125rem !default;
+$input-indeterminate-width: 0.625rem;
+$input-indeterminate-left: .1875rem;
+
+$checkbox-label-padding-y: 0rem !default;
+$checkbox-label-padding-x: 1.5rem !default;
+$checkbox-label-line-height: 1.125rem !default;
+
+//Input Radio
+$input-radio-width: 1rem;
+$input-radio-height: 1rem;
+
+$input-radio-padding-top: .875rem;
+
+$input-radio-border-width: $border-width !default;
+$input-radio-border-style: solid !default;
+
+$radio-label-padding-y: 0rem !default;
+$radio-label-padding-x: 1.625rem !default;
+$radio-label-line-height: 1.125rem !default;
+
+$input-radio-checkmark-height: .5rem;
+$input-radio-checkmark-width: .5rem;
+$input-radio-checkmark-left: .25rem;
+$input-radio-checkmark-top: .25rem;
+
+$input-datepicker-line-height: 1.875rem;
+
+
+//Switch: now in toggle_switches_vars
+// $switch-transition-duration: 0.25s !default;
+// $switch-transition-effect: ease-in-out !default;
+
+//Time picker
+$time-picker-width: 6.5rem;
+$button-grp-left: $time-picker-width+0.5rem;
+
+//Colors
+$error-red: $red-44;
+$info-blue: $blue-50;
+$warn-orange: $orange-56;
+$success-green: $green-38;

@@ -1,0 +1,67 @@
+/* =====================================================
+    STEPPERS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$steppers-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$steppers-font-size:                                var(--dlt-font-size-xs, .875rem);
+$steppers-font-weight:                              var(--dlt-font-weight-regular, 400);
+$steppers-line-height:                              var(--dlt-font-line-height-lg, 32px);
+$steppers-title-font-size:                          var(--dlt-font-size-sm, 1rem);
+$steppers-title-font-weight:                        var(--dlt-font-weight-medium, 500);
+
+$steppers-step-line-height:                         28px;
+$steppers-tick-icon:                                '\e910';
+$steppers-icon-tick-font-size:                      1.4rem;
+$steppers-icon-invalid-font-size:                   22px;
+$steppers-icon-invalid-font-weight:                 var(--dlt-font-weight-bold, 600);;
+
+$steppers-border-radii:                             var(--dlt-border-radii-smooth, 100%);
+$steppers-border-style:                             var(--dlt-border-style-default, solid);
+$steppers-border-width:                             var(--dlt-border-width-stepper,  2px);
+
+$steppers-size:                                     var(--dlt-sizing-md, 32px);
+
+$steppers-color-error-background:                   var(--dlt-color-system-message-error, $error-color);
+$steppers-color-error:                              var(--dlt-color-system-message-error, $error-color);
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'steppers';
+
+$steppers-color-background:                         var(--dlt-#{$el}-color-background-interactive-primary-default, $component-color-background-interactive-primary-default);
+$steppers-color-background-secondary:               var(--dlt-#{$el}-color-background-interactive-secondary-default, $component-color-secondary-default);
+$steppers-color-background-active:                  var(--dlt-#{$el}-color-background-interactive-primary-active, $component-color-background-interactive-primary-active);
+$steppers-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$steppers-color-text-inverse:                       var(--dlt-#{$el}-color-text-inverse, $component-color-text-inverse);
+$steppers-color-icon-secondary:                     var(--dlt-#{$el}-color-icon-interactive-secondary, $component-color-icon-interactive-secondary);
+$steppers-color-border:                             var(--dlt-#{$el}-color-border-interactive-primary, var(--dlt-color-border-interactive-primary, rgb(102, 102, 102)));
+$steppers-color-border-active:                      var(--dlt-#{$el}-color-border-interactive-primary, var(--dlt-color-border-interactive-primary, #1776BF));
+$steppers-color-border-inactive:                    var(--dlt-#{$el}-color-border-interactive-contrast, var(--dlt-color-border-interactive-contrast, #1776BF));
+
+$steppers-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$steppers-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$steppers-color-input-border:                       var(--dlt-#{$el}-color-border-interactive-contrast, $component-color-border-interactive-contrast); 
+
+$steppers-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$steppers-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$steppers-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$steppers-color-text-interactive-muted:             var(--dlt-#{$el}-color-text-muted, $component-color-text-interactive-muted); 
+
+$steppers-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$steppers-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$steppers-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$steppers-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$steppers-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 
+
+$steppers-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$steppers-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$steppers-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);

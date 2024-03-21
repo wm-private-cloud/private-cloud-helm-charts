@@ -1,0 +1,57 @@
+/* =====================================================
+    HERO SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$hero-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$hero-font-size:                                var(--dlt-font-size-sm, 1rem);
+$hero-font-weight:                              var(--dlt-font-weight-regular, 400);
+$hero-line-height:                              20px;
+
+$hero-padding:                                  var(--dlt-spacing-2-x, 1rem);
+$hero-elevation:                                var(--dlt-elevation-sm, $shadow-depth-4);
+
+$hero-border-radii:                             var(--dlt-border-radii-default, 0);
+$hero-border-style:                             var(--dlt-border-style-default, solid);
+$hero-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$hero-border-width:                             var(--dlt-border-width-default,  1px);
+$hero-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+$hero-content-margin:                           var(--dlt-spacing-1-x, .5rem);
+$hero-thumbnail-margin:                         var(--dlt-spacing-1-x, .5rem) var(--dlt-spacing-2-x, 1rem) var(--dlt-spacing-1-x, .5rem) var(--dlt-spacing-1-x, .5rem);
+$hero-thumbnail-size:                           80px !default;
+$hero-thumbnail-radius:                         var(--dlt-border-radii-smooth, 100%);
+$hero-thumbnail-font-size:                      2rem !default;
+$hero-thumbnail-edit-font-size:                 var(--dlt-font-size-xs, 0.875rem);
+
+$hero-transition-time:                          var(--dlt-time-transition-short, .25s);
+$hero-transition-effect:                        ease-in;
+
+$hero-actions-position:                         var(--dlt-spacing-2-x, 1rem);
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'hero';
+
+$hero-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$hero-color-background-dark:                    var(--dlt-#{$el}-color-background-dark, $component-color-background-static-tertiary);
+$hero-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$hero-color-text-inverse:                       var(--dlt-#{$el}-color-text-inverse, $component-color-text-inverse);
+$hero-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$hero-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$hero-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$hero-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$hero-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$hero-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$hero-color-primary-light:                      var(--dlt-#{$el}-color-interactive-secondary-active, $component-color-secondary-active); 
+$hero-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$hero-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$hero-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 

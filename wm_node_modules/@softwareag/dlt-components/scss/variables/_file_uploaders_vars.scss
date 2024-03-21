@@ -1,0 +1,55 @@
+/* =====================================================
+    FILE UPLOADERS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$file-uploaders-width:                                    16rem;
+$file-uploaders-box-shadow:                               var(--dlt-elevation-border, 0px 0px 0px transparent), var(--dlt-elevation-sm, $shadow-depth-4);
+
+$file-uploaders-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$file-uploaders-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$file-uploaders-font-weight:                              var(--dlt-font-weight-regular, 400);
+$file-uploaders-count-font-weight:                        var(--dlt-font-weight-medium, 500);
+$file-uploaders-line-height:                              1rem;
+$file-uploaders-line-height-md:                           1.5rem;
+$file-uploaders-margin:                                   var(--dlt-spacing-1-x, .5rem) 0 0 0; 
+
+$file-uploaders-clear-button-font-size:                   var(--dlt-font-size-xxs, 0.75rem);
+$file-uploaders-clear-button-font-weight:                 var(--dlt-font-weight-regular, 400);
+$file-uploaders-clear-button-padding:                     0 8px 0 0;
+$file-uploaders-clear-button-margin:                      0.25rem 0.25rem 0 0;
+$file-uploaders-clear-button-line-height:                 var(--dlt-font-line-height-reset, 1);
+$file-uploaders-clear-button-height:                      var(--dlt-sizing-sm, 24px);
+$file-uploaders-clear-button-icon-font-size:              var(--dlt-font-size-sm, 1rem);
+$file-uploaders-clear-button-icon-margin:                 0 0 2px 8px;
+
+$file-uploaders-remove-icon-font-size:                    var(--dlt-font-size-xxl, 1.5rem);
+$file-uploaders-remove-icon-size:                         var(--dlt-sizing-sm, 1.5rem);
+$file-uploaders-remove-icon-margin-right:                 0.5rem;
+
+$file-uploaders-padding:                                  0 var(--dlt-spacing-1-x-half, .75rem); 
+$file-uploaders-elevation:                                var(--dlt-elevation-sm, 0px 2px 4px 1px hsla(0, 0%, 0%, 0.16));
+
+//Drag n Drop Items
+$file-uploaders-drag-drop-width:                          30rem; 
+$file-uploaders-drag-drop-p-margin:                       0 0 12px 0; 
+$file-uploaders-drag-drop-p-margin-sm:                    4px 2px 4px 0; 
+$file-uploaders-drag-drop-p-margin-lg:                    0 0 16px 0; 
+$file-uploaders-drag-drop-p-line-height:                  16px; 
+$file-uploaders-drop-zone-padding:                        40px 0 0 0; 
+$file-uploaders-drop-zone-padding-sm:                     1rem 0 0 0; 
+$file-uploaders-drop-zone-padding-lg:                     40px 0 0 0; 
+$file-uploaders-drop-zone-border-style:                   var(--dlt-border-style-dropzone, dashed); 
+$file-uploaders-drop-zone-border-style-hover:             var(--dlt-border-style-dropzone, dashed); 
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+//## COLORS ARE SHARED FROM FORMS_VAR
+
+$file-uploaders-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$file-uploaders-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);

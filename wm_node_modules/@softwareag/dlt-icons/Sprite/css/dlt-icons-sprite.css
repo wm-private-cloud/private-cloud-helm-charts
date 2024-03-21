@@ -1,0 +1,26 @@
+/*!
+*
+* Copyright (c) 2019-2023 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA,
+* and/or its subsidiaries and/or its affiliates and/or their licensors.
+*
+*/
+.dlt-icon-svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.dlt-icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.dlt-icon-shuffle {
+  width: 1.03125em;
+}

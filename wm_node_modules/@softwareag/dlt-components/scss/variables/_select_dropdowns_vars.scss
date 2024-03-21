@@ -1,0 +1,64 @@
+/* =====================================================
+    SELECT DROPDOWNS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$select-dropdowns-font-weight:                              var(--dlt-font-weight-regular, 400);
+$select-dropdowns-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$select-dropdowns-line-height:                              1.875rem;
+$select-dropdowns-height:                                   var(--dlt-sizing-md, 2rem); 
+$select-dropdowns-min-width:                                2rem; 
+$select-dropdowns-padding:                                  0 .725rem; 
+
+$select-dropdowns-drop-elevation:                           var(--dlt-elevation-border, 0px 0px 0px transparent), var(--dlt-elevation-md, $shadow-depth-12);//var(--dlt-elevation-sm, 0px 2px 4px 1px hsla(0, 0%, 0%, 0.16)); 
+
+$select-dropdowns-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$select-dropdowns-line-height-sm:                           1.4rem;
+$select-dropdowns-height-sm:                                var(--dlt-sizing-sm, 1.5rem); 
+$select-dropdowns-min-width-sm:                             1.5rem; 
+$select-dropdowns-padding-sm:                               0 .5rem; 
+
+$select-dropdowns-font-size-lg:                             var(--dlt-font-size-xs, 0.875rem);
+$select-dropdowns-line-height-lg:                           2.4rem;
+$select-dropdowns-height-lg:                                var(--dlt-sizing-lg, 2.5rem); 
+$select-dropdowns-min-width-lg:                             2.5rem; 
+
+
+$select-dropdowns-select-deselect-button-font-size:         var(--dlt-font-size-xxs, 0.75rem);
+$select-dropdowns-select-deselect-button-font-weight:       var(--dlt-font-weight-regular, 400);
+$select-dropdowns-select-deselect-button-padding:           0 0.375rem 0 0.1875rem;
+$select-dropdowns-select-deselect-button-margin:            0.25rem;
+$select-dropdowns-select-deselect-button-icon-margin:       0.15rem;
+$select-dropdowns-select-deselect-button-line-height:       1.2rem;
+$select-dropdowns-select-deselect-button-height:            1.5rem;
+$select-dropdowns-select-deselect-button-icon-font-size:    1rem;
+$select-dropdowns-select-deselect-button-icon-line-height:  1.18rem;
+$select-dropdowns-select-button-icon-font-size:             1rem;
+
+$select-dropdowns-select-icon-font-size:                    var(--dlt-font-size-sm, 1rem);
+$select-dropdowns-select-input-padding:                     0 1.5rem 0 .8rem;
+$select-dropdowns-select-input-padding-sm:                  0 1.4rem 0 .5rem;
+
+$select-dropdowns-multiselect-icon-font-size:               1.5rem;
+$select-dropdowns-multiselect-icon-right:                   3px;
+$select-dropdowns-multiselect-icon-line-height:             1.2;
+
+$select-dropdowns-arrow-content:                            "\e987";
+$select-dropdowns-arrow-font-size:                          1.4rem;
+$select-dropdowns-arrow-line-height:                        2.1rem;
+$select-dropdowns-arrow-top:                                0;
+$select-dropdowns-arrow-right:                              1px;
+
+// Native dropdown customizations used on Input groups also
+$select-dropdowns-native-size:                              2rem;
+$select-dropdowns-native-padding-right:                     1.4rem;
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+//## COLORS ARE SHARED FROM FORMS_VAR

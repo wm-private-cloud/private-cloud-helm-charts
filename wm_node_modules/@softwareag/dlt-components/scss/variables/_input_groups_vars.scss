@@ -1,0 +1,51 @@
+/* =====================================================
+    INPUT GROUPS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$input-groups-font-weight:                              var(--dlt-font-weight-medium, 500);
+$input-groups-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$input-groups-line-height:                              1.875rem;
+$input-groups-height:                                   var(--dlt-sizing-md, 2rem); 
+$input-groups-min-width:                                2rem; 
+$input-groups-padding:                                  0 .725rem; 
+
+$input-groups-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$input-groups-line-height-sm:                           1.4rem;
+$input-groups-height-sm:                                var(--dlt-sizing-sm, 1.5rem); 
+$input-groups-min-width-sm:                             1.5rem; 
+$input-groups-padding-sm:                               0 .5rem; 
+
+$input-groups-font-size-lg:                             var(--dlt-font-size-xs, 0.875rem);
+$input-groups-line-height-lg:                           2.4rem;
+$input-groups-height-lg:                                var(--dlt-sizing-lg, 2.5rem); 
+$input-groups-min-width-lg:                             2.5rem; 
+
+
+$input-groups-clear-button-font-size:                   var(--dlt-font-size-xxs, 0.75rem);
+$input-groups-clear-button-font-weight:                 var(--dlt-font-weight-regular, 400);
+$input-groups-clear-button-padding:                     0 6px 0 3px;
+$input-groups-clear-button-margin:                      0.25rem 0.75rem 0 0;
+$input-groups-clear-button-line-height:                 var(--dlt-font-line-height-reset, 1);
+$input-groups-clear-button-height:                      var(--dlt-sizing-sm, 24px);
+$input-groups-clear-button-icon-font-size:              var(--dlt-font-size-sm, 1rem);
+$input-groups-clear-button-icon-margin:                 0 4px 0 0;
+
+$input-groups-select-icon-font-size:                    var(--dlt-font-size-sm, 1rem);
+$input-groups-select-icon-right:                        12px;
+$input-groups-select-icon-right-sm:                     8px;
+
+$input-groups-select-input-padding:                     0 30px 0 11px;
+$input-groups-select-input-padding-sm:                  0 26px 0 7px;
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+//## COLORS ARE SHARED FROM FORMS_VAR
+
+$input-groups-color-select-background:                   var(--dlt-component-color-select-background, var(--dlt-color-background-input-group-dropdown, $gray-95));

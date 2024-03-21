@@ -1,0 +1,35 @@
+/* =====================================================
+    DATE PICKERS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$date-pickers-icon-font-size:                           var(--dlt-font-size-xxl, 1.5rem);
+
+$date-pickers-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$date-pickers-data-font-size:                           var(--dlt-font-size-sm, 1rem);
+$date-pickers-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$date-pickers-font-weight:                              var(--dlt-font-weight-regular, 400);
+$date-pickers-title-font-weight:                        var(--dlt-font-weight-medium, 500);
+$date-pickers-line-height:                              2rem;
+
+$date-pickers-padding:                                  var(--dlt-sizing-sm, 1.5rem); 
+$date-pickers-margin:                                   var(--dlt-sizing-sm, 1.5rem); 
+$date-pickers-icon-margin-large:                        var(--dlt-spacing-1-x, .5rem);
+$date-pickers-icon-margin-default:                      var(--dlt-spacing-half-x, 4px);
+$date-pickers-cell-size:                                var(--dlt-sizing-md, 32px); 
+$date-pickers-elevation:                                var(--dlt-elevation-border, 0px 0px 0px transparent), var(--dlt-elevation-md, $shadow-depth-12);
+$date-picker-arrow-margin:                              10px;
+$date-pickers-arrow-icon-size:                          6px;
+$date-picker-value-margin:                              2px;
+$date-picker-value-wrapper-margin-top:                  16px;
+
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+//## COLORS ARE SHARED FROM FORMS_VAR

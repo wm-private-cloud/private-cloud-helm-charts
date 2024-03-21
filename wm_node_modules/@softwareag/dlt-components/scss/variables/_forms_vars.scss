@@ -1,0 +1,108 @@
+/* =====================================================
+    FORMS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$forms-font-family:                              var(--dlt-font-family-base, $font-family-base);
+
+// Text field and Textarea specifics
+$forms-input-font-size:                          var(--dlt-font-size-xs, 0.875rem); //14px
+$forms-input-font-size-sm:                       var(--dlt-font-size-xxs, 0.75rem); //12px
+$forms-input-font-size-lg:                       var(--dlt-font-size-md, 1.125rem); //18px
+
+$forms-input-line-height:                        30px;
+$forms-input-line-height-sm:                     var(--dlt-sizing-xs, 1rem);
+$forms-input-font-weight:                        var(--dlt-font-weight-regular, 400);
+$forms-input-placeholder-font-style:             italic;
+$forms-input-padding-y:                          0 !default;
+$forms-input-padding-x:                          .5rem !default;
+$forms-input-padding-lg:                         0 0.75rem !default;
+
+$forms-input-height:                             var(--dlt-sizing-md, 2rem);
+$forms-input-height-sm:                          var(--dlt-sizing-sm, 1.5rem);
+$forms-input-height-lg:                          var(--dlt-sizing-lg, 2.5rem);
+
+//Legends for all the form elements
+$forms-legend-font-size:                         var(--dlt-font-size-xs, 0.875rem);
+$forms-legend-font-size-sm:                      var(--dlt-font-size-xxs, 0.75rem);
+$forms-legend-font-weight:                       var(--dlt-font-weight-medium, 500); // Shared with input label also
+$forms-legend-line-height:                       var(--dlt-font-line-height-reset, 1);
+
+$forms-label-font-size:                          var(--dlt-font-size-xs, 0.875rem);
+$forms-label-font-weight:                        var(--dlt-font-weight-regular, 400);
+$forms-label-line-height:                        1.2 !default;
+
+$input-text-label-line-height: var(--dlt-font-line-height-xxs, 1rem);
+$input-text-label-padding-bottom: .25rem;
+$input-text-label-margin: 0;
+
+$input-text-close-right: .25rem;
+$input-text-close-width: 1.5rem;
+$input-text-close-height: 1.5rem;
+$input-text-close-line-height: 1.6rem;
+
+
+// for Password and Datepicker icons
+$forms-icon-width:                               1.5rem;
+$forms-icon-height:                              1.5rem;
+$forms-icon-line-height:                         1.6rem;
+
+$forms-border-radii:                             var(--dlt-border-radii-default, 0);
+$forms-border-style:                             var(--dlt-border-style-default, solid);
+$forms-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$forms-border-width:                             var(--dlt-border-width-default,  1px);
+$forms-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+$forms-color-placeholder-text-style:             italic;
+
+//## Unique adjustments
+$forms-outline-offset:                           -2px !default;
+
+$forms-color-error:                              var(--dlt-color-system-message-error, #e0000e);
+$forms-color-success:                            var(--dlt-color-system-message-success, #a0b909);
+$forms-color-info:                               var(--dlt-color-system-message-info, #1c8ce3);
+$forms-color-warning:                            var(--dlt-color-system-message-warning, #ff801f);
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'forms';
+
+$forms-color-background:                         var(--dlt-#{$el}-color-background-interactive-secondary-default, $component-color-background-interactive-secondary-default);
+$forms-color-background-secondary-active:        var(--dlt-#{$el}-color-background-interactive-secondary-active, $component-color-background-interactive-secondary-active);
+$forms-color-background-static:                  var(--dlt-#{$el}-color-background-static-primary, $component-color-background-default);
+$forms-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$forms-color-text-interactive-subtle:            var(--dlt-#{$el}-color-text-interactive-subtle, $component-color-text-interactive-muted);
+$forms-color-text-inverse:                       var(--dlt-#{$el}-color-text-inverse, $component-color-text-inverse);
+$forms-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$forms-color-input-background:                   var(--dlt-#{$el}-color-background-input-default, $component-color-background-input-default); 
+$forms-color-input-background-focus:             var(--dlt-#{$el}-color-background-input-focus, $component-color-background-input-focus); 
+$forms-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+$forms-color-input-border-hover:                 var(--dlt-#{$el}-color-border-input-hover, $component-color-border-input-hover); 
+
+
+$forms-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$forms-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$forms-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+$forms-color-text-interactive-muted:             var(--dlt-#{$el}-color-text-muted, $component-color-text-interactive-muted); 
+
+$forms-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$forms-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$forms-color-primary-light:                      var(--dlt-#{$el}-color-interactive-secondary-active, $component-color-secondary-active); 
+$forms-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$forms-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$forms-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 
+
+$forms-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$forms-color-icon:                               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary);
+$forms-color-icon-interactive-primary:           var(--dlt-#{$el}-color-icon-interactive-primary, $component-color-icon-interactive-primary); 
+$forms-color-icon-interactive-secondary:         var(--dlt-#{$el}-color-icon-interactive-secondary, $component-color-icon-interactive-secondary); 
+$forms-color-icon-muted-secondary:               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary); 
+$forms-color-icon-muted-primary:                 var(--dlt-#{$el}-color-icon-muted-primary, $component-color-icon-muted-primary);
+

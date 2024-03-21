@@ -1,0 +1,92 @@
+/* =====================================================
+    MODALS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$modals-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$modals-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$modals-font-weight:                              var(--dlt-font-weight-regular, 400);
+$modals-line-height:                              var(--dlt-font-line-height-text, 1.5);
+$modals-title-font-size:                          var(--dlt-font-size-lg, 1.25rem);
+$modals-title-font-weight:                        var(--dlt-font-weight-medium, 500);
+$modals-title-line-height:                        1.75rem;
+
+$modals-border-radii:                             var(--dlt-border-radii-default, 0);
+$modals-border-style:                             var(--dlt-border-style-default, solid);
+$modals-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$modals-border-width:                             var(--dlt-border-width-default,  1px);
+$modals-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+$modals-padding:                                  var(--dlt-spacing-4-x, 2rem);
+$modals-max-height:                               calc(100% - 64px);
+$modals-elevation:                                var(--dlt-elevation-lg, $shadow-depth-24);
+
+$modals-z-index:                                  var(--dlt-z-index-modal, 99999);
+$modals-overlay-z-index:                          calc(var(--dlt-z-index-modal, 99999) + 1);
+$modals-container-z-index:                        calc(var(--dlt-z-index-modal, 99999) + 2);
+
+$modals-content-margin-top:                       var(--dlt-spacing-3-x, 1.5rem);
+$modals-footer-margin-right:                      var(--dlt-spacing-3-x, 1.5rem);
+$modals-footer-button-margin-left:                var(--dlt-spacing-1-x, 0.5rem);
+
+$modals-close-icon-size:                          var(--dlt-sizing-sm, 1.5rem);
+$modals-close-icon-font-size:                     var(--dlt-font-size-xxl, 1.5rem);
+
+$modals-transition-time:                          var(--dlt-time-transition-default, .3s);
+$modals-transition-effect:                        cubic-bezier(0.165, 0.84, 0.44, 1);
+$modals-transition-delay:                         var(--dlt-time-delay-short, 0.05s);
+$modals-transition-backdrop-delay:                var(--dlt-time-delay-default, 0.10s);
+$modals-transition-backdrop-effect:               ease;
+
+$modals-width-sm:                                 33%;
+$modals-width-md:                                 62%;
+$modals-width-lg:                                 84%;
+$modals-color-overlay:                            var(--dlt-color-overlay, rgba(0,0,0,.32));
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'modals';
+
+$modals-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$modals-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$modals-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$modals-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$modals-color-background-active:                  var(--dlt-#{$el}-color-background-default, $component-color-background-default); 
+$modals-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$modals-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$modals-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$modals-color-border-focus:                       var(--dlt-#{$el}-color-border-separator, $component-color-border-separator); 
+
+$modals-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$modals-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$modals-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+
+$modals-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$modals-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$modals-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$modals-color-text-muted:                         var(--dlt-#{$el}-color-text-muted, $component-color-text-interactive-muted); 
+
+$modals-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$modals-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$modals-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$modals-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$modals-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 
+
+$modals-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$modals-color-icon:                               var(--dlt-#{$el}-color-icon-interactive-secondary, $component-color-icon-interactive-secondary);
+$modals-color-icon-muted-secondary:               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary); 
+$modals-color-icon-muted-primary:                 var(--dlt-#{$el}-color-icon-muted-primary, $component-color-icon-muted-primary);
+
+$modals-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$modals-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

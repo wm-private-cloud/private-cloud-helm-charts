@@ -1,0 +1,76 @@
+/* =====================================================
+    LISTS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$lists-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$lists-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$lists-font-weight:                              var(--dlt-font-weight-medium, 500);
+$lists-line-height:                              var(--dlt-font-line-height-sm, 24px); 
+$lists-primary-line-height:                      var(--dlt-font-line-height-sm, 24px); 
+$lists-secondary-font-size:                      var(--dlt-font-size-xxs, .75rem);
+$lists-secondary-line-height:                    var(--dlt-font-line-height-xxs, 16px); 
+$lists-secondary-font-weight:                    var(--dlt-font-weight-regular, 400);
+
+$lists-padding:                                  var(--dlt-spacing-3-x, 1.5rem); 
+$lists-item-padding:                             var(--dlt-spacing-1-x-half, 12px) var(--dlt-spacing-1-x, .5rem) calc(var(--dlt-spacing-1-x-half, 12px) - 1px) var(--dlt-spacing-1-x, .5rem); 
+$lists-item-icon-size:                           var(--dlt-sizing-sm, 24px);
+$lists-item-icon-font-size:                      var(--dlt-font-size-xxl, 1.5rem);
+$lists-item-icon-margin-right:                   var(--dlt-spacing-1-x, 8px);
+
+$lists-action-icon-size:                         var(--dlt-sizing-sm, 24px);
+$lists-action-icon-font-size:                    1rem;
+$lists-action-icon-line-height:                  1rem;
+$lists-action-icon-margin-right:                 1px;
+
+$lists-transition-time:                          var(--dlt-time-transition-short, .25s);
+$lists-transition-effect:                        ease-in;
+
+$lists-border-radii:                             var(--dlt-border-radii-default, 0);
+$lists-border-style:                             var(--dlt-border-style-default, solid);
+$lists-border-style-hover:                       solid;
+$lists-border-width:                             var(--dlt-border-width-default,  1px);
+$lists-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+//## Density for lists
+$lists-padding-sm:                               var(--dlt-spacing-half-x, 4px) var(--dlt-spacing-1-x, 8px) calc(var(--dlt-spacing-half-x, 4px) - 1px) var(--dlt-spacing-1-x, 8px);
+$lists-padding-lg:                               var(--dlt-spacing-2-x-half, 20px) var(--dlt-spacing-1-x, 8px) calc(var(--dlt-spacing-2-x-half, 20px) - 1px) var(--dlt-spacing-1-x, 8px);
+$lists-multiline-padding-sm:                     var(--dlt-spacing-half-x, 4px) var(--dlt-spacing-1-x, 8px) calc(var(--dlt-spacing-half-x, 4px) - 1px) var(--dlt-spacing-1-x, 8px);
+$lists-multiline-padding-md:                     var(--dlt-spacing-half-x, 4px) var(--dlt-spacing-1-x, 8px) calc(var(--dlt-spacing-1-x-half, 12px) - 1px);
+$lists-multiline-md-icon-margin-top:             var(--dlt-spacing-half-x, 4px);
+$lists-multiline-padding-lg:                     var(--dlt-spacing-half-x, 4px) var(--dlt-spacing-1-x, 8px) calc(var(--dlt-spacing-2-x-half, 20px) - 1px);
+
+//## Unique adjustments
+$lists-outline-offset:                           -2px !default;
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'lists';
+
+$lists-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$lists-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$lists-color-text-inverse:                       var(--dlt-#{$el}-color-text-inverse, $component-color-text-inverse);
+$lists-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$lists-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$lists-color-background-active:                  var(--dlt-#{$el}-color-background-default, $component-color-background-default); 
+$lists-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$lists-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$lists-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+
+$lists-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$lists-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$lists-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$lists-color-secondary-active:                   var(--dlt-#{$el}-color-interactive-secondary-active, $component-color-secondary-active); 
+
+$lists-color-icon-static-muted:                  var(--dlt-#{$el}-color-icon-static-muted, $component-color-icon-muted-secondary); 
+
+$lists-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+

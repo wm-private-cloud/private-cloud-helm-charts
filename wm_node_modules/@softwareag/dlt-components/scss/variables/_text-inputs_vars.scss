@@ -1,0 +1,66 @@
+/* =====================================================
+    TEXT INPUTS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+//## SOME PROPERTIES ARE SHARED FROM FORMS_VAR
+
+// $text-inputs-number-icon-font-size:                    1.3rem;
+$text-inputs-number-icon-font-size:                    1.5rem;
+$text-inputs-number-icon-height:                       12px;
+$text-inputs-number-icon-width:                        24px;
+
+$text-inputs-number-icon-font-size-sm:                 18px;
+$text-inputs-number-icon-height-sm:                    8px;
+$text-inputs-number-icon-width-sm:                     16px;
+
+$text-inputs-number-line-height:                       28px;
+$text-inputs-number-padding:                           2px 14px 0 7px;
+$text-inputs-number-padding-lg:                        0   12px 0 7px;
+$text-inputs-number-padding-sm:                        0   14px 0 7px;
+
+$text-inputs-textarea-padding:                         0.5rem 0.5rem;
+$text-inputs-textarea-height:                          7.5rem;
+$text-inputs-textarea-line-height:                     1rem;
+
+$text-inputs-icon-right:                               .25rem;
+$text-inputs-icon-right-lg:                            .5rem;
+$text-inputs-icon-size:                                var(--dlt-sizing-sm, 1.5rem);
+$text-inputs-icon-size-sm:                             var(--dlt-sizing-xs, 1rem);
+$text-inputs-close-icon-font-size:                     var(--dlt-font-size-xxl, 1.5rem);
+
+$text-inputs-password-file-icon-font-size:             var(--dlt-font-size-xxl, 1.5rem);
+$text-inputs-password-file-icon-right:                 0.25rem;
+$text-inputs-password-file-close-icon-right:           1.75rem;
+$text-inputs-password-file-close-icon-right-lg:        2rem;
+
+$text-inputs-date-icon-font-size:                      0.9rem;
+$text-inputs-date-icon-line-height:                    1.4rem;
+$text-inputs-date-icon-width:                          1rem;
+$text-inputs-date-icon-right:                          0.25rem;
+$text-inputs-date-icon-width-lg:                       1.25rem;
+
+$text-inputs-select-icon-right-lg:                     0.25rem;
+$text-inputs-select-height-lg:                         var(--dlt-sizing-lg, 40px);
+
+$text-inputs-padding-left-lg:                          12px;
+
+$text-inputs-message-font-size:                        var(--dlt-font-size-xxs, 0.75rem); //12px
+$text-inputs-message-icon-font-size:                   var(--dlt-font-size-sm, 1rem); //16px
+$text-inputs-message-line-height:                      var(--dlt-font-line-height-xxs, 1rem); //18px
+$text-inputs-message-line-height-lg:                   1.125rem; //18px
+$text-inputs-message-font-weight:                      var(--dlt-font-weight-regular, 400);
+$text-inputs-message-title-font-weight:                var(--dlt-font-weight-medium, 500);
+
+$text-inputs-message-padding-top:                      4px;
+$text-inputs-message-padding-left:                     .25rem;
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+//## COLORS ARE SHARED FROM FORMS_VAR

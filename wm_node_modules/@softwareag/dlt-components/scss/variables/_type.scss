@@ -1,0 +1,18 @@
+$font-size-base: 0.875rem !default; // 14px — Start from the browser default (1rem = 16px)
+$font-size-lg: ($font-size-base * 1.28571428571) !default; // 18px
+$font-size-sm: ($font-size-base * 0.85714285714) !default; // 12px
+$font-size-xs: ($font-size-base * 0.71428571429) !default; // 10px
+
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-base: $font-weight-regular !default;
+
+$line-height-base: 1.5 !default;
+$line-height-lg: 1.5 !default;
+$line-height-sm: 1.5 !default;
+
+$gray-text: $almost-black !default;
+$text-muted: color($gray-60);

@@ -1,0 +1,17 @@
+@mixin no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+@mixin no-action {
+    -webkit-touch-action: none;
+    -webkit-touch-action: none;
+    -khtml-touch-action: none;
+    -moz-touch-action: none;
+    -ms-touch-action: none;
+    touch-action: none;
+  }

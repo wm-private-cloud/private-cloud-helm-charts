@@ -1,0 +1,37 @@
+/* =====================================================
+    LINKS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$links-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$links-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$links-font-size-sm:                             var(--dlt-font-size-xxs, .5rem);
+$links-font-size-lg:                             var(--dlt-font-size-sm, 1rem);
+$links-text-decoration:                          none !default;
+$links-inline-text-decoration:                   underline !default;
+$links-text-decoration-hover:                    underline !default;
+$links-inline-text-decoration-hover:             none !default;
+$links-inline-text-decoration-focus:             $links-inline-text-decoration-hover;
+
+$links-inline-border-radii:                      var(--dlt-border-radii-default, 0);
+$links-inline-border-style-focus:                solid;
+$links-inline-border-width:                      var(--dlt-border-width-default,  1px);
+$links-inline-border-width-focus:                var(--dlt-border-width-hover, 2px);
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'links';
+
+$links-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$links-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+$links-color-link-active:                        var(--dlt-#{$el}-color-link-active, $component-color-text-link-active); 
+$links-color-link-visited:                       var(--dlt-#{$el}-color-link-visited, $component-color-text-link-visited); 
+
+$links-color-border:                             var(--dlt-#{$el}-color-border, $component-color-primary-default);
+
+$links-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);

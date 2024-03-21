@@ -1,0 +1,43 @@
+/* =====================================================
+    RADIO BUTTONS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$radio-buttons-size:                                     var(--dlt-sizing-xs, 1rem);
+$radio-buttons-size-sm:                                  var(--dlt-sizing-xxs, .75rem);
+$radio-buttons-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$radio-buttons-label-line-height:                        var(--dlt-font-line-height-xxs, 1rem);
+$radio-buttons-line-height-sm:                           .8rem;
+$radio-buttons-label-padding-y:                          0!default;
+$radio-buttons-label-padding-x-left :                    1.5rem;   
+$radio-buttons-label-padding-x-left-sm :                 20px;   
+$radio-buttons-label-padding-x-right:                    1.5rem; 
+$radio-buttons-label-padding-x-right-sm:                 16px; 
+$radio-buttons-legend-padding-bottom-sm:                 7px;   
+$radio-buttons-padding-bottom:                           1rem;     
+$radio-buttons-padding-bottom-sm:                        0.5rem;     
+$radio-buttons-legend-padding-bottom:                    1rem;     
+$radio-buttons-label-padding:                            0rem 1.2rem;     
+
+$radio-buttons-border-radii:                             var(--dlt-border-radii-smooth, 100%);
+
+//## Check mark for radio-buttons
+$radio-buttons-checkmark-height:                         .5rem !default;
+$radio-buttons-checkmark-width:                          .5rem !default;
+$radio-buttons-checkmark-left:                           .25rem !default;
+$radio-buttons-checkmark-top:                            .25rem !default;
+
+$radio-buttons-checkmark-height-sm:                      0.375rem !default;
+$radio-buttons-checkmark-width-sm:                       0.375rem !default;
+$radio-buttons-checkmark-left-sm:                        0.18rem !default;
+$radio-buttons-checkmark-top-sm:                         0.19rem !default;
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+//## COLORS ARE SHARED FROM FORMS_VAR

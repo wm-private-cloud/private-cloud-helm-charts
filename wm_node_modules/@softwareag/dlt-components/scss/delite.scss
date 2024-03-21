@@ -1,0 +1,27 @@
+/*
+***
+* DELITE DESIGN SYSTEM
+***
+***
+*/
+
+$dlt-typography: true !default; // Variable to switch off typography inclusion use 'false' to skip
+
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "components";
+
+:root{
+    --dlt-z-index-modal: 9999;
+    --dlt-z-index-toast: 999;
+    --dlt-z-index-header: 99;
+    --dlt-z-index-mask: 9; /* For Dropdowns, Tooltips */
+    --dlt-z-index-deep: -99999;
+    --dlt-z-index-default: 1;
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}

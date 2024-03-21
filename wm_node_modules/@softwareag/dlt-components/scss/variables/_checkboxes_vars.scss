@@ -1,0 +1,62 @@
+/* =====================================================
+    CHECKBOXES SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$checkboxes-check-content:                            "\e910";
+$checkboxes-size:                                     var(--dlt-sizing-xs, 1rem);
+$checkboxes-size-sm:                                  var(--dlt-sizing-xxs, .75rem);
+$checkboxes-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$checkboxes-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$checkboxes-font-weight:                              var(--dlt-font-weight-medium, 500);
+$checkboxes-line-height:                              var(--dlt-font-line-height-xxs, 1rem);
+$checkboxes-line-height-sm:                           14px;
+$checkboxes-label-line-height:                        var(--dlt-font-line-height-xxs, 1rem);
+$checkboxes-label-padding-y:                          0!default;
+$checkboxes-label-padding-x:                          var(--dlt-spacing-3-x, 1.5rem);   
+$checkboxes-label-padding-x-sm:                       var(--dlt-spacing-2-x-half, 1.25rem);   
+$checkboxes-padding:                                  0 0 var(--dlt-spacing-2-x, 1rem) 0;     
+$checkboxes-padding-sm:                               0 0 var(--dlt-spacing-1-x, .5rem) 0;     
+$checkboxes-legend-padding-bottom-sm:                 var(--dlt-spacing-1-x, .5rem);     
+$checkboxes-legend-padding-bottom:                    var(--dlt-spacing-2-x, 1rem);     
+$checkboxes-legend-line-height:                       var(--dlt-font-line-height-xxs, 1rem);     
+$checkboxes-margin-top:                               var(--dlt-spacing-3-x, 1.5rem); 
+
+
+$checkboxes-border-radii:                             var(--dlt-border-radii-checkbox, 0);
+$checkboxes-border-style:                             var(--dlt-border-style-default, solid);
+$checkboxes-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$checkboxes-border-width:                             var(--dlt-border-width-default,  1px);
+$checkboxes-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+//## Indeterminate checkboxes
+$checkboxes-indeterminate-bottom-width:               2px !default;
+$checkboxes-indeterminate-width:                      10px !default;
+$checkboxes-indeterminate-left:                       3px !default;
+
+//## Check mark for checkboxes
+$checkboxes-checkmark-height:                         var(--dlt-sizing-xs, 1rem);
+$checkboxes-checkmark-width:                          var(--dlt-sizing-xs, 1rem);
+$checkboxes-checkmark-font-size:                      var(--dlt-font-size-sm, 1rem);
+$checkboxes-checkmark-border-left:                    2px !default;
+$checkboxes-checkmark-border-bottom:                  2px !default;
+$checkboxes-checkmark-left:                           0 !default;
+$checkboxes-checkmark-top:                            0 !default;
+
+$checkboxes-checkmark-height-sm:                      var(--dlt-sizing-xxs, 12px);
+$checkboxes-checkmark-width-sm:                       var(--dlt-sizing-xxs, 12px);
+$checkboxes-checkmark-font-size-sm:                   var(--dlt-font-size-xxs, 12px);
+$checkboxes-checkmark-left-sm:                        0 !default;
+$checkboxes-checkmark-top-sm:                         0 !default;
+
+//## Unique adjustments
+$checkboxes-outline-offset:                           -2px !default;
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+//## COLORS ARE SHARED FROM FORMS_VAR

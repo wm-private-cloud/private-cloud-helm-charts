@@ -1,0 +1,72 @@
+/* =====================================================
+    PANELS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$panels-font-family:                              var(--dlt-font-family-base, $font-family-base);
+
+$panels-border-radii:                             var(--dlt-border-radii-default, 0);
+$panels-border-style:                             var(--dlt-border-style-default, solid);
+$panels-border-width:                             var(--dlt-border-width-default,  1px);
+
+$panels-padding:                                  var(--dlt-spacing-3-x, 1.4rem) var(--dlt-spacing-2-x, 1rem) var(--dlt-spacing-2-x, 1rem) var(--dlt-spacing-2-x, 1rem);
+$panels-bottom-padding:                           var(--dlt-spacing-2-x, 1rem);
+$panels-bottom-padding-collapsed:                 var(--dlt-spacing-1-x, .5rem) var(--dlt-spacing-2-x, 1rem);
+$panels-collapsed-width:                          56px;
+$panels-collapsed-height:                         56px;
+$panels-elevation:                                var(--dlt-elevation-md, $shadow-depth-12);
+
+$panels-chevron-size:                             38px;
+$panels-chevron-position:                         1rem;
+
+$panels-width-sm:                                 16.67%;
+$panels-width-md:                                 50%;
+$panels-width-lg:                                 83.34%;
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'panels';
+
+$panels-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$panels-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$panels-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$panels-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$panels-color-background-active:                  var(--dlt-#{$el}-color-background-default, $component-color-background-default); 
+$panels-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$panels-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$panels-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$panels-color-border-focus:                       var(--dlt-#{$el}-color-border-separator, $component-color-border-separator); 
+
+$panels-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$panels-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$panels-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+
+$panels-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$panels-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$panels-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$panels-color-text-muted:                         var(--dlt-#{$el}-color-text-muted, $component-color-text-interactive-muted); 
+
+$panels-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$panels-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$panels-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$panels-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$panels-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 
+
+$panels-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$panels-color-icon:                               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary);
+$panels-color-icon-muted-secondary:               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary); 
+$panels-color-icon-muted-primary:                 var(--dlt-#{$el}-color-icon-muted-primary, $component-color-icon-muted-primary);
+
+$panels-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$panels-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

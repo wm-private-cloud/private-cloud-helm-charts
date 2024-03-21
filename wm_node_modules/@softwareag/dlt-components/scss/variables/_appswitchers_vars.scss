@@ -1,0 +1,64 @@
+/* =====================================================
+    APP SWITCHERS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$app-switchers-border-radii:                             var(--dlt-border-radii-default, 0);
+$app-switchers-border-style:                             var(--dlt-border-style-default, solid);
+$app-switchers-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$app-switchers-border-width:                             var(--dlt-border-width-default,  1px);
+$app-switchers-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+$app-switchers-box-shadow:                               var(--dlt-elevation-md, $shadow-depth-12);
+
+$app-switchers-space-top:                                var(--dlt-spacing-2-x, 1rem);
+$app-switchers-space-right:                              var(--dlt-spacing-2-x, 1rem); 
+$app-switchers-space-bottom:                             var(--dlt-spacing-2-x, 1rem); 
+$app-switchers-space-left:                               var(--dlt-spacing-2-x, 1rem);
+
+$app-switchers-z-index:                                  var(--dlt-z-index-mask, 100);
+
+$app-switchers-item-font-size:                           var(--dlt-font-size-xxs, 0.75rem);
+$app-switchers-item-font-weight:                         var(--dlt-font-weight-regular, $font-weight-regular);
+
+$app-switchers-title-font-size:                          var(--dlt-font-size-xs, 0.875rem);
+$app-switchers-title-font-weight:                        var(--dlt-font-weight-medium, $font-weight-medium);
+
+$app-switchers-text-line-height:                         var(--dlt-font-line-height-xxs, 1rem);
+
+$app-switchers-box-shadow:                               var(--dlt-elevation-border, 0px 0px 0px transparent), var(--dlt-elevation-md, $shadow-depth-12);
+
+$app-switchers-after-content:                            "";
+$app-switchers-after-position:                           absolute;
+$app-switchers-after-border-width:                       8px;
+$app-switchers-after-border-pos-left:                    auto;
+$app-switchers-after-border-pos-right:                   16px;
+$app-switchers-after-border-style:                       solid;
+$app-switchers-after-webkit-filter:                      var(--dlt-elevation-tooltip-nose, drop-shadow(0 0 0 rgba(0, 0, 0, .16)));
+$app-switchers-after-filter:                             var(--dlt-elevation-tooltip-nose, drop-shadow(0 0 0 rgba(0, 0, 0, .16)));
+
+/* =====================================================
+COMPONENT SHARED STYLES
+------------------------------------------------------
+*/
+//** Colors
+
+$el: 'app-switchers';
+
+$app-switchers-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$app-switchers-after-border-color:                       transparent transparent $app-switchers-color-background transparent;
+$app-switchers-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$app-switchers-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$app-switchers-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$app-switchers-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$app-switchers-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$app-switchers-color-primary-light:                      var(--dlt-#{$el}-color-interactive-secondary-active, $component-color-secondary-active); 
+
+$app-switchers-color-icon-interactive-primary:           var(--dlt-#{$el}-color-icon-interactive-primary, $component-color-icon-interactive-primary); 
+$app-switchers-color-icon-interactive-secondary:         var(--dlt-#{$el}-color-icon-interactive-secondary, $component-color-icon-interactive-secondary); 
+
+$app-switchers-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$app-switchers-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

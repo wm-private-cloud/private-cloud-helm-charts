@@ -1,0 +1,651 @@
+//
+// Icon Font: dlt-icons
+//
+
+@font-face {
+  font-family: "dlt-icons";
+  src: url("/assets/fonts/dlt-icons/dlt-icons.woff") format("woff"),
+  url("/assets/fonts/dlt-icons/dlt-icons.woff2") format("woff2"),
+  url("/assets/fonts/dlt-icons/dlt-icons.ttf") format("ttf"),
+  url("/assets/fonts/dlt-icons/dlt-icons.svg#dlt-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "dlt-icons";
+    src: url("/assets/fonts/dlt-icons.svg#dlt-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.dlt-icon-accessibility-settings:before,
+.dlt-icon-accounting:before,
+.dlt-icon-add-identity-provider:before,
+.dlt-icon-add-tag:before,
+.dlt-icon-add-user:before,
+.dlt-icon-alarm:before,
+.dlt-icon-app-switcher:before,
+.dlt-icon-arrow-down:before,
+.dlt-icon-arrow-left:before,
+.dlt-icon-arrow-right:before,
+.dlt-icon-arrow-up:before,
+.dlt-icon-attach:before,
+.dlt-icon-badge:before,
+.dlt-icon-bar-chart:before,
+.dlt-icon-bluetooth-symbol:before,
+.dlt-icon-body:before,
+.dlt-icon-bookmark:before,
+.dlt-icon-breadcrumb:before,
+.dlt-icon-briefcase:before,
+.dlt-icon-bug:before,
+.dlt-icon-building:before,
+.dlt-icon-button:before,
+.dlt-icon-buy:before,
+.dlt-icon-calculator:before,
+.dlt-icon-calendar:before,
+.dlt-icon-calendar-add:before,
+.dlt-icon-calendar-remove:before,
+.dlt-icon-cam:before,
+.dlt-icon-car:before,
+.dlt-icon-card:before,
+.dlt-icon-caret-down:before,
+.dlt-icon-caret-left:before,
+.dlt-icon-caret-right:before,
+.dlt-icon-caret-up:before,
+.dlt-icon-case:before,
+.dlt-icon-centralized-network:before,
+.dlt-icon-chat:before,
+.dlt-icon-check:before,
+.dlt-icon-check-circle:before,
+.dlt-icon-checkbox-selected:before,
+.dlt-icon-checkbox-unselected:before,
+.dlt-icon-chevron-breadcrumb:before,
+.dlt-icon-chevron-circle-down:before,
+.dlt-icon-chevron-circle-left:before,
+.dlt-icon-chevron-circle-right:before,
+.dlt-icon-chevron-circle-up:before,
+.dlt-icon-chevron-double-down:before,
+.dlt-icon-chevron-double-left:before,
+.dlt-icon-chevron-double-right:before,
+.dlt-icon-chevron-double-up:before,
+.dlt-icon-chevron-down:before,
+.dlt-icon-chevron-left:before,
+.dlt-icon-chevron-right:before,
+.dlt-icon-chevron-up:before,
+.dlt-icon-clipboard-with-a-green-tick:before,
+.dlt-icon-clock:before,
+.dlt-icon-close:before,
+.dlt-icon-cloud:before,
+.dlt-icon-cloud-checked:before,
+.dlt-icon-cloud-download:before,
+.dlt-icon-cloud-error:before,
+.dlt-icon-cloud-minus:before,
+.dlt-icon-cloud-plus:before,
+.dlt-icon-cloud-remote-working:before,
+.dlt-icon-cloud-restricted:before,
+.dlt-icon-cloud-search:before,
+.dlt-icon-cloud-settings:before,
+.dlt-icon-cloud-unavailable:before,
+.dlt-icon-cloud-upload:before,
+.dlt-icon-code:before,
+.dlt-icon-collapse:before,
+.dlt-icon-column:before,
+.dlt-icon-compass:before,
+.dlt-icon-connected:before,
+.dlt-icon-contacts-book:before,
+.dlt-icon-contract:before,
+.dlt-icon-copy:before,
+.dlt-icon-cross:before,
+.dlt-icon-customize:before,
+.dlt-icon-dashboard:before,
+.dlt-icon-data-transfer:before,
+.dlt-icon-database:before,
+.dlt-icon-database-administrator:before,
+.dlt-icon-delete:before,
+.dlt-icon-density-column-customization:before,
+.dlt-icon-density-large:before,
+.dlt-icon-density-medium:before,
+.dlt-icon-density-small:before,
+.dlt-icon-density-xlarge:before,
+.dlt-icon-department:before,
+.dlt-icon-deploy:before,
+.dlt-icon-desktop:before,
+.dlt-icon-disconnected:before,
+.dlt-icon-document:before,
+.dlt-icon-document-with-a-check-mark:before,
+.dlt-icon-document-with-code:before,
+.dlt-icon-documents:before,
+.dlt-icon-download:before,
+.dlt-icon-dropdown:before,
+.dlt-icon-duplicate:before,
+.dlt-icon-edit:before,
+.dlt-icon-edit-file:before,
+.dlt-icon-error:before,
+.dlt-icon-expand:before,
+.dlt-icon-external-link:before,
+.dlt-icon-filter:before,
+.dlt-icon-flag-outline:before,
+.dlt-icon-flow:before,
+.dlt-icon-flow-chart:before,
+.dlt-icon-folder:before,
+.dlt-icon-footer:before,
+.dlt-icon-fullscreen:before,
+.dlt-icon-fullscreen-exit:before,
+.dlt-icon-gift:before,
+.dlt-icon-goal:before,
+.dlt-icon-graph:before,
+.dlt-icon-grid:before,
+.dlt-icon-group:before,
+.dlt-icon-hamburger:before,
+.dlt-icon-hashtag:before,
+.dlt-icon-header:before,
+.dlt-icon-health-examine:before,
+.dlt-icon-heart:before,
+.dlt-icon-help:before,
+.dlt-icon-home:before,
+.dlt-icon-identification-documents:before,
+.dlt-icon-info:before,
+.dlt-icon-invoice:before,
+.dlt-icon-key:before,
+.dlt-icon-landing-page:before,
+.dlt-icon-light-bulb-outline:before,
+.dlt-icon-link:before,
+.dlt-icon-list:before,
+.dlt-icon-lock:before,
+.dlt-icon-mail:before,
+.dlt-icon-marker:before,
+.dlt-icon-mind-map:before,
+.dlt-icon-minus:before,
+.dlt-icon-more-menu:before,
+.dlt-icon-network:before,
+.dlt-icon-notification:before,
+.dlt-icon-online:before,
+.dlt-icon-open:before,
+.dlt-icon-open-document:before,
+.dlt-icon-pages:before,
+.dlt-icon-palette:before,
+.dlt-icon-parking:before,
+.dlt-icon-password:before,
+.dlt-icon-password-hide:before,
+.dlt-icon-password-show:before,
+.dlt-icon-paste:before,
+.dlt-icon-photo-gallery:before,
+.dlt-icon-picture:before,
+.dlt-icon-pie-chart:before,
+.dlt-icon-plus:before,
+.dlt-icon-price-tag:before,
+.dlt-icon-print:before,
+.dlt-icon-process:before,
+.dlt-icon-product:before,
+.dlt-icon-profile:before,
+.dlt-icon-qr-code:before,
+.dlt-icon-redo:before,
+.dlt-icon-refresh:before,
+.dlt-icon-restore:before,
+.dlt-icon-robot:before,
+.dlt-icon-row:before,
+.dlt-icon-ruler:before,
+.dlt-icon-ruler-pencil:before,
+.dlt-icon-rules:before,
+.dlt-icon-sales-performance:before,
+.dlt-icon-search:before,
+.dlt-icon-send:before,
+.dlt-icon-sensor:before,
+.dlt-icon-server:before,
+.dlt-icon-settings:before,
+.dlt-icon-share:before,
+.dlt-icon-sheet-of-paper:before,
+.dlt-icon-shield:before,
+.dlt-icon-small-business:before,
+.dlt-icon-stacked-organizational-chart:before,
+.dlt-icon-star:before,
+.dlt-icon-storage:before,
+.dlt-icon-submit-document:before,
+.dlt-icon-success:before,
+.dlt-icon-tab:before,
+.dlt-icon-table:before,
+.dlt-icon-tag:before,
+.dlt-icon-target-symbol:before,
+.dlt-icon-team:before,
+.dlt-icon-temperature:before,
+.dlt-icon-text-input:before,
+.dlt-icon-unbookmark:before,
+.dlt-icon-undo:before,
+.dlt-icon-ungroup:before,
+.dlt-icon-unheart:before,
+.dlt-icon-unlink:before,
+.dlt-icon-unlock:before,
+.dlt-icon-unsort:before,
+.dlt-icon-unstar:before,
+.dlt-icon-up-down-arrows:before,
+.dlt-icon-upload:before,
+.dlt-icon-warning:before,
+.dlt-icon-wireless-network:before,
+.dlt-icon-workspace:before {
+  display: inline-block;
+  font-family: "dlt-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.dlt-icon-accessibility-settings:before { content: "\f100"; }
+.dlt-icon-accounting:before { content: "\f101"; }
+.dlt-icon-add-identity-provider:before { content: "\f1b7"; }
+.dlt-icon-add-tag:before { content: "\f102"; }
+.dlt-icon-add-user:before { content: "\f103"; }
+.dlt-icon-alarm:before { content: "\f104"; }
+.dlt-icon-app-switcher:before { content: "\f105"; }
+.dlt-icon-arrow-down:before { content: "\f106"; }
+.dlt-icon-arrow-left:before { content: "\f107"; }
+.dlt-icon-arrow-right:before { content: "\f108"; }
+.dlt-icon-arrow-up:before { content: "\f1ca"; }
+.dlt-icon-attach:before { content: "\f10c"; }
+.dlt-icon-badge:before { content: "\f10d"; }
+.dlt-icon-bar-chart:before { content: "\f10e"; }
+.dlt-icon-bluetooth-symbol:before { content: "\f10f"; }
+.dlt-icon-body:before { content: "\f110"; }
+.dlt-icon-bookmark:before { content: "\f111"; }
+.dlt-icon-breadcrumb:before { content: "\f112"; }
+.dlt-icon-briefcase:before { content: "\f113"; }
+.dlt-icon-bug:before { content: "\f114"; }
+.dlt-icon-building:before { content: "\f115"; }
+.dlt-icon-button:before { content: "\f116"; }
+.dlt-icon-buy:before { content: "\f117"; }
+.dlt-icon-calculator:before { content: "\f118"; }
+.dlt-icon-calendar:before { content: "\f119"; }
+.dlt-icon-calendar-add:before { content: "\f11a"; }
+.dlt-icon-calendar-remove:before { content: "\f11b"; }
+.dlt-icon-cam:before { content: "\f11c"; }
+.dlt-icon-car:before { content: "\f11d"; }
+.dlt-icon-card:before { content: "\f11e"; }
+.dlt-icon-caret-down:before { content: "\f1da"; }
+.dlt-icon-caret-left:before { content: "\f1db"; }
+.dlt-icon-caret-right:before { content: "\f1dc"; }
+.dlt-icon-caret-up:before { content: "\f1dd"; }
+.dlt-icon-case:before { content: "\f127"; }
+.dlt-icon-centralized-network:before { content: "\f128"; }
+.dlt-icon-chat:before { content: "\f129"; }
+.dlt-icon-check:before { content: "\f1bf"; }
+.dlt-icon-check-circle:before { content: "\f1de"; }
+.dlt-icon-checkbox-selected:before { content: "\f1d0"; }
+.dlt-icon-checkbox-unselected:before { content: "\f1d1"; }
+.dlt-icon-chevron-breadcrumb:before { content: "\f1df"; }
+.dlt-icon-chevron-circle-down:before { content: "\f1e0"; }
+.dlt-icon-chevron-circle-left:before { content: "\f1e1"; }
+.dlt-icon-chevron-circle-right:before { content: "\f1e2"; }
+.dlt-icon-chevron-circle-up:before { content: "\f1e3"; }
+.dlt-icon-chevron-double-down:before { content: "\f1e4"; }
+.dlt-icon-chevron-double-left:before { content: "\f1e5"; }
+.dlt-icon-chevron-double-right:before { content: "\f1e6"; }
+.dlt-icon-chevron-double-up:before { content: "\f1e7"; }
+.dlt-icon-chevron-down:before { content: "\f1e8"; }
+.dlt-icon-chevron-left:before { content: "\f1e9"; }
+.dlt-icon-chevron-right:before { content: "\f1ea"; }
+.dlt-icon-chevron-up:before { content: "\f1eb"; }
+.dlt-icon-clipboard-with-a-green-tick:before { content: "\f12d"; }
+.dlt-icon-clock:before { content: "\f12e"; }
+.dlt-icon-close:before { content: "\f12f"; }
+.dlt-icon-cloud:before { content: "\f130"; }
+.dlt-icon-cloud-checked:before { content: "\f1b8"; }
+.dlt-icon-cloud-download:before { content: "\f131"; }
+.dlt-icon-cloud-error:before { content: "\f1b9"; }
+.dlt-icon-cloud-minus:before { content: "\f132"; }
+.dlt-icon-cloud-plus:before { content: "\f133"; }
+.dlt-icon-cloud-remote-working:before { content: "\f1ba"; }
+.dlt-icon-cloud-restricted:before { content: "\f134"; }
+.dlt-icon-cloud-search:before { content: "\f1bb"; }
+.dlt-icon-cloud-settings:before { content: "\f1bc"; }
+.dlt-icon-cloud-unavailable:before { content: "\f1bd"; }
+.dlt-icon-cloud-upload:before { content: "\f135"; }
+.dlt-icon-code:before { content: "\f136"; }
+.dlt-icon-collapse:before { content: "\f137"; }
+.dlt-icon-column:before { content: "\f138"; }
+.dlt-icon-compass:before { content: "\f139"; }
+.dlt-icon-connected:before { content: "\f13a"; }
+.dlt-icon-contacts-book:before { content: "\f13b"; }
+.dlt-icon-contract:before { content: "\f13c"; }
+.dlt-icon-copy:before { content: "\f1d2"; }
+.dlt-icon-cross:before { content: "\f1ec"; }
+.dlt-icon-customize:before { content: "\f13e"; }
+.dlt-icon-dashboard:before { content: "\f13f"; }
+.dlt-icon-data-transfer:before { content: "\f140"; }
+.dlt-icon-database:before { content: "\f141"; }
+.dlt-icon-database-administrator:before { content: "\f142"; }
+.dlt-icon-delete:before { content: "\f143"; }
+.dlt-icon-density-column-customization:before { content: "\f1c0"; }
+.dlt-icon-density-large:before { content: "\f1c1"; }
+.dlt-icon-density-medium:before { content: "\f1c2"; }
+.dlt-icon-density-small:before { content: "\f1c3"; }
+.dlt-icon-density-xlarge:before { content: "\f1c4"; }
+.dlt-icon-department:before { content: "\f144"; }
+.dlt-icon-deploy:before { content: "\f145"; }
+.dlt-icon-desktop:before { content: "\f146"; }
+.dlt-icon-disconnected:before { content: "\f147"; }
+.dlt-icon-document:before { content: "\f148"; }
+.dlt-icon-document-with-a-check-mark:before { content: "\f149"; }
+.dlt-icon-document-with-code:before { content: "\f14a"; }
+.dlt-icon-documents:before { content: "\f14b"; }
+.dlt-icon-download:before { content: "\f150"; }
+.dlt-icon-dropdown:before { content: "\f151"; }
+.dlt-icon-duplicate:before { content: "\f1d8"; }
+.dlt-icon-edit:before { content: "\f152"; }
+.dlt-icon-edit-file:before { content: "\f153"; }
+.dlt-icon-error:before { content: "\f1ed"; }
+.dlt-icon-expand:before { content: "\f156"; }
+.dlt-icon-external-link:before { content: "\f157"; }
+.dlt-icon-filter:before { content: "\f158"; }
+.dlt-icon-flag-outline:before { content: "\f159"; }
+.dlt-icon-flow:before { content: "\f15a"; }
+.dlt-icon-flow-chart:before { content: "\f15b"; }
+.dlt-icon-folder:before { content: "\f15c"; }
+.dlt-icon-footer:before { content: "\f15d"; }
+.dlt-icon-fullscreen:before { content: "\f15e"; }
+.dlt-icon-fullscreen-exit:before { content: "\f1ee"; }
+.dlt-icon-gift:before { content: "\f15f"; }
+.dlt-icon-goal:before { content: "\f160"; }
+.dlt-icon-graph:before { content: "\f161"; }
+.dlt-icon-grid:before { content: "\f162"; }
+.dlt-icon-group:before { content: "\f163"; }
+.dlt-icon-hamburger:before { content: "\f164"; }
+.dlt-icon-hashtag:before { content: "\f165"; }
+.dlt-icon-header:before { content: "\f166"; }
+.dlt-icon-health-examine:before { content: "\f167"; }
+.dlt-icon-heart:before { content: "\f168"; }
+.dlt-icon-help:before { content: "\f169"; }
+.dlt-icon-home:before { content: "\f16a"; }
+.dlt-icon-identification-documents:before { content: "\f16b"; }
+.dlt-icon-info:before { content: "\f1ef"; }
+.dlt-icon-invoice:before { content: "\f16d"; }
+.dlt-icon-key:before { content: "\f16e"; }
+.dlt-icon-landing-page:before { content: "\f16f"; }
+.dlt-icon-light-bulb-outline:before { content: "\f170"; }
+.dlt-icon-link:before { content: "\f171"; }
+.dlt-icon-list:before { content: "\f172"; }
+.dlt-icon-lock:before { content: "\f173"; }
+.dlt-icon-mail:before { content: "\f174"; }
+.dlt-icon-marker:before { content: "\f175"; }
+.dlt-icon-mind-map:before { content: "\f176"; }
+.dlt-icon-minus:before { content: "\f1f0"; }
+.dlt-icon-more-menu:before { content: "\f178"; }
+.dlt-icon-network:before { content: "\f179"; }
+.dlt-icon-notification:before { content: "\f17a"; }
+.dlt-icon-online:before { content: "\f17b"; }
+.dlt-icon-open:before { content: "\f17c"; }
+.dlt-icon-open-document:before { content: "\f17d"; }
+.dlt-icon-pages:before { content: "\f17e"; }
+.dlt-icon-palette:before { content: "\f17f"; }
+.dlt-icon-parking:before { content: "\f180"; }
+.dlt-icon-password:before { content: "\f181"; }
+.dlt-icon-password-hide:before { content: "\f182"; }
+.dlt-icon-password-show:before { content: "\f183"; }
+.dlt-icon-paste:before { content: "\f1d9"; }
+.dlt-icon-photo-gallery:before { content: "\f184"; }
+.dlt-icon-picture:before { content: "\f185"; }
+.dlt-icon-pie-chart:before { content: "\f186"; }
+.dlt-icon-plus:before { content: "\f1f1"; }
+.dlt-icon-price-tag:before { content: "\f188"; }
+.dlt-icon-print:before { content: "\f189"; }
+.dlt-icon-process:before { content: "\f18a"; }
+.dlt-icon-product:before { content: "\f18b"; }
+.dlt-icon-profile:before { content: "\f18c"; }
+.dlt-icon-qr-code:before { content: "\f18d"; }
+.dlt-icon-redo:before { content: "\f18e"; }
+.dlt-icon-refresh:before { content: "\f18f"; }
+.dlt-icon-restore:before { content: "\f190"; }
+.dlt-icon-robot:before { content: "\f191"; }
+.dlt-icon-row:before { content: "\f192"; }
+.dlt-icon-ruler:before { content: "\f193"; }
+.dlt-icon-ruler-pencil:before { content: "\f194"; }
+.dlt-icon-rules:before { content: "\f195"; }
+.dlt-icon-sales-performance:before { content: "\f196"; }
+.dlt-icon-search:before { content: "\f197"; }
+.dlt-icon-send:before { content: "\f198"; }
+.dlt-icon-sensor:before { content: "\f199"; }
+.dlt-icon-server:before { content: "\f19a"; }
+.dlt-icon-settings:before { content: "\f19b"; }
+.dlt-icon-share:before { content: "\f19c"; }
+.dlt-icon-sheet-of-paper:before { content: "\f19d"; }
+.dlt-icon-shield:before { content: "\f19e"; }
+.dlt-icon-small-business:before { content: "\f19f"; }
+.dlt-icon-stacked-organizational-chart:before { content: "\f1a0"; }
+.dlt-icon-star:before { content: "\f1a1"; }
+.dlt-icon-storage:before { content: "\f1a2"; }
+.dlt-icon-submit-document:before { content: "\f1a3"; }
+.dlt-icon-success:before { content: "\f1f2"; }
+.dlt-icon-tab:before { content: "\f1a5"; }
+.dlt-icon-table:before { content: "\f1a6"; }
+.dlt-icon-tag:before { content: "\f1a7"; }
+.dlt-icon-target-symbol:before { content: "\f1a8"; }
+.dlt-icon-team:before { content: "\f1a9"; }
+.dlt-icon-temperature:before { content: "\f1aa"; }
+.dlt-icon-text-input:before { content: "\f1ab"; }
+.dlt-icon-unbookmark:before { content: "\f1ac"; }
+.dlt-icon-undo:before { content: "\f1ad"; }
+.dlt-icon-ungroup:before { content: "\f1ae"; }
+.dlt-icon-unheart:before { content: "\f1af"; }
+.dlt-icon-unlink:before { content: "\f1b0"; }
+.dlt-icon-unlock:before { content: "\f1b1"; }
+.dlt-icon-unsort:before { content: "\f1c9"; }
+.dlt-icon-unstar:before { content: "\f1b2"; }
+.dlt-icon-up-down-arrows:before { content: "\f1be"; }
+.dlt-icon-upload:before { content: "\f1b3"; }
+.dlt-icon-warning:before { content: "\f1f3"; }
+.dlt-icon-wireless-network:before { content: "\f1b5"; }
+.dlt-icon-workspace:before { content: "\f1b6"; }
+
+$font-dlt-icons-dlt-icon-accessibility-settings: "\f100";
+$font-dlt-icons-dlt-icon-accounting: "\f101";
+$font-dlt-icons-dlt-icon-add-identity-provider: "\f1b7";
+$font-dlt-icons-dlt-icon-add-tag: "\f102";
+$font-dlt-icons-dlt-icon-add-user: "\f103";
+$font-dlt-icons-dlt-icon-alarm: "\f104";
+$font-dlt-icons-dlt-icon-app-switcher: "\f105";
+$font-dlt-icons-dlt-icon-arrow-down: "\f106";
+$font-dlt-icons-dlt-icon-arrow-left: "\f107";
+$font-dlt-icons-dlt-icon-arrow-right: "\f108";
+$font-dlt-icons-dlt-icon-arrow-up: "\f1ca";
+$font-dlt-icons-dlt-icon-attach: "\f10c";
+$font-dlt-icons-dlt-icon-badge: "\f10d";
+$font-dlt-icons-dlt-icon-bar-chart: "\f10e";
+$font-dlt-icons-dlt-icon-bluetooth-symbol: "\f10f";
+$font-dlt-icons-dlt-icon-body: "\f110";
+$font-dlt-icons-dlt-icon-bookmark: "\f111";
+$font-dlt-icons-dlt-icon-breadcrumb: "\f112";
+$font-dlt-icons-dlt-icon-briefcase: "\f113";
+$font-dlt-icons-dlt-icon-bug: "\f114";
+$font-dlt-icons-dlt-icon-building: "\f115";
+$font-dlt-icons-dlt-icon-button: "\f116";
+$font-dlt-icons-dlt-icon-buy: "\f117";
+$font-dlt-icons-dlt-icon-calculator: "\f118";
+$font-dlt-icons-dlt-icon-calendar: "\f119";
+$font-dlt-icons-dlt-icon-calendar-add: "\f11a";
+$font-dlt-icons-dlt-icon-calendar-remove: "\f11b";
+$font-dlt-icons-dlt-icon-cam: "\f11c";
+$font-dlt-icons-dlt-icon-car: "\f11d";
+$font-dlt-icons-dlt-icon-card: "\f11e";
+$font-dlt-icons-dlt-icon-caret-down: "\f1da";
+$font-dlt-icons-dlt-icon-caret-left: "\f1db";
+$font-dlt-icons-dlt-icon-caret-right: "\f1dc";
+$font-dlt-icons-dlt-icon-caret-up: "\f1dd";
+$font-dlt-icons-dlt-icon-case: "\f127";
+$font-dlt-icons-dlt-icon-centralized-network: "\f128";
+$font-dlt-icons-dlt-icon-chat: "\f129";
+$font-dlt-icons-dlt-icon-check: "\f1bf";
+$font-dlt-icons-dlt-icon-check-circle: "\f1de";
+$font-dlt-icons-dlt-icon-checkbox-selected: "\f1d0";
+$font-dlt-icons-dlt-icon-checkbox-unselected: "\f1d1";
+$font-dlt-icons-dlt-icon-chevron-breadcrumb: "\f1df";
+$font-dlt-icons-dlt-icon-chevron-circle-down: "\f1e0";
+$font-dlt-icons-dlt-icon-chevron-circle-left: "\f1e1";
+$font-dlt-icons-dlt-icon-chevron-circle-right: "\f1e2";
+$font-dlt-icons-dlt-icon-chevron-circle-up: "\f1e3";
+$font-dlt-icons-dlt-icon-chevron-double-down: "\f1e4";
+$font-dlt-icons-dlt-icon-chevron-double-left: "\f1e5";
+$font-dlt-icons-dlt-icon-chevron-double-right: "\f1e6";
+$font-dlt-icons-dlt-icon-chevron-double-up: "\f1e7";
+$font-dlt-icons-dlt-icon-chevron-down: "\f1e8";
+$font-dlt-icons-dlt-icon-chevron-left: "\f1e9";
+$font-dlt-icons-dlt-icon-chevron-right: "\f1ea";
+$font-dlt-icons-dlt-icon-chevron-up: "\f1eb";
+$font-dlt-icons-dlt-icon-clipboard-with-a-green-tick: "\f12d";
+$font-dlt-icons-dlt-icon-clock: "\f12e";
+$font-dlt-icons-dlt-icon-close: "\f12f";
+$font-dlt-icons-dlt-icon-cloud: "\f130";
+$font-dlt-icons-dlt-icon-cloud-checked: "\f1b8";
+$font-dlt-icons-dlt-icon-cloud-download: "\f131";
+$font-dlt-icons-dlt-icon-cloud-error: "\f1b9";
+$font-dlt-icons-dlt-icon-cloud-minus: "\f132";
+$font-dlt-icons-dlt-icon-cloud-plus: "\f133";
+$font-dlt-icons-dlt-icon-cloud-remote-working: "\f1ba";
+$font-dlt-icons-dlt-icon-cloud-restricted: "\f134";
+$font-dlt-icons-dlt-icon-cloud-search: "\f1bb";
+$font-dlt-icons-dlt-icon-cloud-settings: "\f1bc";
+$font-dlt-icons-dlt-icon-cloud-unavailable: "\f1bd";
+$font-dlt-icons-dlt-icon-cloud-upload: "\f135";
+$font-dlt-icons-dlt-icon-code: "\f136";
+$font-dlt-icons-dlt-icon-collapse: "\f137";
+$font-dlt-icons-dlt-icon-column: "\f138";
+$font-dlt-icons-dlt-icon-compass: "\f139";
+$font-dlt-icons-dlt-icon-connected: "\f13a";
+$font-dlt-icons-dlt-icon-contacts-book: "\f13b";
+$font-dlt-icons-dlt-icon-contract: "\f13c";
+$font-dlt-icons-dlt-icon-copy: "\f1d2";
+$font-dlt-icons-dlt-icon-cross: "\f1ec";
+$font-dlt-icons-dlt-icon-customize: "\f13e";
+$font-dlt-icons-dlt-icon-dashboard: "\f13f";
+$font-dlt-icons-dlt-icon-data-transfer: "\f140";
+$font-dlt-icons-dlt-icon-database: "\f141";
+$font-dlt-icons-dlt-icon-database-administrator: "\f142";
+$font-dlt-icons-dlt-icon-delete: "\f143";
+$font-dlt-icons-dlt-icon-density-column-customization: "\f1c0";
+$font-dlt-icons-dlt-icon-density-large: "\f1c1";
+$font-dlt-icons-dlt-icon-density-medium: "\f1c2";
+$font-dlt-icons-dlt-icon-density-small: "\f1c3";
+$font-dlt-icons-dlt-icon-density-xlarge: "\f1c4";
+$font-dlt-icons-dlt-icon-department: "\f144";
+$font-dlt-icons-dlt-icon-deploy: "\f145";
+$font-dlt-icons-dlt-icon-desktop: "\f146";
+$font-dlt-icons-dlt-icon-disconnected: "\f147";
+$font-dlt-icons-dlt-icon-document: "\f148";
+$font-dlt-icons-dlt-icon-document-with-a-check-mark: "\f149";
+$font-dlt-icons-dlt-icon-document-with-code: "\f14a";
+$font-dlt-icons-dlt-icon-documents: "\f14b";
+$font-dlt-icons-dlt-icon-download: "\f150";
+$font-dlt-icons-dlt-icon-dropdown: "\f151";
+$font-dlt-icons-dlt-icon-duplicate: "\f1d8";
+$font-dlt-icons-dlt-icon-edit: "\f152";
+$font-dlt-icons-dlt-icon-edit-file: "\f153";
+$font-dlt-icons-dlt-icon-error: "\f1ed";
+$font-dlt-icons-dlt-icon-expand: "\f156";
+$font-dlt-icons-dlt-icon-external-link: "\f157";
+$font-dlt-icons-dlt-icon-filter: "\f158";
+$font-dlt-icons-dlt-icon-flag-outline: "\f159";
+$font-dlt-icons-dlt-icon-flow: "\f15a";
+$font-dlt-icons-dlt-icon-flow-chart: "\f15b";
+$font-dlt-icons-dlt-icon-folder: "\f15c";
+$font-dlt-icons-dlt-icon-footer: "\f15d";
+$font-dlt-icons-dlt-icon-fullscreen: "\f15e";
+$font-dlt-icons-dlt-icon-fullscreen-exit: "\f1ee";
+$font-dlt-icons-dlt-icon-gift: "\f15f";
+$font-dlt-icons-dlt-icon-goal: "\f160";
+$font-dlt-icons-dlt-icon-graph: "\f161";
+$font-dlt-icons-dlt-icon-grid: "\f162";
+$font-dlt-icons-dlt-icon-group: "\f163";
+$font-dlt-icons-dlt-icon-hamburger: "\f164";
+$font-dlt-icons-dlt-icon-hashtag: "\f165";
+$font-dlt-icons-dlt-icon-header: "\f166";
+$font-dlt-icons-dlt-icon-health-examine: "\f167";
+$font-dlt-icons-dlt-icon-heart: "\f168";
+$font-dlt-icons-dlt-icon-help: "\f169";
+$font-dlt-icons-dlt-icon-home: "\f16a";
+$font-dlt-icons-dlt-icon-identification-documents: "\f16b";
+$font-dlt-icons-dlt-icon-info: "\f1ef";
+$font-dlt-icons-dlt-icon-invoice: "\f16d";
+$font-dlt-icons-dlt-icon-key: "\f16e";
+$font-dlt-icons-dlt-icon-landing-page: "\f16f";
+$font-dlt-icons-dlt-icon-light-bulb-outline: "\f170";
+$font-dlt-icons-dlt-icon-link: "\f171";
+$font-dlt-icons-dlt-icon-list: "\f172";
+$font-dlt-icons-dlt-icon-lock: "\f173";
+$font-dlt-icons-dlt-icon-mail: "\f174";
+$font-dlt-icons-dlt-icon-marker: "\f175";
+$font-dlt-icons-dlt-icon-mind-map: "\f176";
+$font-dlt-icons-dlt-icon-minus: "\f1f0";
+$font-dlt-icons-dlt-icon-more-menu: "\f178";
+$font-dlt-icons-dlt-icon-network: "\f179";
+$font-dlt-icons-dlt-icon-notification: "\f17a";
+$font-dlt-icons-dlt-icon-online: "\f17b";
+$font-dlt-icons-dlt-icon-open: "\f17c";
+$font-dlt-icons-dlt-icon-open-document: "\f17d";
+$font-dlt-icons-dlt-icon-pages: "\f17e";
+$font-dlt-icons-dlt-icon-palette: "\f17f";
+$font-dlt-icons-dlt-icon-parking: "\f180";
+$font-dlt-icons-dlt-icon-password: "\f181";
+$font-dlt-icons-dlt-icon-password-hide: "\f182";
+$font-dlt-icons-dlt-icon-password-show: "\f183";
+$font-dlt-icons-dlt-icon-paste: "\f1d9";
+$font-dlt-icons-dlt-icon-photo-gallery: "\f184";
+$font-dlt-icons-dlt-icon-picture: "\f185";
+$font-dlt-icons-dlt-icon-pie-chart: "\f186";
+$font-dlt-icons-dlt-icon-plus: "\f1f1";
+$font-dlt-icons-dlt-icon-price-tag: "\f188";
+$font-dlt-icons-dlt-icon-print: "\f189";
+$font-dlt-icons-dlt-icon-process: "\f18a";
+$font-dlt-icons-dlt-icon-product: "\f18b";
+$font-dlt-icons-dlt-icon-profile: "\f18c";
+$font-dlt-icons-dlt-icon-qr-code: "\f18d";
+$font-dlt-icons-dlt-icon-redo: "\f18e";
+$font-dlt-icons-dlt-icon-refresh: "\f18f";
+$font-dlt-icons-dlt-icon-restore: "\f190";
+$font-dlt-icons-dlt-icon-robot: "\f191";
+$font-dlt-icons-dlt-icon-row: "\f192";
+$font-dlt-icons-dlt-icon-ruler: "\f193";
+$font-dlt-icons-dlt-icon-ruler-pencil: "\f194";
+$font-dlt-icons-dlt-icon-rules: "\f195";
+$font-dlt-icons-dlt-icon-sales-performance: "\f196";
+$font-dlt-icons-dlt-icon-search: "\f197";
+$font-dlt-icons-dlt-icon-send: "\f198";
+$font-dlt-icons-dlt-icon-sensor: "\f199";
+$font-dlt-icons-dlt-icon-server: "\f19a";
+$font-dlt-icons-dlt-icon-settings: "\f19b";
+$font-dlt-icons-dlt-icon-share: "\f19c";
+$font-dlt-icons-dlt-icon-sheet-of-paper: "\f19d";
+$font-dlt-icons-dlt-icon-shield: "\f19e";
+$font-dlt-icons-dlt-icon-small-business: "\f19f";
+$font-dlt-icons-dlt-icon-stacked-organizational-chart: "\f1a0";
+$font-dlt-icons-dlt-icon-star: "\f1a1";
+$font-dlt-icons-dlt-icon-storage: "\f1a2";
+$font-dlt-icons-dlt-icon-submit-document: "\f1a3";
+$font-dlt-icons-dlt-icon-success: "\f1f2";
+$font-dlt-icons-dlt-icon-tab: "\f1a5";
+$font-dlt-icons-dlt-icon-table: "\f1a6";
+$font-dlt-icons-dlt-icon-tag: "\f1a7";
+$font-dlt-icons-dlt-icon-target-symbol: "\f1a8";
+$font-dlt-icons-dlt-icon-team: "\f1a9";
+$font-dlt-icons-dlt-icon-temperature: "\f1aa";
+$font-dlt-icons-dlt-icon-text-input: "\f1ab";
+$font-dlt-icons-dlt-icon-unbookmark: "\f1ac";
+$font-dlt-icons-dlt-icon-undo: "\f1ad";
+$font-dlt-icons-dlt-icon-ungroup: "\f1ae";
+$font-dlt-icons-dlt-icon-unheart: "\f1af";
+$font-dlt-icons-dlt-icon-unlink: "\f1b0";
+$font-dlt-icons-dlt-icon-unlock: "\f1b1";
+$font-dlt-icons-dlt-icon-unsort: "\f1c9";
+$font-dlt-icons-dlt-icon-unstar: "\f1b2";
+$font-dlt-icons-dlt-icon-up-down-arrows: "\f1be";
+$font-dlt-icons-dlt-icon-upload: "\f1b3";
+$font-dlt-icons-dlt-icon-warning: "\f1f3";
+$font-dlt-icons-dlt-icon-wireless-network: "\f1b5";
+$font-dlt-icons-dlt-icon-workspace: "\f1b6";

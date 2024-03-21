@@ -1,0 +1,78 @@
+/* =====================================================
+    TAB BARS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$tab-bars-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$tab-bars-title-font-weight:                        var(--dlt-font-weight-regular, 400);
+$tab-bars-title-font-size:                          var(--dlt-font-size-sm, 1rem);
+$tab-bars-title-font-weight-selected:               var(--dlt-font-weight-medium, 500);
+$tab-bars-title-max-width:                          320px;
+
+$tab-bars-border-radii:                             var(--dlt-border-radii-default, 0);
+$tab-bars-border-style:                             var(--dlt-border-style-default, solid);
+$tab-bars-border-width:                             var(--dlt-border-width-default, 1px);
+$tab-bars-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+$tab-bars-title-padding:                            var(--dlt-spacing-1-x, .5rem)
+                                                    var(--dlt-spacing-1-x, .5rem)
+                                                    var(--dlt-spacing-1-x, .5rem)
+                                                    var(--dlt-spacing-1-x, .5rem);
+
+$tab-bars-title-padding-hover-focus:                calc(var(--dlt-spacing-1-x, .5rem) - $tab-bars-border-width-hover)
+                                                    calc(var(--dlt-spacing-1-x, .5rem) - $tab-bars-border-width-hover)
+                                                    calc(var(--dlt-spacing-1-x, .5rem) - $tab-bars-border-width-hover)
+                                                    calc(var(--dlt-spacing-1-x, .5rem) - $tab-bars-border-width-hover);
+
+$tab-bars-title-padding-right-selected:             calc(var(--dlt-spacing-1-x, .5rem) - $tab-bars-border-width-hover + 1px);
+$tab-bars-title-padding-right-selected-hover-focus: calc(var(--dlt-spacing-1-x, .5rem) - $tab-bars-border-width-hover - 1px);
+
+$tab-bars-content-padding:                          var(--dlt-spacing-3-x, 1.5rem);
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'tab-bars';
+
+$tab-bars-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$tab-bars-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$tab-bars-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$tab-bars-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$tab-bars-color-background-active:                  var(--dlt-#{$el}-color-background-default, $component-color-background-default); 
+$tab-bars-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$tab-bars-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$tab-bars-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$tab-bars-color-border-focus:                       var(--dlt-#{$el}-color-border-separator, $component-color-border-separator); 
+
+$tab-bars-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$tab-bars-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$tab-bars-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+
+$tab-bars-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$tab-bars-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$tab-bars-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$tab-bars-color-text-interactive-muted:                         var(--dlt-#{$el}-color-text-muted, $component-color-text-interactive-muted); 
+
+$tab-bars-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$tab-bars-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active); 
+$tab-bars-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+$tab-bars-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active); 
+$tab-bars-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); 
+
+$tab-bars-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$tab-bars-color-icon:                               var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary);
+$tab-bars-color-icon-muted-secondary:                         var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary); 
+$tab-bars-color-icon-muted-primary:                          var(--dlt-#{$el}-color-icon-muted-primary, $component-color-icon-muted-primary);
+
+$tab-bars-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$tab-bars-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

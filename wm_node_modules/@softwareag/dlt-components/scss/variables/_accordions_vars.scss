@@ -1,0 +1,59 @@
+/* =====================================================
+    ACCORDION SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$accordion-border-radii:                             var(--dlt-border-radii-default, 0);
+$accordion-border-style:                             var(--dlt-border-style-default, solid);
+$accordion-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$accordion-border-width:                             var(--dlt-border-width-default,  1px);
+$accordion-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+$accordion-box-shadow:                               var(--dlt-elevation-default, 0 0 0 0 hsla(0, 0%, 0%, 0));
+
+$accordion-content-space-top:                        calc(var(--dlt-spacing-1-x-half, .75rem) + var(--dlt-border-width-default,  1px));
+$accordion-content-space-right:                      var(--dlt-spacing-1-x-half, .75rem); 
+$accordion-content-space-bottom:                     var(--dlt-spacing-1-x-half, .75rem); 
+$accordion-content-space-left:                       var(--dlt-spacing-6-x, 3rem);
+$accordion-content-font-size:                        var(--dlt-font-size-xs, 0.875rem);
+$accordion-content-font-weight:                      var(--dlt-font-weight-regular, $font-weight-regular);
+$accordion-content-font-line-height:                 var(--dlt-font-line-height-xxs, 1.5);
+
+$accordion-title-font-size:                          var(--dlt-font-size-xs, 0.875rem);
+$accordion-title-font-weight:                        var(--dlt-font-weight-regular, $font-weight-regular);
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'accordion';
+
+$accordion-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$accordion-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$accordion-color-text-inverse:                       var(--dlt-#{$el}-color-text-inverse, $component-color-text-inverse);
+$accordion-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$accordion-color-border:                             var(--dlt-#{$el}-color-border-separator, $component-color-border-separator);
+
+$accordion-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$accordion-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$accordion-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+
+$accordion-color-label-text:                         var(--dlt-#{$el}-color-text-label, $component-color-text-label); 
+$accordion-color-legend-text:                        var(--dlt-#{$el}-color-text-legend, $component-color-text-legend); 
+$accordion-color-placeholder-text:                   var(--dlt-#{$el}-color-text-placeholder, $component-color-text-placeholder); 
+
+$accordion-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$accordion-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default); 
+
+$accordion-color-icon-interactive-primary:           var(--dlt-#{$el}-color-icon-interactive-secondary, $component-color-icon-interactive-secondary); 
+
+$accordion-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$accordion-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$accordion-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

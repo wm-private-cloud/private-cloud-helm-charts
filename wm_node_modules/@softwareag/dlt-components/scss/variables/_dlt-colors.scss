@@ -1,0 +1,224 @@
+$white: #fff;
+$gray-95: #F2F2F2;
+$gray-90: #E5E5E5;
+$gray-85: #d2d9e0;
+$gray-80: #CCCCCC;
+$gray-70: #B3B3B3;
+$gray-60: #999999;
+$gray-50: #808080;
+$gray-40: #666666;
+$gray-30: #4D4D4D;
+$almost-black: #333333;
+$black: #000;
+
+$blue-98: #F6FAFE;
+$blue-89: #CDE6F9;
+$blue-77: #96CAF3;
+$blue-65: #5FAEEC;
+$blue-50: #1C8CE3;
+$blue-primary: #1776BF;
+$blue-35: #14629F;
+$blue-27: #0F4C7B;
+$blue-20: #0B385B;
+$blue-14: #08293F;
+
+
+$purple-98: #F9F5FF;
+$purple-92: #E8D6FF;
+$purple-84: #D1ADFF;
+$purple-75: #B780FF;
+$purple-65: #9A4DFF;
+$purple-56: #801FFF;
+$purple-47: #6800F0;
+$purple-34: #4B00AD;
+$purple-22: #310070;
+$purple-16: #230052;
+
+$pink-98: #FFF5FB;
+$pink-94: #FFE0F1;
+$pink-87: #FFBDE2;
+$pink-78: #FF8FCE;
+$pink-69: #FF61BA;
+$pink-56: #FF1F9E;
+$pink-accent: #E0007F;
+$pink-35: #B30065;
+$pink-24: #7A0045;
+$pink-17: #570030;
+
+
+$red-97: #FFF0F0;
+$red-90: #FFCCCF;
+$red-78: #FF8F96;
+$red-68: #FF5C66;
+$red-56: #FF1F2D;
+$red-44: #E0000E;
+$red-37: #BD000C;
+$red-28: #8F0009;
+$red-21: #6B0006;
+$red-16: #520005;
+
+
+$orange-97: #FFF6F0;
+$orange-92: #FFE8D6;
+$orange-81: #FFC89E;
+$orange-67: #FFA057;
+$orange-56: #FF801F;
+$orange-45: #E66400;
+$orange-38: #C25400;
+$orange-31: #9E4400;
+$orange-23: #753200;
+$orange-18: #5C2800;
+
+
+$yellow-95: #FFFEE6;
+$yellow-89: #FFFBC7;
+$yellow-79: #FFF794;
+$yellow-56: #FFF01F;
+$yellow-47: #F0DF00;
+$yellow-42: #D6C800;
+$yellow-34: #ADA200;
+$yellow-25: #807700;
+$yellow-18: #5C5500;
+$yellow-14: #474200;
+
+$green-95: #FAFEE7;
+$green-89: #F5FCCA;
+$green-77: #EAFA8F;
+$green-49: #CDEF0B;
+$green-44: #BAD80A;
+$green-38: #A0B909;
+$green-31: #829707;
+$green-24: #657506;
+$green-18: #4C5705;
+$green-14: #3B4503;
+
+
+$teal-97: #F1FDFC;
+$teal-92: #DBFAF9;
+$teal-81: #A9F4F0;
+$teal-66: #64EDE3;
+$teal-46: #19D2C7;
+$teal-39: #15B0A6;
+$teal-31: #108E86;
+$teal-23: #0C6A64;
+$teal-16: #094845;
+$teal-12: #063733;
+
+$delite-colors:(white: $white,
+gray-95: $gray-95,
+gray-90: $gray-90,
+gray-80: $gray-80,
+gray-70: $gray-70,
+gray-60: $gray-60,
+gray-50: $gray-50,
+gray-40: $gray-40,
+gray-30: $gray-30,
+almost-black: $almost-black,
+black: $black,
+blue-98: $blue-98,
+blue-89: $blue-89,
+blue-77: $blue-77,
+blue-65: $blue-65,
+blue-50: $blue-50,
+blue-primary: $blue-primary,
+primary: $blue-primary,
+blue-35: $blue-35,
+blue-27: $blue-27,
+blue-20: $blue-20,
+blue-14: $blue-14,
+purple-98: $purple-98,
+purple-92: $purple-92,
+purple-84: $purple-84,
+purple-75: $purple-75,
+purple-65: $purple-65,
+purple-56: $purple-56,
+purple-47: $purple-47,
+purple-34: $purple-34,
+purple-22: $purple-22,
+purple-16: $purple-16,
+pink-98: $pink-98,
+pink-94: $pink-94,
+pink-87: $pink-87,
+pink-78: $pink-78,
+pink-69: $pink-69,
+pink-56: $pink-56,
+pink-accent: $pink-accent,
+pink-35: $pink-35,
+pink-24: $pink-24,
+pink-17: $pink-17,
+red-97: $red-97,
+red-90: $red-90,
+red-78: $red-78,
+red-68: $red-68,
+red-56: $red-56,
+red-44: $red-44,
+red-37: $red-37,
+red-28: $red-28,
+red-21: $red-21,
+red-16: $red-16,
+orange-97: $orange-97,
+orange-92: $orange-92,
+orange-81: $orange-81,
+orange-67: $orange-67,
+orange-56: $orange-56,
+orange-45: $orange-45,
+orange-38: $orange-38,
+orange-31: $orange-31,
+orange-23: $orange-23,
+orange-18: $orange-18,
+yellow-95: $yellow-95,
+yellow-89: $yellow-89,
+yellow-79: $yellow-79,
+yellow-56: $yellow-56,
+yellow-47: $yellow-47,
+yellow-42: $yellow-42,
+yellow-34: $yellow-34,
+yellow-25: $yellow-25,
+yellow-18: $yellow-18,
+yellow-14: $yellow-14,
+green-95: $green-95,
+green-89: $green-89,
+green-77: $green-77,
+green-49: $green-49,
+green-44: $green-44,
+green-38: $green-38,
+success: $green-38,
+green-31: $green-31,
+green-24: $green-24,
+green-18: $green-18,
+green-14: $green-14,
+teal-97: $teal-97,
+teal-92: $teal-92,
+teal-81: $teal-81,
+teal-66: $teal-66,
+teal-46: $teal-46,
+teal-39: $teal-39,
+teal-31: $teal-31,
+teal-23: $teal-23,
+teal-16: $teal-16,
+teal-12: $teal-12);
+
+// feedback colors
+$success-color: $green-38;
+$warning-color: $orange-56;
+$error-color: $red-44;
+$info-color: $blue-50;
+
+// text color
+$gray-text: $almost-black;
+
+
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default;
+
+
+// Customize the light and dark text colors for use in YIQ color contrast function.
+$yiq-text-dark: $gray-text !default;
+$yiq-text-light: white !default;
+
+
+// For LIGHT AND DARK THEME
+$brand-primary-light-css-var: $gray-50;
+$brand-primary-dark-css-var:$blue-35;
+$component-icon-color: $gray-50;

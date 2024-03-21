@@ -1,0 +1,48 @@
+/* =====================================================
+    LOADERS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$loaders-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$loaders-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$loaders-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$loaders-font-weight:                              var(--dlt-font-weight-medium, 500);
+$loaders-font-size-xl:                             var(--dlt-font-size-md, 1.125rem);
+$loaders-line-height-xxs:                          var(--dlt-font-line-height-xxs, 1rem);
+$loaders-line-height-sm:                           var(--dlt-font-line-height-sm), 1.5rem;
+
+$loaders-text-below-margin:                        0.25rem auto 0; 
+$loaders-text-right-margin:                        0 0 0 0.5rem; 
+$loaders-text-right-min-width:                     30px; 
+$loaders-text-right-span-margin:                   0 0 0 0.25rem; 
+
+$loaders-linear-height:                            4px; 
+$loaders-circular-size:                            var(--dlt-sizing-sm, 24px); 
+$loaders-circular-scale:                           0.92; 
+$loaders-circular-size-sm:                         var(--dlt-sizing-xs, 1rem); 
+$loaders-circular-size-lg:                         var(--dlt-sizing-xl, 3rem); 
+$loaders-circular-size-xl:                         var(--dlt-sizing-xxl, 4rem); 
+
+$loaders-circular-stroke-width:                    2px; 
+$loaders-circular-stroke-width-lg:                 4px; 
+$loaders-circular-stroke-width-xl:                 4px; 
+
+$loaders-determinate-transition-time:              0.15s;
+$loaders-linear-indeterminate-transition-time:     3.5s;
+$loaders-circular-indeterminate-transition-time:   1.35s;
+
+$loaders-color-gradient-start:                    var( --dlt-color-global-gradient-start, $component-color-background-loaders-primary);
+$loaders-color-gradient-end:                     var( --dlt-color-global-gradient-end, $component-color-background-loaders-primary);
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'loaders';
+
+$loaders-color-loaders-background:                 var(--dlt-#{$el}-color-background-loaders-default, $component-color-background-loaders-default);
+$loaders-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$loaders-color-primary:                            var(--dlt-#{$el}-color-background-loaders-primary, $component-color-background-loaders-primary); 
+

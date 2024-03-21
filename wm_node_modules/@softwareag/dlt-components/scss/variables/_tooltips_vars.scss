@@ -1,0 +1,96 @@
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'tooltips';
+
+$tooltips-color-text:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$tooltips-color-background:                        var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+
+/* =====================================================
+    TOOLTIPS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+
+$tooltips-text-max-width:                                   196px;
+$tooltips-text-min-height:                                  28px;
+$tooltips-text-height:                                      auto;
+$tooltips-text-width:                                       auto;
+$tooltips-text-text-align:                                  left;
+$tooltips-text-box-shadow:                                  var(--dlt-elevation-border, 0px 0px 0px transparent), var(--dlt-elevation-md, $shadow-depth-12);
+$tooltips-text-position:                                    absolute;
+$tooltips-text-padding:                                     4px 8px 4px 8px;
+$tooltips-text-border-radius:                               0;
+$tooltips-text-font-family:                                 var(--dlt-font-family-base, $font-family-base);
+$tooltips-text-font-size:                                   var(--dlt-font-size-xs, $font-size-base);
+$tooltips-text-font-weight:                                 var(--dlt-font-weight-regular, $font-weight-regular);
+$tooltips-text-line-height:                                 var(--dlt-font-line-height-xs, 1.5);
+$tooltips-text-align-items:                                 center;
+$tooltips-text-word-wrap:                                   break-word;
+$tooltips-text-white-space:                                 normal;
+$tooltips-text-z-index:                                     2;
+
+$tooltips-text-after-content:                               "";
+$tooltips-text-after-position:                              absolute;
+$tooltips-text-after-box-sizing:                            border-box;
+$tooltips-text-after-width:                                 0;
+$tooltips-text-after-height:                                0;
+$tooltips-text-after-border-width:                          8px;
+$tooltips-text-after-border-style:                          solid;
+$tooltips-text-after-border-color:                          transparent transparent $tooltips-color-background transparent;
+$tooltips-text-after-webkit-filter:                         var(--dlt-elevation-tooltip-nose, drop-shadow(0 0 0 rgba(0, 0, 0, .16)));
+$tooltips-text-after-filter:                                var(--dlt-elevation-tooltip-nose, drop-shadow(0 0 0 rgba(0, 0, 0, .16)));
+
+$tooltips-text-after-bottom-start-bottom:                   calc(100% - 1px);
+$tooltips-text-after-bottom-start-right:                    0;
+$tooltips-text-after-bottom-start-left:                     16px;
+
+$tooltips-text-after-bottom-center-bottom:                  calc(100% - 1px);                  
+$tooltips-text-after-bottom-center-right:                   0;                  
+$tooltips-text-after-bottom-center-left:                    calc(50% - 7px)                     ;
+
+$tooltips-text-after-bottom-end-bottom:                     calc(100% - 1px);
+$tooltips-text-after-bottom-end-right:                      16px;
+
+$tooltips-text-after-top-start-content:                     "";
+$tooltips-text-after-top-start-top:                         calc(100% - 1px);
+$tooltips-text-after-top-start-left:                        16px;
+$tooltips-text-after-top-start-transform:                   rotate(180deg);
+
+$tooltips-text-after-top-center-top:                        calc(100% - 1px);
+$tooltips-text-after-top-center-right:                      0;
+$tooltips-text-after-top-center-left:                       calc(50% - 7px);
+$tooltips-text-after-top-center-transform:                  rotate(180deg);
+
+$tooltips-text-after-top-end-top:                           calc(100% - 1px);
+$tooltips-text-after-top-center-right:                      16px;
+$tooltips-text-after-top-center-transform:                  rotate(180deg);
+
+$tooltips-text-after-left-start-top:                        calc(0% + 16px);
+$tooltips-text-after-left-start-left:                       calc(100% - 0px);
+$tooltips-text-after-left-start-transform:                  rotate(90deg);
+
+$tooltips-text-after-left-center-top:                       calc(50% - 8px);
+$tooltips-text-after-left-center-left:                      calc(100% - 0px);
+$tooltips-text-after-left-center-transform:                 rotate(90deg);
+
+$tooltips-text-after-left-end-top:                          calc(100% - 32px);
+$tooltips-text-after-left-end-left:                         calc(100% - 0px);
+$tooltips-text-after-left-end-transform:                    rotate(90deg);
+
+$tooltips-text-after-right-start-top:                       calc(0% + 16px);
+$tooltips-text-after-right-start-right:                     calc(100% - 0px);
+$tooltips-text-after-right-start-transform:                 rotate(270deg);
+
+$tooltips-text-after-right-center-top:                      calc(50% - 8px);
+$tooltips-text-after-right-center-right:                    calc(100% - 0px);
+$tooltips-text-after-right-center-transform:                rotate(270deg);
+
+$tooltips-text-after-right-end-top:                         calc(100% - 32px);
+$tooltips-text-after-right-end-right:                       calc(100% - 0px);
+$tooltips-text-after-right-end-transform:                   rotate(270deg);
+
+
+

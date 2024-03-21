@@ -1,0 +1,116 @@
+/* =====================================================
+    BUTTONS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+//## Deriving the values from the base values
+.dlt-button{
+  --dlt-buttons-line-height:                       calc(var(--dlt-sizing-md) - 2px); // Removing the 2px for the up and down borders
+  --dlt-buttons-line-height-sm:                    calc(var(--dlt-sizing-sm) - 2px); // Removing the 2px for the up and down borders
+  --dlt-buttons-line-height-lg:                    calc(var(--dlt-sizing-lg) - 2px); // Removing the 2px for the up and down borders
+  --dlt-buttons-accent-line-height:                calc(var(--dlt-sizing-md) - 4px); // Removing the 4px for the up and down borders
+  --dlt-buttons-accent-line-height-sm:             calc(var(--dlt-sizing-sm) - 4px); // Removing the 4px for the up and down borders
+  --dlt-buttons-accent-line-height-lg:             calc(var(--dlt-sizing-lg) - 4px); // Removing the 4px for the up and down borders
+}
+
+$buttons-line-height:                              var(--dlt-buttons-line-height, 30px);
+$buttons-line-height-sm:                           var(--dlt-buttons-line-height-sm, 22px);
+$buttons-line-height-lg:                           var(--dlt-buttons-line-height-lg, 38px);
+$buttons-accent-line-height:                       var(--dlt-buttons-accent-line-height, 28px);
+$buttons-accent-line-height-sm:                    var(--dlt-buttons-accent-line-height-sm, 20px);
+$buttons-accent-line-height-lg:                    var(--dlt-buttons-accent-line-height-lg, 36px);
+
+$buttons-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$buttons-font-size-lg:                             var(--dlt-font-size-sm, 1rem);
+
+$buttons-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$buttons-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$buttons-font-weight:                              var(--dlt-font-weight-regular, 400);
+
+$buttons-time-transition:                           var(--dlt-time-transition-short, .25s);
+$buttons-transition-effect:                         ease-in;
+
+$buttons-border-radii:                              var(--dlt-border-radii-default, 0);
+$buttons-border-accent-radii:                       var(--dlt-border-radii-emphasis, 20px);
+$buttons-border-style:                              var(--dlt-border-style-default, solid);
+$buttons-border-style-hover:                        var(--dlt-border-style-hover, solid);
+$buttons-border-width:                              var(--dlt-border-width-default,  1px);
+$buttons-border-width-hover:                        var(--dlt-border-width-hover, 2px);
+
+$buttons-padding-y:                                 0;
+$buttons-padding-x:                                 var(--dlt-spacing-1-x-half, .75rem);
+$buttons-padding-x-sm:                              var(--dlt-spacing-1-x, 0.5rem);
+$buttons-padding-x-lg:                              var(--dlt-spacing-2-x, 1rem);
+
+
+//## Icon buttons
+$buttons-icon-size:                                var(--dlt-font-size-lg, 1.2rem);
+$buttons-icon-size-sm:                             var(--dlt-font-size-sm, 1rem);
+$buttons-icon-size-lg:                             var(--dlt-font-size-xxl, 1.5rem);
+$buttons-icon-margin-right:                        0.6rem;
+$buttons-icon-margin-right-sm:                     0.3rem;
+$buttons-icon-margin-right-lg:                     0.5rem;
+
+$buttons-icon-height:                              var(--dlt-sizing-md, 2rem);
+$buttons-icon-width:                               var(--dlt-sizing-md, 2rem);
+$buttons-icon-height-lg:                           var(--dlt-sizing-lg, 2.5rem);
+$buttons-icon-width-lg:                            var(--dlt-sizing-lg, 2.5rem);
+$buttons-icon-height-sm:                           var(--dlt-sizing-sm, 1.5rem);
+$buttons-icon-width-sm:                            var(--dlt-sizing-sm, 1.5rem);
+
+
+//## Dropdown buttons
+$buttons-dropdown-height-lg:                       var(--dlt-sizing-lg, 40px);
+$buttons-dropdown-height-sm:                       var(--dlt-sizing-sm, 24px);
+$buttons-dropdown-font-size-sm:                    var(--dlt-font-size-xxs, 12px);
+$buttons-dropdown-padding-lg:                      0 var(--dlt-spacing-2-x, 1rem) 0 var(--dlt-spacing-2-x, 1rem);
+$buttons-dropdown-padding:                         0 var(--dlt-spacing-1-x-half, .7rem) 0 var(--dlt-spacing-1-x-half, .7rem);
+$buttons-dropdown-padding-sm:                      0 var(--dlt-spacing-1-x, .5rem) 0 var(--dlt-spacing-1-x, .5rem);
+$buttons-dropdown-content-line-height:             28px;
+$buttons-dropdown-content-line-height-sm:          20px;
+$buttons-dropdown-content-padding:                 0 10px;
+$buttons-dropdown-content-parent-padding:          4px;
+$buttons-dropdown-icon-size:                       var(--dlt-font-size-sm, 1rem);
+$buttons-dropdown-icon-margin-left:                0.2rem;
+$buttons-dropdown-icon-margin-top:                 0;//0.09rem;
+$buttons-dropdown-z-index:                         var(--dlt-z-index-mask, 999);
+$buttons-dropdown-elevation:                       var(--dlt-elevation-border, 0px 0px 0px transparent), var(--dlt-elevation-md, $shadow-depth-12);
+
+//## Unique adjustments
+$buttons-outline-offset:                            -2px;
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'buttons';
+
+$buttons-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$buttons-color-text-inverse:                       var(--dlt-#{$el}-color-text-inverse, $component-color-text-interactive-inverse);
+$buttons-color-text-primary:                       var(--dlt-#{$el}-color-text-primary, $component-color-text-primary);
+$buttons-color-text-dark:                          var(--dlt-#{$el}-color-text-dark, $component-color-text-interactive-secondary);
+$buttons-color-text-accent:                        var(--dlt-#{$el}-color-text-accent, $component-color-text-accent);
+
+$buttons-color-background-static-primary:  var(--dlt-#{$el}-color-background-static-primary, $component-color-background-default);
+
+$buttons-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$buttons-color-primary-hover:                      var(--dlt-#{$el}-color-interactive-primary-hover, $component-color-primary-hover); 
+$buttons-color-primary-active:                     var(--dlt-#{$el}-color-interactive-primary-active, $component-color-primary-active);
+$buttons-color-primary-focus:                      var(--dlt-#{$el}-color-interactive-primary-focus, $component-color-primary-focus);
+
+$buttons-color-secondary:                          var(--dlt-#{$el}-color-interactive-secondary-default, $component-color-secondary-default); 
+$buttons-color-secondary-hover:                    var(--dlt-#{$el}-color-interactive-secondary-hover, $component-color-secondary-hover); 
+$buttons-color-secondary-active:                   var(--dlt-#{$el}-color-interactive-secondary-active, $component-color-secondary-active);
+$buttons-color-secondary-focus:                    var(--dlt-#{$el}-color-interactive-secondary-focus, $component-color-secondary-focus);
+
+$buttons-color-accent:                             var(--dlt-#{$el}-color-interactive-accent-default, $component-color-accent-default);
+$buttons-color-accent-hover:                       var(--dlt-#{$el}-color-interactive-accent-hover, $component-color-accent-hover);
+$buttons-color-accent-active:                      var(--dlt-#{$el}-color-interactive-accent-active, $component-color-accent-active);
+$buttons-color-accent-focus:                       var(--dlt-#{$el}-color-interactive-accent-focus, $component-color-accent-focus);
+$buttons-color-accent-light:                       var(--dlt-#{$el}-color-interactive-accent-light, $component-color-accent-light); /* Used for heart icon active from Cards */
+
+$buttons-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+

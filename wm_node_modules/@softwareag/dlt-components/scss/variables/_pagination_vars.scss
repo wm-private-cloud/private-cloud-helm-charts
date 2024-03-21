@@ -1,0 +1,69 @@
+/* =====================================================
+    PAGINATION SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$pagination-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$pagination-font-weight:                              var(--dlt-font-weight-regular, 400);
+$pagination-active-font-weight:                       var(--dlt-font-weight-bold, 600);
+
+$pagination-border-radii:                             var(--dlt-border-radii-default, 0);
+$pagination-border-style:                             var(--dlt-border-style-default, solid);
+$pagination-border-style-hover:                       var(--dlt-border-style-hover, solid);
+$pagination-border-width:                             var(--dlt-border-width-default,  1px);
+$pagination-border-width-hover:                       var(--dlt-border-width-hover, 2px);
+
+$pagination-margin-top:                               -2px;
+$pagination-left-padding:                             1px 8px 0 8px; // 0 var(--dlt-spacing-1-x-half, .75rem);
+$pagination-height:                                   var(--dlt-sizing-xl, 3rem);
+$pagination-margin-right:                             4px;
+
+$pagination-margin-text:                              1px 1px 0 0;
+$pagination-margin-right-text-mid:                    6px;
+
+$pagination-select-margin:                            0px 1px 0 1px;
+$pagination-select-height:                            var(--dlt-sizing-sm, 1.5rem);
+$pagination-select-line-height:                       20px;
+$pagination-select-icon-font-size:                    var(--dlt-sizing-sm, 1.5rem);
+$pagination-select-icon-line-height:                  var(--dlt-sizing-sm, 1.5rem);
+$pagination-select-icon-right:                        .0625rem;
+$pagination-select-input-padding:                     1px 27px 1px 0px;
+$pagination-select-arrow-margin-right:                6px;
+
+
+$pagination-page-icon-font-size:                      24px;
+$pagination-page-icon-margin:                         calc(0.5rem - 2px); // 0.5rem;
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'pagination';
+
+$pagination-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$pagination-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$pagination-color-title:                              var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$pagination-color-border:                             var(--dlt-#{$el}-color-border-static-primary, $component-color-border-separator);
+
+$pagination-color-background-active:                  var(--dlt-#{$el}-color-background-default, $component-color-background-default); 
+$pagination-color-text-active:                        var(--dlt-#{$el}-color-text-default, $component-color-text-default); 
+
+$pagination-color-background-focus:                   var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$pagination-color-text-focus:                         var(--dlt-#{$el}-color-text-default, $component-color-text-default);
+$pagination-color-border-focus:                       var(--dlt-#{$el}-color-border-focus, $component-color-border-input-focus); 
+
+$pagination-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$pagination-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$pagination-color-input-border:                       var(--dlt-#{$el}-color-border-input-default, $component-color-border-input-default); 
+$pagination-color-text-interactive-secondary:         var(--dlt-#{$el}-color-text-interactive-secondary, $component-color-text-interactive-secondary); 
+
+$pagination-color-text-static-muted:                  var(--dlt-#{$el}-color-text-muted, $component-color-text-static-muted); 
+
+$pagination-color-icon:                               var(--dlt-#{$el}-color-icon-interactive-secondary, $component-color-icon-interactive-secondary); 
+$pagination-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$pagination-box-shadow:                               inset 0px -1px 0px 0px $pagination-color-border, inset 0px 1px 0px 0px $pagination-color-border;

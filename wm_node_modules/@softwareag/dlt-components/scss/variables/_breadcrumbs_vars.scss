@@ -1,0 +1,27 @@
+/* =====================================================
+    BREADCRUMBS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$breadcrumbs-icon-size:                                var(--dlt-font-size-sm, 1rem);
+//$breadcrumbs-icon-size-lg:                             var(--dlt-font-size-md, 1.125rem);
+
+$breadcrumbs-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$breadcrumbs-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$breadcrumbs-line-height:                              var(--dlt-font-line-height-text, 1.5);
+$breadcrumbs-font-size-sm:                             var(--dlt-font-size-xxs, 0.75rem);
+$breadcrumbs-font-size-lg:                             var(--dlt-font-size-sm, 1rem);
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'breadcrumbs';
+
+$breadcrumbs-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$breadcrumbs-color-text-static-muted:                         var(--dlt-#{$el}-color-text-muted, $component-color-text-static-muted); 
+$breadcrumbs-color-icon-muted-secondary:              var(--dlt-#{$el}-color-icon-muted-secondary, $component-color-icon-muted-secondary); 
+

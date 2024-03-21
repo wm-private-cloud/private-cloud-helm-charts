@@ -1,0 +1,99 @@
+
+  @mixin component-vars($comp){
+    $el: #{$comp};
+    &,*{
+      --dlt-component-color-background-default:                       var(--dlt-#{$el}-color-background-default);
+      --dlt-component-color-background-dark:                          var(--dlt-#{$el}-color-background-dark);
+      --dlt-component-color-background-input-hover:                   var(--dlt-#{$el}-color-background-input-hover);
+      --dlt-component-color-background-input-focus:                   var(--dlt-#{$el}-color-background-input-focus);
+      --dlt-component-color-background-input-default:                 var(--dlt-#{$el}-color-background-input-default);
+      --dlt-component-color-background-input-group-dropdown:          var(--dlt-#{$el}-color-background-input-group-dropdown);
+      --dlt-component-color-background-loaders-default:               var(--dlt-#{$el}-color-background-loaders-default);
+      --dlt-component-color-background-loaders-primary:               var(--dlt-#{$el}-color-background-loaders-primary);
+      --dlt-component-color-background-loaders-secondary:             var(--dlt-#{$el}-color-background-loaders-secondary);
+      --dlt-component-color-background-toggle-knob-default:           var(--dlt-#{$el}-color-background-toggle-knob-default);
+      --dlt-component-color-background-toggle-knob-active:            var(--dlt-#{$el}-color-background-toggle-knob-active);
+      --dlt-component-color-background-zebra-light:                   var(--dlt-#{$el}-color-background-zebra-light);                          
+      --dlt-component-color-background-zebra-dark:                    var(--dlt-#{$el}-color-background-zebra-dark);                           
+      --dlt-component-color-background-scrollbar-track:               var(--dlt-#{$el}-color-background-scrollbar-track);                                   
+      --dlt-component-color-background-scrollbar-thumb:               var(--dlt-#{$el}-color-background-scrollbar-thumb);
+      --dlt-component-color-background-sliders-track:                 var(--dlt-#{$el}-color-background-sliders-track);    
+
+      --dlt-component-color-interactive-primary-default:              var(--dlt-#{$el}-color-interactive-primary-default);  
+      --dlt-component-color-interactive-primary-hover:                var(--dlt-#{$el}-color-interactive-primary-hover); 
+      --dlt-component-color-interactive-primary-active:               var(--dlt-#{$el}-color-interactive-primary-active);
+
+      --dlt-component-color-interactive-secondary-default:            var(--dlt-#{$el}-color-interactive-secondary-default);
+      --dlt-component-color-interactive-secondary-hover:              var(--dlt-#{$el}-color-interactive-secondary-hover); 
+      --dlt-component-color-interactive-secondary-active:             var(--dlt-#{$el}-color-interactive-secondary-active);
+      
+      --dlt-component-color-interactive-accent-default:               var(--dlt-#{$el}-color-interactive-accent-default);
+      --dlt-component-color-interactive-accent-hover:                 var(--dlt-#{$el}-color-interactive-accent-hover);
+      --dlt-component-color-interactive-accent-active:                var(--dlt-#{$el}-color-interactive-accent-active);
+      --dlt-component-color-interactive-accent-light:                 var(--dlt-#{$el}-color-interactive-accent-light);
+      
+      --dlt-component-color-text-default:                             var(--dlt-#{$el}-color-text-default);
+      --dlt-component-color-text-inverse:                             var(--dlt-#{$el}-color-text-inverse);    
+      --dlt-component-color-text-legend:                              var(--dlt-#{$el}-color-text-legend);
+      --dlt-component-color-text-label:                               var(--dlt-#{$el}-color-text-label);
+      --dlt-component-color-text-placeholder:                         var(--dlt-#{$el}-color-text-placeholder);
+      --dlt-component-color-text-input:                               var(--dlt-#{$el}-color-text-input);
+      --dlt-component-color-text-interactive-muted:                   var(--dlt-#{$el}-color-text-interactive-muted);
+      --dlt-component-color-text-static-muted:                        var(--dlt-#{$el}-color-text-static-muted);
+      --dlt-component-color-text-link-default:                        var(--dlt-#{$el}-color-text-link-default);
+      --dlt-component-color-text-link-hover:                          var(--dlt-#{$el}-color-text-link-hover);
+      --dlt-component-color-text-link-active:                         var(--dlt-#{$el}-color-text-link-active); 
+      --dlt-component-color-text-link-visited:                        var(--dlt-#{$el}-color-text-link-visited);   
+
+      --dlt-component-color-border-input-default:                     var(--dlt-#{$el}-color-border-input-default);
+      --dlt-component-color-border-input-focus:                       var(--dlt-#{$el}-color-border-input-focus);              
+      --dlt-component-color-border-input-hover:                       var(--dlt-#{$el}-color-border-input-hover);                           
+      --dlt-component-color-border-separator:                         var(--dlt-#{$el}-color-border-separator);                                           
+
+      --dlt-component-color-icon-muted-secondary:                     var(--dlt-#{$el}-color-icon-muted-secondary);
+      --dlt-component-color-icon-muted-primary:                       var(--dlt-#{$el}-color-icon-muted-primary);
+      --dlt-component-color-icon-inverse:                             var(--dlt-#{$el}-color-icon-inverse);
+      --dlt-component-color-icon-interactive-primary:                 var(--dlt-#{$el}-color-icon-interactive-primary);
+
+      --dlt-component-color-system-message-success:                   var(--dlt-#{$el}-color-system-message-success);
+      --dlt-component-color-system-message-info:                      var(--dlt-#{$el}color-system-message-info);
+      --dlt-component-color-system-message-warning:                   var(--dlt-#{$el}color-system-message-warning);
+      --dlt-component-color-system-message-error:                     var(--dlt-#{$el}-color-system-message-error);
+
+      --dlt-component-opacity-disabled:                               var(--dlt-#{$el}-opacity-disabled);
+
+    }
+  }
+
+
+  @mixin component-setup(){
+
+    background: $component-background;
+    color: $component-color;
+    fill: $component-color;
+  
+    --hr-border: $component-border;
+    --label-text-color: $component-label-color;
+    --legend-text-color: $component-legend-color;
+    --link-color: $component-link-color;
+    --link-color-hover: $component-link-color-hover;
+  
+    .text-muted{
+      color: $component-text-muted;
+    }
+    &.active{
+      background: $component-active-background;
+      color: $component-active-color;
+    }
+    .expanded, &.expanded{
+      background: $component-expanded-background;
+      color: $component-expanded-color;
+    }
+    a:not([class]){
+      color: $component-link-color;
+      &:hover{
+        color: $component-link-color-hover;
+      }
+    }
+  
+}

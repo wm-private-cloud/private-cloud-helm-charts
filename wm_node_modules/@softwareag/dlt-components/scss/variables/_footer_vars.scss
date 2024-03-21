@@ -1,0 +1,35 @@
+/* =====================================================
+    FOOTER SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$footer-font-size:                                var(--dlt-font-size-xxs, .75rem);
+$footer-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$footer-border-radii:                             var(--dlt-border-radii-default, 0);
+$footer-padding:                                  var(--dlt-sizing-lg, 40px) var(--dlt-sizing-xs, 16px) var(--dlt-sizing-xs, 16px) var(--dlt-sizing-xs, 16px);
+$footer-link-padding:                             0 var(--dlt-spacing-half-x, 4px);
+$footer-link-margin-left:                         var(--dlt-spacing-half-x, 4px);
+
+$footer-link-seperator-height:                    12px !default;
+$footer-link-seperator-width:                     1px !default;
+
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'footer';
+
+$footer-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+$footer-color-text:                               var(--dlt-#{$el}-color-text-default, $component-color-text-legend);
+
+$footer-color-link:                               var(--dlt-#{$el}-color-text-link-default, $component-color-text-link-default); 
+$footer-color-link-hover:                         var(--dlt-#{$el}-color-text-link-hover, $component-color-text-link-hover); 
+
+$footer-color-scrollbar-thumb:                    var(--dlt-#{$el}-color-background-scrollbar-thumb, $component-color-background-scrollbar-thumb); 
+$footer-color-scrollbar-track:                    var(--dlt-#{$el}-color-background-scrollbar-track, $component-color-background-scrollbar-track);
+

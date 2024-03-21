@@ -1,0 +1,63 @@
+/* =====================================================
+    SLIDERS SPECIFIC VARIABLES
+   ------------------------------------------------------
+  */
+//## Define common padding and border and more.
+
+$slider-font-family:                              var(--dlt-font-family-base, $font-family-base);
+$slider-font-weight-regular:                      var(--dlt-font-weight-regular, 400);
+$slider-font-weight-medium:                       var(--dlt-font-weight-medium, 500);
+$slider-font-size:                                var(--dlt-font-size-xs, 0.875rem);
+$slider-label-font-size-small:                    var(--dlt-font-size-xxs, 0.75rem);
+$slider-label-line-height-small:                  var(--dlt-font-line-height-xxs, 16px);
+$slider-label-line-height:                        var(--dlt-font-line-height-xs, 20px);
+
+$slider-color-error:                              var(--dlt-color-system-message-error, $error-color);
+
+$slider-height-track-s:                            4px;
+$slider-height-track:                              6px;
+
+$slider-input-width-s:                            var(--dlt-slider-input-width-s, 2.5rem);
+$slider-input-width:                              var(--dlt-slider-input-width, 2.875rem);
+
+$slider-value-width-s:                            var(--dlt-slider-value-width-s, 28px);
+$slider-value-height-s:                           var(--dlt-slider-value-height-s, 24px);
+$slider-value-width:                              var(--dlt-slider-value-width, 32px);
+$slider-value-height:                             var(--dlt-slider-value-height, 28px);
+
+$slider-thumb-size-s:                             var(--dlt-slider-thumb-size-s, 17px);
+$slider-thumb-size:                               var(--dlt-slider-thumb-size, 21px);
+
+$slider-color-thumb-active:                       var(--dlt-slider-color-thumb-active, $blue-89); 
+$slider-color-thumb-hover:                        var(--dlt-slider-color-thumb-hover, $blue-primary);
+$slider-thumb-border-radii:                       var(--dlt-border-radii-smooth, 100%);
+$slider-thumb-border-style:                       var(--dlt-thumb-border-style-default, solid);
+$slider-thumb-border-width:                       var(--dlt-thumb-border-width,  1px);
+$slider-thumb-border-width-hover:                 var(--dlt-border-width-hover,  2px);
+
+$slider-value-space-left:                         var(--dlt-spacing-1-x-half, .75rem);
+$slider-value-space-right:                        var(--dlt-spacing-1-x-half, .75rem);
+$slider-spacing:                                  var(--dlt-spacing-1-x-half, .75rem);
+$slider-spacing-small:                            var(--dlt-spacing-1-x, 0.5rem);
+$slider-spacing-4px:                              var(--dlt-spacing-half-x, 4px);
+
+
+/* =====================================================
+    COMPONENT SHARED STYLES
+   ------------------------------------------------------
+*/
+//** Colors
+
+$el: 'sliders';
+
+$slider-color-primary:                            var(--dlt-#{$el}-color-interactive-primary-default, $component-color-primary-default); 
+$slider-color-primary-light:                      var(--dlt-#{$el}-color-interactive-secondary-active, $component-color-secondary-active); 
+
+$slider-color-background:                         var(--dlt-#{$el}-color-background-default, $component-color-background-default);
+
+$slider-opacity-disabled:                         var(--dlt-#{$el}-opacity-disabled, $component-opacity-disabled);
+
+$slider-color-track:                              var(--dlt-#{$el}-color-background-sliders-track, $component-color-background-sliders-track);
+
+
+
