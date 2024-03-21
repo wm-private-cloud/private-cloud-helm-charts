@@ -12,20 +12,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout main
+        uses: actions/checkout@v3
+        with:
+          path: main
+          ref: main
+      
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          path: repository
+          ref: repository
 
       - name: "Package, index and push chart"
         run: |
+          echo "Begin repository handling and indexing..."
+          
+          # Package each chart and then index the repository
+          cd repository
+          REPOSITORY=`pwd`
+          cd ../main
           WORKDIR=`pwd`
-          for subdir in "$WORKDIR/charts"/*/; do
+          for subdir in "$WORKDIR"/*/; do
               if [ -d "$subdir" ]; then
                   echo "Processing directory: $subdir"
-                  cd docs
+                  cd $REPOSITORY
                   helm package $subdir
-                  cd $WORKDIR 
+                  cd $WORKDIR
               fi
           done
-          helm repo index --url https://sag-private-cloud.github.io/private-cloud-helm-charts/ docs
+          cd $REPOSITORY
+          helm repo index --url https://sag-private-cloud.github.io/private-cloud-helm-charts/ .
+          
+          # Push changes to the repository branch
           git config --global user.email "SAGPrivateCloudBot@softwareag.com"
           git config --global user.name "SAG Private Cloud Bot"
           git add .
