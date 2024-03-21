@@ -1,8 +1,0 @@
-Access the deployed application at this URL:
-{{- range $host := .Values.ingress.hosts }}
-  http://{{ $host.host }}:5555/
-  {{- end }}
-
-Helm deployment release name:      {{ .Release.Name }}
-Helm deployment release namespace: {{ .Release.Namespace }}
-Helm deployment release revision:  {{ .Release.Revision }}
