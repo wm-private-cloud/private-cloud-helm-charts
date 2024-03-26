@@ -42,7 +42,7 @@ jobs:
               fi
           done
           cd $REPOSITORY
-          helm repo index --url https://sag-private-cloud.github.io/private-cloud-helm-charts/ .
+          helm repo index --url https://charts.webmethods.io/ .
           
           # Push changes to the repository branch
           git config --global user.email "SAGPrivateCloudBot@softwareag.com"
