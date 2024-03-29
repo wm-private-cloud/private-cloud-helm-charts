@@ -1,4 +1,4 @@
-# private-cloud-helm-charts
-Collection of Helm Charts for SoftwareAG's product suite
+# webMethods Helm Charts Collection
+Collection of Helm Charts for webMethods's product suite
 
-https://sag-private-cloud.github.io/private-cloud-helm-charts/
+https://charts.webmethods.io
