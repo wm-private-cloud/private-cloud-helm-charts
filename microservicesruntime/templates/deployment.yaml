@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "universalmessaging-server.fullname" . }}
+  name: {{ include "microservicesruntime.fullname" . }}
   labels:
-    {{- include "universalmessaging-server.labels" . | nindent 4 }}
+    {{- include "microservicesruntime.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "universalmessaging-server.selectorLabels" . | nindent 6 }}
+      {{- include "microservicesruntime.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "universalmessaging-server.selectorLabels" . | nindent 8 }}
+        {{- include "microservicesruntime.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "universalmessaging-server.serviceAccountName" . }}
+      serviceAccountName: {{ include "microservicesruntime.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -37,16 +37,11 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          command: [ '/bin/sh','-c' ]
+          args:
+             - /opt/softwareag/IntegrationServer/bin/startContainer.sh
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
