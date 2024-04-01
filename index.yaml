@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  integrationserver:
+  - apiVersion: v2
+    appVersion: "10.15"
+    created: "2024-04-01T06:40:49.814947123Z"
+    description: Integration Server (IS) Helm Chart for Kubernetes
+    digest: 18de3e7cb173a50616c5848a9bcf417fa01ecf177f847b0f7dc949ba213c4b99
+    name: integrationserver
+    type: application
+    urls:
+    - https://charts.webmethods.io/integrationserver-1.0.0.tgz
+    version: 1.0.0
   microservices-runtime:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-04-01T06:19:05.196063051Z"
+    created: "2024-04-01T06:40:49.815377944Z"
     description: webMethods Microservices Runtime with MySQL Database
     digest: c7153dc604dddaa83f598572fd5475b0afe5a4e7e2f710887824f30c3dae34af
     name: microservices-runtime
@@ -14,9 +25,9 @@ entries:
   microservicesruntime:
   - apiVersion: v2
     appVersion: "10.15"
-    created: "2024-04-01T06:19:05.196407927Z"
+    created: "2024-04-01T06:40:49.815708919Z"
     description: Microservices Runtime (MSR) Helm Chart for Kubernetes
-    digest: 9cc00e8b33eba319e9a38f9b66986268c591d1b0f4c9db01357e099dd11805b5
+    digest: 7d72b4649410545956923a6d8eae62f7fc9e01973f3693f0c4f0030283fcff77
     name: microservicesruntime
     type: application
     urls:
@@ -25,7 +36,7 @@ entries:
   universalmessaging-server:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-04-01T06:19:05.196733496Z"
+    created: "2024-04-01T06:40:49.816022171Z"
     description: Software AG Universal Messaging Server
     digest: 42ae41301386de5d216448f2fef0b2ac22ea9b9bd1d6c1342785dd179cea0e8e
     name: universalmessaging-server
@@ -33,4 +44,4 @@ entries:
     urls:
     - https://charts.webmethods.io/universalmessaging-server-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-01T06:19:05.195494326Z"
+generated: "2024-04-01T06:40:49.814439509Z"
