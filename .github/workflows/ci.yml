@@ -23,19 +23,50 @@ jobs:
         with:
           path: repository
           ref: repository
+      
+      - name: Checkout generate-ui
+        uses: actions/checkout@v3
+        with:
+          path: generate-ui
+          ref: generate-ui
 
-      - name: "Package, index and push chart"
+      - name: Install helm-docs
+        run: |
+          helmDocsFile=helm-docs_1.13.1_Linux_x86_64.deb
+          sudo wget https://github.com/norwoodj/helm-docs/releases/download/v1.13.1/$helmDocsFile && sudo dpkg -i $helmDocsFile && rm $helmDocsFile
+
+      - name: Cleanup repository branch
+        working-directory: repository
+        run: |
+          rm -rf *
+
+      - name: Create CNAME file
+        working-directory: repository
+        run: |
+          echo "charts.webmethods.io" > CNAME
+
+      - name: Package and index
         run: |
           echo "Begin repository handling and indexing..."
           
           # Package each chart and then index the repository
           cd repository
-          REPOSITORY=`pwd`
+          REPOSITORY=$(pwd)
+          cd ../generate-ui
+          UI=$(pwd)
           cd ../main
-          WORKDIR=`pwd`
+
+          # run helm docs
+          helm-docs
+
+          WORKDIR=$(pwd)
           for subdir in "$WORKDIR"/*/; do
               if [ -d "$subdir" ]; then
                   echo "Processing directory: $subdir"
+                  cd $UI
+                  helmChartDocsPath=resources/static/helm-readmes/$(basename $subdir)
+                  echo "Copy helm chart doc '$(basename $subdir)' to $helmChartDocsPath in UI branch.."
+                  mkdir -p $helmChartDocsPath && cp $subdir/README.md $helmChartDocsPath
                   cd $REPOSITORY
                   helm package $subdir
                   cd $WORKDIR
@@ -44,6 +75,39 @@ jobs:
           cd $REPOSITORY
           helm repo index --url https://charts.webmethods.io/ .
           
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install npm packages
+        working-directory: generate-ui
+        run: |
+          npm instal
+
+      - name: Generate UI
+        working-directory: generate-ui
+        run: |
+          cp ../repository/index.yaml .
+          node generate-ui.js
+
+      - name: Copy UI files to repository branch
+        run: |
+          uiBranch=$(pwd)/generate-ui
+          cd $(pwd)/repository
+          cp -r $uiBranch/node_modules .
+          rm -rf node_modules/.bin
+          mkdir -p resources/static/
+          cp -r $uiBranch/resources/static/css resources/static/
+          cp -r $uiBranch/resources/static/js resources/static/
+          cp -r $uiBranch/resources/static/img resources/static/
+          cp $uiBranch/index.html .
+          mv node_modules wm_node_modules
+
+      - name: Push to repository branch
+        working-directory: repository
+        run: |
           # Push changes to the repository branch
           git config --global user.email "SAGPrivateCloudBot@softwareag.com"
           git config --global user.name "SAG Private Cloud Bot"
