@@ -290,3 +290,9 @@ font-size:var(--dlt-font-size-md);
     font-size:var(--dlt-font-size-md);
     margin: var(--dlt-spacing-2-x) 0 0 0;
  }
+
+ .helm-values-table {
+    td {
+        text-align: center;
+    }
+ }

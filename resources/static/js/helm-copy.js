@@ -5,12 +5,6 @@ function showPullCommand() {
     document.getElementById('tab-link-3').className = "dlt-tab-link";
 }
 
-function updateHelmInstallCommand(helmChartElement, helmChartName) {
-    var result  = helmInstallCommandWithPlaceholder.replace(/{helm-chart-name}/g, helmChartName);
-
-    helmChartElement.getElementsByClassName("helm-install-command-label")[0].innerHTML = result;
-}
-
 function copyHelmInstallCommandToClipboard(helmChartName) {
     var labelValue = helmInstallCommandWithPlaceholder.replace(/{helm-chart-name}/g, helmChartName);
 
