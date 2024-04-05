@@ -296,3 +296,7 @@ font-size:var(--dlt-font-size-md);
         text-align: center;
     }
  }
+
+ .helm-chart { 
+    margin-bottom: 10px;
+ }
