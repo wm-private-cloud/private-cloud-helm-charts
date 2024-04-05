@@ -13,19 +13,19 @@ jobs:
 
     steps:
       - name: Checkout main
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
         with:
           path: main
           ref: main
       
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
         with:
           path: repository
           ref: repository
       
       - name: Checkout generate-ui
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
         with:
           path: generate-ui
           ref: generate-ui
