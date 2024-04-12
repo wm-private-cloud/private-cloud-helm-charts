@@ -30,10 +30,15 @@ jobs:
           path: generate-ui
           ref: generate-ui
 
-      - name: Install helm-docs
+      - name: Install binaries
+        working-directory: main
         run: |
-          helmDocsFile=helm-docs_1.13.1_Linux_x86_64.deb
-          sudo wget https://github.com/norwoodj/helm-docs/releases/download/v1.13.1/$helmDocsFile && sudo dpkg -i $helmDocsFile && rm $helmDocsFile
+          for binary in "$(pwd)"/binary/*; do
+            echo "Installing $binary .. "
+            sudo dpkg -i $binary
+          done
+          echo "All binaries are installed.."
+          rm -rf binary
 
       - name: Cleanup repository branch
         working-directory: repository
@@ -61,7 +66,7 @@ jobs:
 
           WORKDIR=$(pwd)
           for subdir in "$WORKDIR"/*/; do
-              if [ -d "$subdir" ]; then
+              if [[ -d "$subdir" && $(basename "$subdir") != "binary" ]]; then
                   echo "Processing directory: $subdir"
                   cd $UI
                   helmChartDocsPath=resources/static/helm-readmes/$(basename $subdir)
