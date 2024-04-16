@@ -33,7 +33,7 @@ jobs:
       - name: Install binaries
         working-directory: main
         run: |
-          for binary in "$(pwd)"/binary/*; do
+          for binary in "$(pwd)"/binary/*.deb; do
             echo "Installing $binary .. "
             sudo dpkg -i $binary
           done
