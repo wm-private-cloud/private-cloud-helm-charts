@@ -31,6 +31,7 @@
                             <img src="resources/static/img/logo.svg" alt="Logo">
                         </a>
                         <div style="margin-left: 50px;">webMethods Helm Charts Repository</div>
+                        <input class="col-2" style="margin-left:auto" type="text" id="helm-chart-search-input" onkeyup="searcHelmCharts()" placeholder="Search Helm charts..">
                     </header>
                 </div>
             </div>
@@ -509,7 +510,28 @@
         </div>
     </div>
 
-    
+    <script>
+        function searcHelmCharts() {
+          var input, filter, i;
+          input = document.getElementById("helm-chart-search-input");
+          filter = input.value.toLowerCase();
+          charts = document.getElementById("helm-charts-body").querySelectorAll(':scope > div');
+          for (i = 0; i < charts.length; i++) {
+            if (propertyValueMatch(charts[i], filter, "helm-chart-name") ||
+                propertyValueMatch(charts[i], filter, "helm-chart-version") ||
+                propertyValueMatch(charts[i], filter, "application-version") ||
+                propertyValueMatch(charts[i], filter, "helm-chart-description")) {
+                charts[i].style.display = "";
+            } else {
+                charts[i].style.display = "none";
+            }
+          }
+        }
+
+        function propertyValueMatch(chart, filter, attribute) {
+            return chart.getAttribute(attribute).toLowerCase().indexOf(filter) > -1;
+        }
+    </script>
 
     <script src="resources/static/js/helm-copy.js"></script>
     <script src="wm_node_modules/jquery/dist/jquery.min.js"></script>
