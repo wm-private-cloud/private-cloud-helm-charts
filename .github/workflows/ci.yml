@@ -104,6 +104,7 @@ jobs:
 
       - name: Copy UI files to repository branch
         run: |
+          ls -R
           uiBranch=$(pwd)/generate-ui
           cd $(pwd)/repository
           cp -r $uiBranch/node_modules .
