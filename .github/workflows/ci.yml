@@ -98,7 +98,7 @@ jobs:
       - name: Generate UI
         working-directory: generate-ui
         run: |
-          cp -r ../repository .
+          cp ../repository/* .
           ls -R
           node generate-ui.js
 
