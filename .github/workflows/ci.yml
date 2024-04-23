@@ -54,8 +54,7 @@ jobs:
         run: |
           echo "Begin repository handling and indexing..."
           
-          WORKDIR=$(pwd)
-          ls -l
+          WORKDIR=$(pwd)/main
           cd repository
 
           # run helm docs
