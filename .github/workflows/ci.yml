@@ -62,24 +62,28 @@ jobs:
           cd ../main
 
           # run helm docs
-          helm-docs
+          helmDocFileName=helmValues.md
+          helm-docs -o $helmDocFileName
 
           WORKDIR=$(pwd)
           for subdir in "$WORKDIR"/*/; do
-              if [[ -d "$subdir" && $(basename "$subdir") != "binary" ]]; then
-                  echo "Processing directory: $subdir"
-                  cd $UI
-                  helmChartDocsPath=resources/static/helm-readmes/$(basename $subdir)
-                  echo "Copy helm chart doc '$(basename $subdir)' to $helmChartDocsPath in UI branch.."
-                  mkdir -p $helmChartDocsPath && cp $subdir/README.md $helmChartDocsPath
-                  cd $REPOSITORY
-                  helm package $subdir
-                  cd $WORKDIR
-              fi
+            if [[ -d "$subdir" && $(basename "$subdir") != "binary" ]]; then
+              helmChartName=$(basename $subdir)
+              echo "------Processing directory: $helmChartName"
+              cd $UI
+
+              chartVersion=$(cat $subdir/$helmDocFileName | sed -nE 's/.*\[Version: ([0-9.]*)\].*/\1/p')
+              appVersion=$(cat $subdir/$helmDocFileName | sed -nE 's/.*\[AppVersion: ([0-9.]*)\].*/\1/p')
+
+              echo "Copy helm chart '$helmChartName' at $(pwd)/$appVersion/$chartVersion/$helmChartName in UI branch.."
+              mkdir -p $(pwd)/$appVersion/$chartVersion/$helmChartName && cp -r $subdir $(pwd)/$appVersion/$chartVersion
+              cd $REPOSITORY
+              helm package $subdir
+              cd $WORKDIR
+            fi
           done
           cd $REPOSITORY
           helm repo index --url https://charts.webmethods.io/ .
-          
 
       - name: Install Node
         uses: actions/setup-node@v4
