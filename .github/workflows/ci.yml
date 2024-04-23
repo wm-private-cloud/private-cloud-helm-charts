@@ -98,7 +98,8 @@ jobs:
       - name: Generate UI
         working-directory: generate-ui
         run: |
-          cp ../repository/index.yaml .
+          cp -r ../repository .
+          ls -R
           node generate-ui.js
 
       - name: Copy UI files to repository branch
