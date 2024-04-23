@@ -76,7 +76,7 @@ jobs:
               appVersion=$(cat $subdir/$helmDocFileName | sed -nE 's/.*\[AppVersion: ([0-9.]*)\].*/\1/p')
 
               echo "Copy helm chart '$helmChartName' at $(pwd)/$helmChartName/$appVersion/$chartVersion in UI branch.."
-              mkdir -p $(pwd)/$helmChartName/$appVersion/$chartVersion && cp -r $subdir $(pwd)/$helmChartName/$appVersion/$chartVersion
+              mkdir -p $(pwd)/$helmChartName/$appVersion/$chartVersion && cp -r $subdir/* $(pwd)/$helmChartName/$appVersion/$chartVersion
               cd $REPOSITORY
               helm package $subdir
               cd $WORKDIR
