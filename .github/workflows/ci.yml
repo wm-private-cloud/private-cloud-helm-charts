@@ -13,19 +13,19 @@ jobs:
 
     steps:
       - name: Checkout main
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
         with:
           path: main
           ref: main
       
       - name: Checkout repository
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
         with:
           path: repository
           ref: repository
       
       - name: Checkout generate-ui
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
         with:
           path: generate-ui
           ref: generate-ui
@@ -33,7 +33,7 @@ jobs:
       - name: Install binaries
         working-directory: main
         run: |
-          for binary in "$(pwd)"/binary/*; do
+          for binary in "$(pwd)"/binary/*.deb; do
             echo "Installing $binary .. "
             sudo dpkg -i $binary
           done
