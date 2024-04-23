@@ -59,7 +59,7 @@ jobs:
           # run helm docs
           helmDocFileName=helmValues.md
           helm-docs -o $helmDocFileName
-          
+
           cd repository
 
           for subdir in "$WORKDIR"/*/; do
@@ -90,7 +90,7 @@ jobs:
       - name: Generate UI
         working-directory: generate-ui
         run: |
-          cp ../repository/* .
+          cp -r ../repository/* .
           ls -R
           node generate-ui.js
 
