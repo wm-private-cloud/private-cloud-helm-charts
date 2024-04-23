@@ -54,35 +54,26 @@ jobs:
         run: |
           echo "Begin repository handling and indexing..."
           
-          # Package each chart and then index the repository
+          WORKDIR=$(pwd)
           cd repository
-          REPOSITORY=$(pwd)
-          cd ../generate-ui
-          UI=$(pwd)
-          cd ../main
 
           # run helm docs
           helmDocFileName=helmValues.md
           helm-docs -o $helmDocFileName
 
-          WORKDIR=$(pwd)
           for subdir in "$WORKDIR"/*/; do
             if [[ -d "$subdir" && $(basename "$subdir") != "binary" ]]; then
               helmChartName=$(basename $subdir)
               echo "------Processing directory: $helmChartName"
-              cd $UI
 
               chartVersion=$(cat $subdir/$helmDocFileName | sed -nE 's/.*\[Version: ([0-9.]*)\].*/\1/p')
               appVersion=$(cat $subdir/$helmDocFileName | sed -nE 's/.*\[AppVersion: ([0-9.]*)\].*/\1/p')
 
-              echo "Copy helm chart '$helmChartName' at $(pwd)/$helmChartName/$appVersion/$chartVersion in UI branch.."
-              mkdir -p $(pwd)/$helmChartName/$appVersion/$chartVersion && cp -r $subdir/* $(pwd)/$helmChartName/$appVersion/$chartVersion
-              cd $REPOSITORY
+              echo "Copy helm chart '$helmChartName' at $helmChartName/$appVersion/$chartVersion in repository branch"
+              mkdir -p $helmChartName/$appVersion/$chartVersion && cp -r $subdir/* $helmChartName/$appVersion/$chartVersion
               helm package $subdir
-              cd $WORKDIR
             fi
           done
-          cd $REPOSITORY
           helm repo index --url https://charts.webmethods.io/ .
 
       - name: Install Node
