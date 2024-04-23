@@ -88,7 +88,7 @@ fs.readFile('./resources/static/html/base-index.html', 'utf8', function(err, dat
 
                 // Add helm values table
                 helmValuesTable = currentHelmChartDiv.getElementById('helm-values-table');
-                helmValuesTable.innerHTML = generateHelmValuesTable(entry.name);
+                helmValuesTable.innerHTML = generateHelmValuesTable(entry.name, entry.version, entry.appVersion);
 
                 helmChartBody.appendChild(currentHelmChartDiv);
             });
@@ -98,8 +98,8 @@ fs.readFile('./resources/static/html/base-index.html', 'utf8', function(err, dat
     });
 });
 
-function generateHelmValuesTable(helmName) {
-    let data = fs.readFileSync(path.join('./resources/static/helm-readmes', helmName, 'README.md'), 'utf8');
+function generateHelmValuesTable(helmName, helmVersion, appVersion) {
+    let data = fs.readFileSync(path.join(helmName, appVersion, helmVersion, 'helmValues.md'), 'utf8');
     let markdownTable = data.split("## Values")[1].split("----------------------------------------------")[0].trim();
     let table = new HTMLParser.parse('div', '');
     table.innerHTML = marked.parse(markdownTable);
