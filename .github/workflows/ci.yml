@@ -55,11 +55,12 @@ jobs:
           echo "Begin repository handling and indexing..."
           
           WORKDIR=$(pwd)/main
-          cd repository
 
           # run helm docs
           helmDocFileName=helmValues.md
           helm-docs -o $helmDocFileName
+          
+          cd repository
 
           for subdir in "$WORKDIR"/*/; do
             if [[ -d "$subdir" && $(basename "$subdir") != "binary" ]]; then
