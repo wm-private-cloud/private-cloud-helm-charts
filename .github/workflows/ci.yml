@@ -91,7 +91,6 @@ jobs:
         working-directory: generate-ui
         run: |
           cp -r ../repository/* .
-          ls -R
           node generate-ui.js
 
       - name: Copy UI files to repository branch
