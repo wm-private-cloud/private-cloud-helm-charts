@@ -99,7 +99,7 @@ fs.readFile('./resources/static/html/base-index.html', 'utf8', function(err, dat
 });
 
 function generateHelmValuesTable(helmName, helmVersion, appVersion) {
-    let data = fs.readFileSync(path.join(helmName, appVersion, helmVersion, 'helmValues.md'), 'utf8');
+    let data = fs.readFileSync(path.join('helm-charts', helmName, appVersion, helmVersion, 'helmValues.md'), 'utf8');
     let markdownTable = data.split("## Values")[1].split("----------------------------------------------")[0].trim();
     let table = new HTMLParser.parse('div', '');
     table.innerHTML = marked.parse(markdownTable);
