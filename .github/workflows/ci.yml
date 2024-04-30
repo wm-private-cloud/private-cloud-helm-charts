@@ -43,7 +43,7 @@ jobs:
       - name: Cleanup repository branch
         working-directory: repository
         run: |
-          rm -rf *
+          rm -rf wm_node_modules
 
       - name: Create CNAME file
         working-directory: repository
