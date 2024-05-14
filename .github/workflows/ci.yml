@@ -104,7 +104,7 @@ jobs:
           cp -r $uiBranch/resources/static/css resources/static/
           cp -r $uiBranch/resources/static/js resources/static/
           cp -r $uiBranch/resources/static/img resources/static/
-          cp $uiBranch/index.html .
+          cp $uiBranch/*.html .
           mv node_modules wm_node_modules
 
       - name: Push to repository branch
