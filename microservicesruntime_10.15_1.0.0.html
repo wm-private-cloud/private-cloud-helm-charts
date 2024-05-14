@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>webMethods Helm Charts Repository</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <link rel="icon" href="resources/static/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="resources/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="wm_node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="wm_node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" >
+    <link rel="stylesheet" type="text/css" href="wm_node_modules/@softwareag/dlt-components/css/delite.min.css">
+    <link rel="stylesheet" type="text/css" href="wm_node_modules/@softwareag/dlt-fonts/roboto.css">
+    <link rel="stylesheet" type="text/css" href="wm_node_modules/@softwareag/dlt-icons/Font/css/dlt-icons-font.css">
+    <link rel="stylesheet" type="text/css" href="wm_node_modules/@softwareag/dlt-tokens/web/css/dlt-tokens.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+</head>
+
+    <div class="container col-12 mr-0 ml-0 pl-0 pr-0">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="header-wrap">
+                    <header class="container col-12 no-margin no-padding main-head">
+                        <a class="brand" href="/">
+                            <img src="resources/static/img/logo.svg" alt="Logo">
+                        </a>
+                        <div style="margin-left: 50px;">webMethods Helm Charts Repository</div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="body"><div class="mx-0 pr-0 pl-6ml-0" style="margin-top: 0px !important">
+                    <div style="align-items: center;display: flex;margin: 20px;">
+                        <div style="padding-left: 15px; width: 80%;">microservicesruntime / Application Version: 10.15 / Chart Version: 1.0.0</div>
+
+                        <div class="dlt-form-item input" style="display: flex; padding-right:15px">
+                            <div class="dlt-form-group" style="justify-content: flex-end">
+                                <div class="helm-install-command-label dlt-text-input label-secondary" id="helm-install-command-label-0">helm install my-microservicesruntime-release webMethods/microservicesruntime --version 1.0.0</div>
+                                <div class="dlt-form-item sm-input">
+                                    <button class="helm-install-command helm-install-command-icon dlt-button dlt-button-secondary dlt-tooltip dlt-tooltip-bottom-center" aria-description="Copy install command" type="button" id="helm-copy-button" onclick="copyHelmInstallCommandToClipboard('microservicesruntime', '1.0.0'); showCopiedIcon('helm-copy-button')">
+                                        <i class="dlt-icon-copy dlt-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="margin-top: 0px;">
+                
+                    <div id="helm-chart-content-body" class="helm-chart-content-body mx-0 pr-0 pl-6ml-0" style>
+                        <div id="helm-chart-readme" style></div>
+                        <div id="helm-values-table-container" style="margin: 0 auto; padding-left: 20px; padding-right: 20px;">
+                            <table class="dlt-card w-100 helm-values-table">
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>affinity</td>
+<td>object</td>
+<td><code>{}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>autoscaling.enabled</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>autoscaling.maxReplicas</td>
+<td>int</td>
+<td><code>100</code></td>
+<td></td>
+</tr>
+<tr>
+<td>autoscaling.minReplicas</td>
+<td>int</td>
+<td><code>1</code></td>
+<td></td>
+</tr>
+<tr>
+<td>autoscaling.targetCPUUtilizationPercentage</td>
+<td>int</td>
+<td><code>80</code></td>
+<td></td>
+</tr>
+<tr>
+<td>fullnameOverride</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>image.pullPolicy</td>
+<td>string</td>
+<td><code>&quot;Always&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>image.repository</td>
+<td>string</td>
+<td><code>&quot;sagcr.azurecr.io/webmethods-microservicesruntime&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>image.tag</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>imagePullSecrets[0].name</td>
+<td>string</td>
+<td><code>&quot;regcred&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ingress.annotations</td>
+<td>object</td>
+<td><code>{}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ingress.className</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ingress.enabled</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ingress.hosts[0].host</td>
+<td>string</td>
+<td><code>&quot;chart-example.local&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ingress.hosts[0].paths[0].path</td>
+<td>string</td>
+<td><code>&quot;/&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ingress.hosts[0].paths[0].pathType</td>
+<td>string</td>
+<td><code>&quot;ImplementationSpecific&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ingress.tls</td>
+<td>list</td>
+<td><code>[]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>nameOverride</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>nodeSelector</td>
+<td>object</td>
+<td><code>{}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>podAnnotations</td>
+<td>object</td>
+<td><code>{}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>podSecurityContext</td>
+<td>object</td>
+<td><code>{}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>replicaCount</td>
+<td>int</td>
+<td><code>1</code></td>
+<td></td>
+</tr>
+<tr>
+<td>resources</td>
+<td>object</td>
+<td><code>{}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>securityContext</td>
+<td>object</td>
+<td><code>{}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>service.port</td>
+<td>int</td>
+<td><code>5555</code></td>
+<td></td>
+</tr>
+<tr>
+<td>service.type</td>
+<td>string</td>
+<td><code>&quot;ClusterIP&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>serviceAccount.annotations</td>
+<td>object</td>
+<td><code>{}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>serviceAccount.create</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>serviceAccount.name</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>tolerations</td>
+<td>list</td>
+<td><code>[]</code></td>
+<td></td>
+</tr>
+</tbody><caption style="font-size: large; text-align: center; caption-side: top;">Helm Values</caption></table>
+
+                        </div>
+                    </div>
+                </div></div>
+
+    <footer class="dlt-footer mt-auto">
+        <p>Copyright © 2024 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.</p>
+    </footer>
+
+    <script src="resources/static/js/helm-copy-button.js"></script>
+    <script src="wm_node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+    <script src="wm_node_modules/@softwareag/dlt-components/js/delite.min.js"></script>
+
+</html>

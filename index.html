@@ -18,20 +18,19 @@
     <link rel="stylesheet" type="text/css" href="wm_node_modules/@softwareag/dlt-fonts/roboto.css">
     <link rel="stylesheet" type="text/css" href="wm_node_modules/@softwareag/dlt-icons/Font/css/dlt-icons-font.css">
     <link rel="stylesheet" type="text/css" href="wm_node_modules/@softwareag/dlt-tokens/web/css/dlt-tokens.css">
-</head>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
 <body class="d-flex flex-column min-vh-100">
     <div class="container col-12 mr-0 ml-0 pl-0 pr-0">
         <div class="row no-gutters">
             <div class="col-12">
                 <div class="header-wrap">
                     <header class="container col-12 no-margin no-padding main-head">
-                        <a class="brand">
+                        <a class="brand" href="/">
                             <img src="resources/static/img/logo.svg" alt="Logo">
                         </a>
-                        
                         <div style="margin-left: 50px;">webMethods Helm Charts Repository</div>
-
                         <div class="dlt-form-item dlt-search dlt-search--sync dlt-search--open col-2" style="margin-left:auto">
                             <div class="dlt-form-group">
                                 <input type="text" id="helm-chart-search-input" class="dlt-text-input dlt-text-search" placeholder="Search Helm charts.." onkeyup="searcHelmCharts()" >
@@ -49,12 +48,12 @@
         </div>
 
         <div class="no-gutters">
-            <div class="dlt-card w-100 no-gutters large-logo" style="margin-top: 15px;">
+            <div class="info-header dlt-card" style="margin-top: 15px">
                 <p>
-                    To use the webMethods charts, add this repository to your Helm configuration:<br><br>
+                    To use the webMethods charts, add this repository to your Helm configuration: 
                     <b>helm repo add webMethods https://charts.webmethods.io</b>
                 </p>
-                <p>
+                <p style="margin: 0;">
                     Once added, you can search for and install webMethods charts using the Helm CLI.
                 </p>
             </div>
@@ -66,486 +65,105 @@
                 <h4>webMethods Charts</h4>
             </div>
 
-            <div id="helm-charts-body" class="m-2 m-md-4" style="margin-top: 0px !important">
-            <div class="helm-chart dlt-card w-100 p-2" helm-chart-name="integrationserver" helm-chart-version="1.0.0" application-version="10.15" helm-chart-description="Integration Server (IS) Helm Chart for Kubernetes">
-                    <div class="tag-card w-100 p-2">
-                        <div style="display: flex; width: 40%;">
-                            <span class="dlt-list-item__text">
-                                <span class="dlt-list-item__primary-text">Integrationserver</span>
-                                <span class="dlt-list-item__secondary-text">Chart Version: 1.0.0</span>
-                                <span class="dlt-list-item__secondary-text">Application Version: 10.15</span>
-                            </span>
-                        </div>
-                        <div class="dlt-input-group">
-                            <span class="helm-chart-description dlt-list-item__secondary-text" style="text-align: center !important">Integration Server (IS) Helm Chart for Kubernetes</span>
-                        </div>
+            <div id="helm-charts-body" class="mx-0 pr-0 pl-6ml-0 d-flex flex-wrap flex-direction-row" style="margin-top: 0px !important">
+            <div class="helm-chart p-0 ml-6 mb-0 mr-0 mt-6" helm-chart-name=integrationserver helm-chart-description="Integration Server (IS) Helm Chart for Kubernetes" style="width: 320px;">
+            <a href="integrationserver_10.15_1.0.0.html" style="text-decoration:none">
+                <div class="dlt-card" style="display: flex; height: 200px; padding-bottom:24px;">
+                    <span class="dlt-list-item__text">
+                        <img src="./resources/static/img/favicon.ico" alt="logo" style="max-width: 20px; max-height: 20px; padding-bottom: 5px">
+                        <span class="dlt-list-item__primary-text" style="font-size: 18px;">| Integrationserver</span>
+                        
+                        <span class="helm-chart-description dlt-list-item__secondary-text">Integration Server (IS) Helm Chart for Kubernetes</span>
 
-                        <div class="dlt-input-group">
-                            <div class="dlt-form-item input">
-                                <div class="dlt-form-group" style="justify-content: flex-end">
-                                    <div class="helm-install-command-label dlt-text-input label-secondary" id="helm-install-command-label-0">helm install my-integrationserver-release webMethods/integrationserver</div>
+                        <div class="d-flex flex-wrap flex-direction-row align-items-center" style="padding-top: 15px">
+                            <div class="dlt-card-versions pl-0 pb-0 pr-2" style="align-content: flex-end; width:40%;">
+                                <div class="dlt-form-item sm-input">
+                                    <label class="dlt-form-label" for="select-input-app-version-integrationserver">App version</label>
+                                    <div class="dlt-form-group">
+                                        <select id="select-input-app-version-integrationserver" class="dlt-single-select select-input-app-version">
+                                            <option value="10.15 integrationserver">10.15</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <button class="helm-install-command-icon dlt-button dlt-button-secondary" type="button" onclick="copyHelmInstallCommandToClipboard(this.getAttribute('helm-chart-name')); showCopiedIcon(this.getAttribute('id'))" id="helm-install-command-icon-0" helm-chart-name="integrationserver">
-                                <i class="dlt-icon-copy dlt-icon"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div>
-                        <ul class="dlt-accordion" data-allow-multiple>
-                            <li class="dlt-accordion-item">
-                                <button aria-expanded="false" id="pane1" class="dlt-accordion-title">
-                                    <i class="dlt-accordion-arrow dlt-icon-chevron-right"></i>
-                                    <span style="font-size: 12px;"><i>View helm chart values</i></span>
-                                </button>
-                                <div id="helm-values-table" class="dlt-accordion-content" aria-labelledby="pane1" style="padding-left: 12px;"><table class="dlt-card w-100 helm-values-table">
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>affinity</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>autoscaling.enabled</td>
-<td>bool</td>
-<td><code>false</code></td>
-<td></td>
-</tr>
-<tr>
-<td>autoscaling.maxReplicas</td>
-<td>int</td>
-<td><code>100</code></td>
-<td></td>
-</tr>
-<tr>
-<td>autoscaling.minReplicas</td>
-<td>int</td>
-<td><code>1</code></td>
-<td></td>
-</tr>
-<tr>
-<td>autoscaling.targetCPUUtilizationPercentage</td>
-<td>int</td>
-<td><code>80</code></td>
-<td></td>
-</tr>
-<tr>
-<td>fullnameOverride</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>image.pullPolicy</td>
-<td>string</td>
-<td><code>&quot;Always&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>image.repository</td>
-<td>string</td>
-<td><code>&quot;sagcr.azurecr.io/webmethods-integrationserver&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>image.tag</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>imagePullSecrets[0].name</td>
-<td>string</td>
-<td><code>&quot;regcred&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.annotations</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.className</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.enabled</td>
-<td>bool</td>
-<td><code>false</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.hosts[0].host</td>
-<td>string</td>
-<td><code>&quot;chart-example.local&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.hosts[0].paths[0].path</td>
-<td>string</td>
-<td><code>&quot;/&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.hosts[0].paths[0].pathType</td>
-<td>string</td>
-<td><code>&quot;ImplementationSpecific&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.tls</td>
-<td>list</td>
-<td><code>[]</code></td>
-<td></td>
-</tr>
-<tr>
-<td>nameOverride</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>nodeSelector</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>podAnnotations</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>podSecurityContext</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>replicaCount</td>
-<td>int</td>
-<td><code>1</code></td>
-<td></td>
-</tr>
-<tr>
-<td>resources</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>securityContext</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>service.port</td>
-<td>int</td>
-<td><code>5555</code></td>
-<td></td>
-</tr>
-<tr>
-<td>service.type</td>
-<td>string</td>
-<td><code>&quot;ClusterIP&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>serviceAccount.annotations</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>serviceAccount.create</td>
-<td>bool</td>
-<td><code>true</code></td>
-<td></td>
-</tr>
-<tr>
-<td>serviceAccount.name</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>tolerations</td>
-<td>list</td>
-<td><code>[]</code></td>
-<td></td>
-</tr>
-</tbody></table>
-</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div><div class="helm-chart dlt-card w-100 p-2" helm-chart-name="microservicesruntime" helm-chart-version="1.0.0" application-version="10.15" helm-chart-description="Microservices Runtime (MSR) Helm Chart for Kubernetes">
-                    <div class="tag-card w-100 p-2">
-                        <div style="display: flex; width: 40%;">
-                            <span class="dlt-list-item__text">
-                                <span class="dlt-list-item__primary-text">Microservicesruntime</span>
-                                <span class="dlt-list-item__secondary-text">Chart Version: 1.0.0</span>
-                                <span class="dlt-list-item__secondary-text">Application Version: 10.15</span>
-                            </span>
-                        </div>
-                        <div class="dlt-input-group">
-                            <span class="helm-chart-description dlt-list-item__secondary-text" style="text-align: center !important">Microservices Runtime (MSR) Helm Chart for Kubernetes</span>
-                        </div>
-
-                        <div class="dlt-input-group">
-                            <div class="dlt-form-item input">
-                                <div class="dlt-form-group" style="justify-content: flex-end">
-                                    <div class="helm-install-command-label dlt-text-input label-secondary" id="helm-install-command-label-1">helm install my-microservicesruntime-release webMethods/microservicesruntime</div>
+                        
+                            <div class="dlt-card-versions pl-0 pb-0 pr-2" style="align-content: flex-end; width:40%;">
+                                <div class="dlt-form-item sm-input">
+                                    <label class="dlt-form-label" for="select-input-chart-version-integrationserver">Chart version</label>
+                                    <div class="dlt-form-group">
+                                        <select id="select-input-chart-version-integrationserver" class="dlt-single-select select-input-chart-version">
+                                            <option value="1.0.0 integrationserver">1.0.0</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <button class="helm-install-command-icon dlt-button dlt-button-secondary" type="button" onclick="copyHelmInstallCommandToClipboard(this.getAttribute('helm-chart-name')); showCopiedIcon(this.getAttribute('id'))" id="helm-install-command-icon-1" helm-chart-name="microservicesruntime">
-                                <i class="dlt-icon-copy dlt-icon"></i>
-                            </button>
+
+                            <div class="dlt-card-versions pl-0 pb-0 pr-2" style="padding-top: 12px; margin-left: 5px;">
+                                <div class="dlt-form-item sm-input">
+                                    <button class="helm-install-command helm-install-command-icon dlt-button dlt-button-secondary dlt-tooltip dlt-tooltip-bottom-center" aria-description="Copy install command" type="button" id="helm-install-command-icon-0" helm-chart-name="integrationserver">
+                                        <i class="dlt-icon-copy dlt-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <ul class="dlt-accordion" data-allow-multiple>
-                            <li class="dlt-accordion-item">
-                                <button aria-expanded="false" id="pane1" class="dlt-accordion-title">
-                                    <i class="dlt-accordion-arrow dlt-icon-chevron-right"></i>
-                                    <span style="font-size: 12px;"><i>View helm chart values</i></span>
-                                </button>
-                                <div id="helm-values-table" class="dlt-accordion-content" aria-labelledby="pane1" style="padding-left: 12px;"><table class="dlt-card w-100 helm-values-table">
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>affinity</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>autoscaling.enabled</td>
-<td>bool</td>
-<td><code>false</code></td>
-<td></td>
-</tr>
-<tr>
-<td>autoscaling.maxReplicas</td>
-<td>int</td>
-<td><code>100</code></td>
-<td></td>
-</tr>
-<tr>
-<td>autoscaling.minReplicas</td>
-<td>int</td>
-<td><code>1</code></td>
-<td></td>
-</tr>
-<tr>
-<td>autoscaling.targetCPUUtilizationPercentage</td>
-<td>int</td>
-<td><code>80</code></td>
-<td></td>
-</tr>
-<tr>
-<td>fullnameOverride</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>image.pullPolicy</td>
-<td>string</td>
-<td><code>&quot;Always&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>image.repository</td>
-<td>string</td>
-<td><code>&quot;sagcr.azurecr.io/webmethods-microservicesruntime&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>image.tag</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>imagePullSecrets[0].name</td>
-<td>string</td>
-<td><code>&quot;regcred&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.annotations</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.className</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.enabled</td>
-<td>bool</td>
-<td><code>false</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.hosts[0].host</td>
-<td>string</td>
-<td><code>&quot;chart-example.local&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.hosts[0].paths[0].path</td>
-<td>string</td>
-<td><code>&quot;/&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.hosts[0].paths[0].pathType</td>
-<td>string</td>
-<td><code>&quot;ImplementationSpecific&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>ingress.tls</td>
-<td>list</td>
-<td><code>[]</code></td>
-<td></td>
-</tr>
-<tr>
-<td>nameOverride</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>nodeSelector</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>podAnnotations</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>podSecurityContext</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>replicaCount</td>
-<td>int</td>
-<td><code>1</code></td>
-<td></td>
-</tr>
-<tr>
-<td>resources</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>securityContext</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>service.port</td>
-<td>int</td>
-<td><code>5555</code></td>
-<td></td>
-</tr>
-<tr>
-<td>service.type</td>
-<td>string</td>
-<td><code>&quot;ClusterIP&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>serviceAccount.annotations</td>
-<td>object</td>
-<td><code>{}</code></td>
-<td></td>
-</tr>
-<tr>
-<td>serviceAccount.create</td>
-<td>bool</td>
-<td><code>true</code></td>
-<td></td>
-</tr>
-<tr>
-<td>serviceAccount.name</td>
-<td>string</td>
-<td><code>&quot;&quot;</code></td>
-<td></td>
-</tr>
-<tr>
-<td>tolerations</td>
-<td>list</td>
-<td><code>[]</code></td>
-<td></td>
-</tr>
-</tbody></table>
-</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div></div>
+                    </span>
+                </div>
+            </a>
+        </div><div class="helm-chart p-0 ml-6 mb-0 mr-0 mt-6" helm-chart-name=microservicesruntime helm-chart-description="Microservices Runtime (MSR) Helm Chart for Kubernetes" style="width: 320px;">
+            <a href="microservicesruntime_10.15_1.0.0.html" style="text-decoration:none">
+                <div class="dlt-card" style="display: flex; height: 200px; padding-bottom:24px;">
+                    <span class="dlt-list-item__text">
+                        <img src="./resources/static/img/favicon.ico" alt="logo" style="max-width: 20px; max-height: 20px; padding-bottom: 5px">
+                        <span class="dlt-list-item__primary-text" style="font-size: 18px;">| Microservicesruntime</span>
+                        
+                        <span class="helm-chart-description dlt-list-item__secondary-text">Microservices Runtime (MSR) Helm Chart for Kubernetes</span>
+
+                        <div class="d-flex flex-wrap flex-direction-row align-items-center" style="padding-top: 15px">
+                            <div class="dlt-card-versions pl-0 pb-0 pr-2" style="align-content: flex-end; width:40%;">
+                                <div class="dlt-form-item sm-input">
+                                    <label class="dlt-form-label" for="select-input-app-version-microservicesruntime">App version</label>
+                                    <div class="dlt-form-group">
+                                        <select id="select-input-app-version-microservicesruntime" class="dlt-single-select select-input-app-version">
+                                            <option value="10.15 microservicesruntime">10.15</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="dlt-card-versions pl-0 pb-0 pr-2" style="align-content: flex-end; width:40%;">
+                                <div class="dlt-form-item sm-input">
+                                    <label class="dlt-form-label" for="select-input-chart-version-microservicesruntime">Chart version</label>
+                                    <div class="dlt-form-group">
+                                        <select id="select-input-chart-version-microservicesruntime" class="dlt-single-select select-input-chart-version">
+                                            <option value="1.0.0 microservicesruntime">1.0.0</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dlt-card-versions pl-0 pb-0 pr-2" style="padding-top: 12px; margin-left: 5px;">
+                                <div class="dlt-form-item sm-input">
+                                    <button class="helm-install-command helm-install-command-icon dlt-button dlt-button-secondary dlt-tooltip dlt-tooltip-bottom-center" aria-description="Copy install command" type="button" id="helm-install-command-icon-1" helm-chart-name="microservicesruntime">
+                                        <i class="dlt-icon-copy dlt-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </a>
+        </div></div>
         </div>
     </div>
 
-    <script>
-        function searcHelmCharts() {
-          let filter = document.getElementById("helm-chart-search-input").value.toLowerCase();
-          let charts = document.getElementById("helm-charts-body").querySelectorAll(':scope > div');
-          for (let i = 0; i < charts.length; i++) {
-            if (propertyValueMatch(charts[i], filter, "helm-chart-name") ||
-                propertyValueMatch(charts[i], filter, "helm-chart-version") ||
-                propertyValueMatch(charts[i], filter, "application-version") ||
-                propertyValueMatch(charts[i], filter, "helm-chart-description")) {
-                charts[i].style.display = "";
-            } else {
-                charts[i].style.display = "none";
-            }
-          }
-        }
+    <footer class="dlt-footer mt-auto">
+        <p>Copyright © 2024 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.</p>
+    </footer>
 
-        function propertyValueMatch(chart, filter, attribute) {
-            return chart.getAttribute(attribute).toLowerCase().indexOf(filter) > -1;
-        }
-    </script>
-
-    <script src="resources/static/js/helm-copy.js"></script>
-    <script src="wm_node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="resources/static/js/utils.js"></script>
+    <script src="resources/static/js/helm-copy-button.js"></script>
     <script src="wm_node_modules/js-yaml/dist/js-yaml.min.js"></script>
     <script src="wm_node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
     <script src="wm_node_modules/@softwareag/dlt-components/js/delite.min.js"></script>
-</body>
+<script>$(".select-input-chart-version").change(function () { let chart = $(this).val().split(' ')[1]; updateHelmChartLinkPage(chart);}); $(".select-input-app-version").change(function () { let version = $(this).val().split(' ')[0]; let chart = $(this).val().split(' ')[1]; let options = document.getElementById('select-input-chart-version-' + chart); let optionsChosen = document.getElementById('select_input_chart_version_' + chart + '_chosen'); options.innerHTML = '';if(chart === "integrationserver" && version === "10.15") {optionsChosen.querySelectorAll('.chosen-single')[0].innerHTML = '<span>1.0.0</span><i class="dlt-icon-dropdown multiselect-icon"></i><div><b></b></div>'; optionsChosen.querySelectorAll('.chosen-results')[0].innerHTML = ''; optionsChosen.querySelectorAll('.chosen-results')[0].innerHTML += '<li class="active-result result-selected highlighted" data-option-array-index="0" role="option" id="" aria-selected="true">1.0.0</li>';options.innerHTML += '<option value="1.0.0 integrationserver">1.0.0</option>';$("#select-input-chart-version-integrationserver").trigger("chosen:updated");}if(chart === "microservicesruntime" && version === "10.15") {optionsChosen.querySelectorAll('.chosen-single')[0].innerHTML = '<span>1.0.0</span><i class="dlt-icon-dropdown multiselect-icon"></i><div><b></b></div>'; optionsChosen.querySelectorAll('.chosen-results')[0].innerHTML = ''; optionsChosen.querySelectorAll('.chosen-results')[0].innerHTML += '<li class="active-result result-selected highlighted" data-option-array-index="0" role="option" id="" aria-selected="true">1.0.0</li>';options.innerHTML += '<option value="1.0.0 microservicesruntime">1.0.0</option>';$("#select-input-chart-version-microservicesruntime").trigger("chosen:updated");}updateHelmChartLinkPage(chart);});</script></body>
 </html>
