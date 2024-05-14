@@ -20,6 +20,8 @@
     <link rel="stylesheet" type="text/css" href="wm_node_modules/@softwareag/dlt-tokens/web/css/dlt-tokens.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
     <div class="container col-12 mr-0 ml-0 pl-0 pr-0">
@@ -31,52 +33,20 @@
                             <img src="resources/static/img/logo.svg" alt="Logo">
                         </a>
                         <div style="margin-left: 50px;">webMethods Helm Charts Repository</div>
-                        <div class="dlt-form-item dlt-search dlt-search--sync dlt-search--open col-2" style="margin-left:auto">
-                            <div class="dlt-form-group">
-                                <input type="text" id="helm-chart-search-input" class="dlt-text-input dlt-text-search" placeholder="Search Helm charts.." onkeyup="searcHelmCharts()" />
-                                <button class="clear-icon" type="reset" onclick='document.getElementById("helm-chart-search-input").value = ""; searcHelmCharts()'>
-                                    <i class="dlt-icon-close"></i>
-                                </button>
-                                <span class="search-icon">
-                                    <i class="dlt-icon-search dlt-icon-lg"></i>
-                                </span>
-                            </div>
-                        </div>
                     </header>
                 </div>
             </div>
         </div>
-
-        <div class="no-gutters">
-            <div class="info-header dlt-card" style="margin-top: 15px">
-                <p>
-                    To use the webMethods charts, add this repository to your Helm configuration: 
-                    <b>helm repo add webMethods https://charts.webmethods.io</b>
-                </p>
-                <p style="margin: 0;">
-                    Once added, you can search for and install webMethods charts using the Helm CLI.
-                </p>
-            </div>
-
-            <div class="row mt-4 mx-2">
-            </div>
-
-            <div style="text-align: center; margin-top: 10px;">
-                <h4>webMethods Charts</h4>
-            </div>
-
-            <div id="helm-charts-body" class="mx-0 pr-0 pl-6ml-0 d-flex flex-wrap flex-direction-row" style="margin-top: 0px !important">
-            </div>
-        </div>
     </div>
+
+    <div id="body">
+    <div>
 
     <footer class="dlt-footer mt-auto">
         <p>Copyright © 2024 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.</p>
     </footer>
 
-    <script src="resources/static/js/utils.js"></script>
     <script src="resources/static/js/helm-copy-button.js"></script>
-    <script src="wm_node_modules/js-yaml/dist/js-yaml.min.js"></script>
     <script src="wm_node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
     <script src="wm_node_modules/@softwareag/dlt-components/js/delite.min.js"></script>
 </body>
