@@ -95,9 +95,9 @@ jobs:
 
       - name: Copy UI files to repository branch
         run: |
-          ls -R
           uiBranch=$(pwd)/generate-ui
           cd $(pwd)/repository
+          rm -rf resources/static
           cp -r $uiBranch/node_modules .
           rm -rf node_modules/.bin
           mkdir -p resources/static/
