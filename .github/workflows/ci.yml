@@ -44,6 +44,7 @@ jobs:
         working-directory: repository
         run: |
           rm -rf wm_node_modules
+          rm -rf resources
 
       - name: Create CNAME file
         working-directory: repository
@@ -97,7 +98,6 @@ jobs:
         run: |
           uiBranch=$(pwd)/generate-ui
           cd $(pwd)/repository
-          rm -rf resources/static
           cp -r $uiBranch/node_modules .
           rm -rf node_modules/.bin
           mkdir -p resources/static/
