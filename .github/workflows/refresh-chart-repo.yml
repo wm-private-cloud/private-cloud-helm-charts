@@ -1,8 +1,8 @@
-name: CI
+name: Refresh Chart Repository
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "repository" ]
   workflow_dispatch:
 
 permissions:
@@ -54,6 +54,10 @@ jobs:
       - name: Package and index
         run: |
           echo "Begin repository handling and indexing..."
+          
+          # Copy refresh chart workflow to repository branch so that it can handle changes made directly in the repository branch on push there
+          mkdir -p repository/.github/workflows 
+          cp -f main/.github/workflows/refresh-chart-repo.yml repository/.github/workflows
           
           WORKDIR=$(pwd)/main
 
