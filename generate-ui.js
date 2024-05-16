@@ -5,6 +5,8 @@ var HTMLParser = require('node-html-parser');
 var marked = require('marked');
 var compareVersions = require('compare-versions');
 
+const helmRepoAddCommand = process.argv[2];
+
 let homePageBaseHTML = HTMLParser.parse(fs.readFileSync('./resources/static/html/base-index.html', 'utf8'));
 let indexYaml = jsyaml.load(fs.readFileSync('./index.yaml', 'utf8'));
 let helmChartBody = homePageBaseHTML.getElementById('helm-charts-body');
@@ -33,6 +35,7 @@ const helmCharts = parseHelmCharts();
 
 let optionScript = new HTMLParser.HTMLElement('script', '');
 optionScript.innerHTML += `$(".select-input-chart-version").change(function () { let chart = $(this).val().split(' ')[1]; updateHelmChartLinkPage(chart);}); $(".select-input-app-version").change(function () { let version = $(this).val().split(' ')[0]; let chart = $(this).val().split(' ')[1]; let options = document.getElementById('select-input-chart-version-' + chart); let optionsChosen = document.getElementById('select_input_chart_version_' + chart + '_chosen'); options.innerHTML = '';`;
+homePageBaseHTML.getElementById('helm-repo-add-command-holder').textContent = helmRepoAddCommand;
 
 helmCharts.forEach((chart, chartIndex) => {
     let chartAppVersionsOptions = "";
