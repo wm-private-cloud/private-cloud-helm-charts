@@ -2,7 +2,7 @@ name: Refresh Chart Repository
 
 on:
   push:
-    branches: [ "main", "repository" ]
+    branches: [ "main", "repository", "generate-ui" ]
   workflow_dispatch:
 
 permissions:
