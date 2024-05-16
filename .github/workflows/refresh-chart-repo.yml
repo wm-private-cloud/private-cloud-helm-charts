@@ -91,7 +91,7 @@ jobs:
         working-directory: generate-ui
         run: |
           cp -r ../repository/* .
-          node generate-ui.js "${{ vars.HELM_REPO_ADD_COMMAND }}"
+          node generate-ui.js '${{ vars.HELM_REPO_ADD_COMMAND }}'
 
       - name: Copy UI files to repository branch
         run: |
