@@ -6,6 +6,7 @@ var marked = require('marked');
 var compareVersions = require('compare-versions');
 
 const helmRepoAddCommand = process.argv[2];
+const generationId = process.argv[3];
 
 let homePageBaseHTML = HTMLParser.parse(fs.readFileSync('./resources/static/html/base-index.html', 'utf8'));
 let indexYaml = jsyaml.load(fs.readFileSync('./index.yaml', 'utf8'));
@@ -118,6 +119,7 @@ ${generateReadmeMarkdown(chart.name, chartVersion, version.appVersion)}
             }
 
             dedicateChartPage.getElementById('body').innerHTML = currentDedicatedPageChartDiv.childNodes[1];
+            dedicateChartPage.getElementById('body').setAttribute('generationId', generationId);
             fs.writeFileSync(path.join(`${chart.name}_${version.appVersion}_${chartVersion}.html`), dedicateChartPage.innerHTML ,{encoding:'utf8',flag:'w'});
         });
 
@@ -178,6 +180,7 @@ ${generateReadmeMarkdown(chart.name, chartVersion, version.appVersion)}
 });
 
 optionScript.innerHTML += `updateHelmChartLinkPage(chart);});`;
+homePageBaseHTML.getElementsByTagName('body')[0].setAttribute('generationId', generationId);
 homePageBaseHTML.getElementsByTagName('body')[0].appendChild(optionScript);
 fs.writeFileSync('./index.html', homePageBaseHTML.innerHTML ,{encoding:'utf8',flag:'w'})
 
