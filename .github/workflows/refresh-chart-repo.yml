@@ -1,0 +1,118 @@
+name: Refresh Chart Repository
+
+on:
+  push:
+    branches: [ "main", "repository", "generate-ui" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        
+      - name: Checkout main
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
+        with:
+          path: main
+          ref: main
+      
+      - name: Checkout repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
+        with:
+          path: repository
+          ref: repository
+      
+      - name: Checkout generate-ui
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
+        with:
+          path: generate-ui
+          ref: generate-ui
+
+      - name: Install binaries
+        working-directory: main
+        run: |
+          for binary in "$(pwd)"/binary/*.deb; do
+            echo "Installing $binary .. "
+            sudo dpkg -i $binary
+          done
+          echo "All binaries are installed.."
+          rm -rf binary
+
+      - name: Cleanup repository branch
+        working-directory: repository
+        run: |
+          rm -rf wm_node_modules
+          rm -rf resources
+
+      - name: Package and index
+        run: |
+          echo "Begin repository handling and indexing..."
+          
+          # Copy refresh chart workflow to repository branch so that it can handle changes made directly in the repository branch on push there
+          mkdir -p repository/.github/workflows 
+          cp -f main/.github/workflows/refresh-chart-repo.yml repository/.github/workflows
+          
+          WORKDIR=$(pwd)/main
+
+          # run helm docs
+          helmDocFileName=helmValues.md
+          helm-docs -o $helmDocFileName
+
+          cd repository
+
+          for subdir in "$WORKDIR"/*/; do
+            if [[ -d "$subdir" && $(basename "$subdir") != "binary" ]]; then
+              helmChartName=$(basename $subdir)
+              echo "------Processing directory: $helmChartName"
+
+              chartVersion=$(cat $subdir/$helmDocFileName | sed -nE 's/.*\[Version: ([0-9.]*)\].*/\1/p')
+              appVersion=$(cat $subdir/$helmDocFileName | sed -nE 's/.*\[AppVersion: ([0-9.]*)\].*/\1/p')
+
+              echo "Copy helm chart '$helmChartName' at $helmChartName/$appVersion/$chartVersion in repository branch"
+              mkdir -p helm-charts/$helmChartName/$appVersion/$chartVersion && cp -r $subdir/* helm-charts/$helmChartName/$appVersion/$chartVersion
+              helm package $subdir
+            fi
+          done
+          helm repo index --url ${{ vars.CHART_REPOSITORY_INDEX_URL }} .
+          
+      - name: Install Node
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 #v4.0.2
+        with:
+          node-version: 20
+
+      - name: Install npm packages
+        working-directory: generate-ui
+        run: |
+          npm instal
+
+      - name: Generate UI
+        working-directory: generate-ui
+        run: |
+          cp -r ../repository/* .
+          generationId=18
+          node generate-ui.js '${{ vars.HELM_REPO_ADD_COMMAND }}' $generationId
+
+      - name: Copy UI files to repository branch
+        run: |
+          uiBranch=$(pwd)/generate-ui
+          cd $(pwd)/repository
+          cp -r $uiBranch/node_modules .
+          rm -rf node_modules/.bin
+          mkdir -p resources/static/
+          cp -r $uiBranch/resources/static/css resources/static/
+          cp -r $uiBranch/resources/static/js resources/static/
+          cp -r $uiBranch/resources/static/img resources/static/
+          cp $uiBranch/*.html .
+          mv node_modules wm_node_modules
+
+      - name: Push to repository branch
+        working-directory: repository
+        run: |
+          # Push changes to the repository branch
+          git config --global user.email "RefreshChartRepoWorkflow@softwareag.com"
+          git config --global user.name "Refresh Chart Repository Workflow"
+          git add .
+          git commit -m "Refreshing charts repository"
+          git push
