@@ -91,7 +91,7 @@ jobs:
         working-directory: generate-ui
         run: |
           cp -r ../repository/* .
-          generationId=28
+          generationId=27
           node generate-ui.js '${{ vars.HELM_REPO_ADD_COMMAND }}' $generationId
 
       - name: Copy UI files to repository branch
