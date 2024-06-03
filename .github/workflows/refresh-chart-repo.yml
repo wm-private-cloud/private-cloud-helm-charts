@@ -4,12 +4,17 @@ on:
   push:
     branches: [ "main", "repository", "generate-ui" ]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Delete Chart from Repository"]
+    types:
+      - completed
 
 permissions:
   contents: write
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
         
       - name: Checkout main
@@ -71,7 +76,9 @@ jobs:
               appVersion=$(cat $subdir/$helmDocFileName | sed -nE 's/.*\[AppVersion: ([0-9.]*)\].*/\1/p')
 
               echo "Copy helm chart '$helmChartName' at $helmChartName/$appVersion/$chartVersion in repository branch"
-              mkdir -p helm-charts/$helmChartName/$appVersion/$chartVersion && cp -r $subdir/* helm-charts/$helmChartName/$appVersion/$chartVersion
+              mkdir -p helm-charts/$helmChartName/$appVersion/$chartVersion
+              cp -r $subdir/* helm-charts/$helmChartName/$appVersion/$chartVersion
+              [[ -f "$subdir/.helmignore" ]] && cp $subdir/.helmignore helm-charts/$helmChartName/$appVersion/$chartVersion
               helm package $subdir
             fi
           done
@@ -91,7 +98,7 @@ jobs:
         working-directory: generate-ui
         run: |
           cp -r ../repository/* .
-          generationId=30
+          generationId=31
           node generate-ui.js '${{ vars.HELM_REPO_ADD_COMMAND }}' $generationId
 
       - name: Copy UI files to repository branch
