@@ -1,14 +1,21 @@
 // ### Helm copy button on front page
 Array.from(document.getElementsByClassName('helm-install-command')).forEach((el) => {
+    el.addEventListener('mousedown', function(event) {
+        addClickEvent(el, event);
+    });
     el.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevents the helm chart box link when clicking the copy button
-        chartName = el.getAttribute("helm-chart-name")
-        chartVersion = document.getElementById('select_input_chart_version_' + chartName + '_chosen').querySelector(".chosen-single").textContent.trim();
-        copyHelmInstallCommandToClipboard(chartName, chartVersion);
-        showCopiedIcon(el.getAttribute("id"))
+        addClickEvent(el, event);
     });
 });
 
+function addClickEvent(el, event) {
+    event.preventDefault(); // Prevents the helm chart box link when clicking the copy button
+    chartName = el.getAttribute("helm-chart-name");
+    chartId = el.getAttribute("id");
+    chartVersion = document.getElementById('select_input_chart_version_' + chartName + '_chosen').querySelector(".chosen-single").textContent.trim();
+    copyHelmInstallCommandToClipboard(chartName, chartVersion);
+    showCopiedIcon(chartId);
+}
 // ###
 
 // ### Search functionality
