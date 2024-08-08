@@ -3,9 +3,9 @@ entries:
   integrationserver:
   - apiVersion: v2
     appVersion: "10.15"
-    created: "2024-08-07T12:34:22.460427842Z"
+    created: "2024-08-08T07:11:27.356261362Z"
     description: Integration Server (IS) Helm Chart for Kubernetes
-    digest: 43cc3899cec0b1e9cdc18a2ee1d13e5ed94d5876b43a6b8ffb5f2a76c2b6acab
+    digest: a32f791908d4c24986cb3624f2f2c86f5e44695aa7d987b22a0e3a28c80d650c
     name: integrationserver
     type: application
     urls:
@@ -14,12 +14,12 @@ entries:
   microservicesruntime:
   - apiVersion: v2
     appVersion: "10.15"
-    created: "2024-08-07T12:34:22.461075593Z"
+    created: "2024-08-08T07:11:27.356662603Z"
     description: Microservices Runtime (MSR) Helm Chart for Kubernetes
-    digest: 77dbcba8ef4aa354885e1bcd23b78d24f542b75d01315ff56580322a3c4af142
+    digest: 325ed368566d4e1c8382f41f80f31f3407250f1d658568464350a5d9df37e634
     name: microservicesruntime
     type: application
     urls:
     - https://charts.webmethods.io/microservicesruntime-1.0.0.tgz
     version: 1.0.0
-generated: "2024-08-07T12:34:22.459724918Z"
+generated: "2024-08-08T07:11:27.355722151Z"
